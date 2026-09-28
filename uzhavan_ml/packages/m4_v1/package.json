@@ -1,0 +1,41 @@
+{
+ "package": "m4_v1",
+ "dataset_version": "m4_v1",
+ "images": 29160,
+ "errors": [],
+ "bytes": 1127808766,
+ "short_side_px": 288,
+ "manifest_sha256": "da25d7ad6acde9942b6738e41968623f01699b1a2cdd62e7046913bfc2ff09e7",
+ "licences": {
+  "in_tn_multicrop_vitc": {
+   "name": "Multi-Crop Disease Dataset (Banana, Chilli, Radish, Groundnut, Cauliflower)",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.mendeley.com/datasets/6243z8r6t6/1",
+   "version": "v1 (published 2025-06-26)"
+  },
+  "in_blackgram_bpld_ap": {
+   "name": "Blackgram Plant Leaf Disease (BPLD) Dataset",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.mendeley.com/datasets/zfcv9fmrgv/3",
+   "version": "v3"
+  },
+  "in_coconut_tree_disease": {
+   "name": "Coconut Tree Disease Dataset",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.mendeley.com/datasets/gh56wbsnj5/1",
+   "version": "v1"
+  },
+  "in_groundnut_wb_sasmal": {
+   "name": "A novel groundnut leaf dataset for detection and classification of groundnut leaf diseases",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.mendeley.com/datasets/x6x5jkk873/2",
+   "version": "v2"
+  },
+  "in_sugarcane_leaf_disease_mh": {
+   "name": "Sugarcane Leaf Disease Dataset",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.mendeley.com/datasets/9424skmnrk/1",
+   "version": "v1"
+  }
+ }
+}

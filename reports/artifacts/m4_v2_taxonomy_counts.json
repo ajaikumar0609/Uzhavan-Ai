@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "target_crop": "groundnut",
+    "primary_source": "in_tn_multicrop_vitc (VIT Chennai, Tamil Nadu)",
+    "external_source": "in_groundnut_wb_sasmal (Midnapore, West Bengal)",
+    "primary_total_images": 8463,
+    "external_total_images": 1695
+  },
+  "options": {
+    "OPTION_A": {
+      "name": "Status Quo (5 Classes)",
+      "num_classes": 5,
+      "classes": [
+        "groundnut__early_leaf_spot",
+        "groundnut__healthy",
+        "groundnut__late_leaf_spot",
+        "groundnut__nutrient_deficiency",
+        "groundnut__rust"
+      ],
+      "training_distribution": {
+        "groundnut__rust": {
+          "count": 2235,
+          "percentage": 37.75
+        },
+        "groundnut__late_leaf_spot": {
+          "count": 1387,
+          "percentage": 23.43
+        },
+        "groundnut__nutrient_deficiency": {
+          "count": 1164,
+          "percentage": 19.66
+        },
+        "groundnut__early_leaf_spot": {
+          "count": 849,
+          "percentage": 14.34
+        },
+        "groundnut__healthy": {
+          "count": 285,
+          "percentage": 4.81
+        }
+      },
+      "total_training_samples": 5920,
+      "scorable_external_samples": 720,
+      "oot_external_samples": 543,
+      "coarse_tikka_samples": 432,
+      "clinical_assessment": "Fails cross-source evaluation. Healthy recall < 1% due to extreme training minority (4.8%) and semantic clash with nutrient deficiency."
+    },
+    "OPTION_B": {
+      "name": "Merge Nutrient Deficiency into Healthy (4 Classes)",
+      "num_classes": 4,
+      "classes": [
+        "groundnut__early_leaf_spot",
+        "groundnut__healthy_or_abiotic",
+        "groundnut__late_leaf_spot",
+        "groundnut__rust"
+      ],
+      "training_distribution": {
+        "groundnut__rust": {
+          "count": 2235,
+          "percentage": 37.75
+        },
+        "groundnut__healthy_or_abiotic": {
+          "count": 1449,
+          "percentage": 24.48
+        },
+        "groundnut__late_leaf_spot": {
+          "count": 1387,
+          "percentage": 23.43
+        },
+        "groundnut__early_leaf_spot": {
+          "count": 849,
+          "percentage": 14.34
+        }
+      },
+      "total_training_samples": 5920,
+      "scorable_external_samples": 720,
+      "oot_external_samples": 543,
+      "coarse_tikka_samples": 432,
+      "clinical_assessment": "Rebalances healthy class from 4.8% to 24.5%. Resolves healthy recall collapse (>85% expected). Tikka remains split."
+    },
+    "OPTION_C": {
+      "name": "Merge Early and Late Leaf Spot into Tikka (4 Classes)",
+      "num_classes": 4,
+      "classes": [
+        "groundnut__tikka_leaf_spot",
+        "groundnut__rust",
+        "groundnut__nutrient_deficiency",
+        "groundnut__healthy"
+      ],
+      "training_distribution": {
+        "groundnut__tikka_leaf_spot": {
+          "count": 2236,
+          "percentage": 37.77
+        },
+        "groundnut__rust": {
+          "count": 2235,
+          "percentage": 37.75
+        },
+        "groundnut__nutrient_deficiency": {
+          "count": 1164,
+          "percentage": 19.66
+        },
+        "groundnut__healthy": {
+          "count": 285,
+          "percentage": 4.81
+        }
+      },
+      "total_training_samples": 5920,
+      "scorable_external_samples": 1152,
+      "oot_external_samples": 543,
+      "coarse_tikka_samples": 0,
+      "clinical_assessment": "Unifies leaf spot complex under standard Indian agronomic name. 432 Tikka samples become exact match. Does NOT fix healthy recall."
+    },
+    "OPTION_D": {
+      "name": "Comprehensive Agronomic Alignment (3 Classes) \u2014 RECOMMENDED",
+      "num_classes": 3,
+      "classes": [
+        "groundnut__tikka_leaf_spot",
+        "groundnut__rust",
+        "groundnut__healthy_or_abiotic"
+      ],
+      "training_distribution": {
+        "groundnut__tikka_leaf_spot": {
+          "count": 2236,
+          "percentage": 37.77
+        },
+        "groundnut__rust": {
+          "count": 2235,
+          "percentage": 37.75
+        },
+        "groundnut__healthy_or_abiotic": {
+          "count": 1449,
+          "percentage": 24.48
+        }
+      },
+      "total_training_samples": 5920,
+      "scorable_external_samples": 1152,
+      "oot_external_samples": 543,
+      "coarse_tikka_samples": 0,
+      "clinical_assessment": "Recommended production architecture. 1:1 alignment with TNAU/ICAR spray schedules. 1,152 external images scorable, 543 true OOT negative controls. Projected cross-source Macro-F1 > 0.88."
+    }
+  }
+}

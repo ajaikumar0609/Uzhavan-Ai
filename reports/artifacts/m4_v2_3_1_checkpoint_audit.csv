@@ -1,0 +1,13 @@
+Property,V2.2 S42,V2.3 S42,V2.3.1 S42,Verification
+Model Architecture,EfficientNetV2-S,EfficientNetV2-S,EfficientNetV2-S,IDENTICAL
+Classifier Head,"Linear(1280, 3)","Linear(1280, 3)","Linear(1280, 3)",IDENTICAL
+Parameter Count,"20,181,259","20,181,259","20,181,259",EXACT MATCH
+Total Epochs Run,15,15,15,IDENTICAL
+Best Selected Epoch,Epoch 1 (out of 15),Epoch 1 (out of 15),Epoch 5 (out of 15),DIVERGENT
+Validation Macro-F1,1.0000,1.0000,1.0000,SATURATED CEILING
+Epochs with Val F1 == 1.0000,14 / 15 epochs,14 / 15 epochs,10 / 15 epochs,EXTREME CEILING TIE
+Selection Tie-Breaking Rule,Strict '>' (First win kept),Strict '>' (First win kept),Strict '>' (First win kept),IDENTICAL CODE
+Epoch 1 Canonical Macro-F1,0.8548,0.8399,N/A (Epoch 5 selected),N/A
+Val Set Composition,"1,268 (310 H, 479 R, 479 T)","1,268 (310 H, 479 R, 479 T)","1,268 (310 H, 479 R, 479 T)",IDENTICAL
+Val Pure-Green Count,61 / 310 Healthy,61 / 310 Healthy,61 / 310 Healthy,IDENTICAL
+Internal Val Error Sensitivity,0 errors on val,0 errors on val,0 errors on val,100% BLIND TO FIELD OOD

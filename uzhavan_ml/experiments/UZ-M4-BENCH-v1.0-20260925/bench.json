@@ -1,0 +1,18 @@
+{
+ "device": "mps",
+ "torch": "2.14.0",
+ "machine": "arm64",
+ "weights": "IMAGENET1K_V1 (torchvision)",
+ "train_img_per_s_bs16": 21.7,
+ "mps_driver_mem_gb_bs16": 4.04,
+ "train_img_per_s_bs32": 24.0,
+ "mps_driver_mem_gb_bs32": 6.75,
+ "decode_img_per_s_in_blackgram_bpld_ap": 152.1,
+ "decode_img_per_s_in_coconut_tree_disease": 95.2,
+ "decode_img_per_s_in_groundnut_wb_sasmal": 8.7,
+ "decode_img_per_s_in_sugarcane_leaf_disease_mh": 173.9,
+ "decode_img_per_s_in_tn_multicrop_vitc": 354.0,
+ "train_images": 19192,
+ "est_minutes_per_epoch_compute_only": 13.3,
+ "est_hours_3seeds_x30epochs_compute_only": 20.0
+}

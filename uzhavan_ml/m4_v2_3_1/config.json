@@ -1,0 +1,79 @@
+{
+  "experiment_series": "M4_V2_3_1",
+  "name": "UZ-M4-v2.3.1-groundnut-s1-triclass-balance",
+  "version": "2.3.1",
+  "date_created": "2026-09-28",
+  "objective": "Recover Rust recall while retaining Healthy recall gains via 1:2 green healthy oversampling and 1.25x Rust loss weighting",
+  "architecture": {
+    "backbone": "efficientnet_v2_s",
+    "pretrained": "IMAGENET1K_V1",
+    "dropout": 0.2,
+    "num_classes": 3,
+    "classes": [
+      "groundnut__healthy_or_abiotic",
+      "groundnut__rust",
+      "groundnut__tikka_leaf_spot"
+    ]
+  },
+  "training": {
+    "epochs": 15,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "lr": 1e-4,
+    "weight_decay": 1e-2,
+    "amp": true,
+    "loss": "wce",
+    "rust_weight_mult": 1.25,
+    "seed": 42
+  },
+  "sampler": {
+    "type": "TargetedPureGreenHealthyWeightedRandomSampler",
+    "pure_green_filter": {
+      "canonical_id": "groundnut__healthy_or_abiotic",
+      "v1_canonical_id": "groundnut__healthy",
+      "original_label": "groundnut_healthy"
+    },
+    "reference_class": "groundnut__tikka_leaf_spot",
+    "target_exposure_ratio": 0.5,
+    "pure_green_samples_count": 285,
+    "tikka_samples_count": 2236,
+    "rust_samples_count": 2235,
+    "nutrient_deficiency_count": 1164,
+    "pure_green_weight_multiplier": 3.9228070175438596,
+    "total_epoch_weight_sum": 6753.0,
+    "epoch_samples_policy": "dataset_size",
+    "num_samples_per_epoch": 5920
+  },
+  "augmentations": {
+    "resize": [256, 256],
+    "crop_size": 224,
+    "scale_range": [0.6, 1.0],
+    "ratio_range": [0.8, 1.25],
+    "hflip_prob": 0.5,
+    "rotation_degrees": 20,
+    "color_jitter": {
+      "brightness": 0.2,
+      "contrast": 0.2,
+      "saturation": 0.2,
+      "hue": 0.05
+    },
+    "shadow_simulation": {
+      "prob": 0.35,
+      "darkening_range": [0.35, 0.65],
+      "area_range": [0.05, 0.35]
+    },
+    "gaussian_blur": {
+      "prob": 0.2,
+      "kernel_size": [3, 5],
+      "sigma": [0.1, 1.5]
+    }
+  },
+  "manifest": "m4_v2/manifests/groundnut_v2.csv",
+  "expected_manifest_sha256": "6768c740a0bc32ec45be08237c564e0be153a610caab9909196c1a0c123a4cfe",
+  "success_criteria": {
+    "healthy_recall_min": 0.80,
+    "rust_recall_min": 0.90,
+    "tikka_recall_min": 0.96,
+    "canonical_macro_f1_min": 0.86
+  }
+}

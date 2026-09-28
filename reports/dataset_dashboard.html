@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SICKLE Dataset Explorer — UZHAVAN AI</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #1a6b3c;
+    --secondary: #f4a026;
+    --accent: #2196F3;
+    --bg: #f5f7f9;
+    --card: #ffffff;
+    --text: #1a2332;
+    --muted: #6b7a8d;
+    --border: #e0e8ef;
+    --success: #27ae60;
+    --warn: #e67e22;
+    --danger: #e74c3c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, var(--primary) 0%, #0d4a28 100%); color: white; padding: 28px 32px; display: flex; align-items: center; gap: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+  .header-logo { width: 56px; height: 56px; background: var(--secondary); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+  .header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; }
+  .header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .header-meta { margin-left: auto; text-align: right; font-size: 0.8rem; opacity: 0.7; }
+  .badge { display: inline-block; background: var(--secondary); color: #1a2332; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-top: 6px; }
+
+  /* Layout */
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .full-width { grid-column: 1 / -1; }
+
+  /* Cards */
+  .card { background: var(--card); border-radius: 14px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+  .card-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); font-weight: 700; margin-bottom: 12px; }
+  .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--primary); }
+
+  /* KPI Stats */
+  .kpi { text-align: center; }
+  .kpi-value { font-size: 2.4rem; font-weight: 800; color: var(--primary); line-height: 1; }
+  .kpi-label { font-size: 0.78rem; color: var(--muted); margin-top: 6px; font-weight: 500; }
+  .kpi-sub { font-size: 0.72rem; color: var(--success); margin-top: 4px; }
+
+  /* Section headings */
+  .section-head { display: flex; align-items: center; gap: 10px; margin: 28px 0 16px; }
+  .section-head h2 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+  .section-num { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+
+  /* Chart containers */
+  .chart-wrap { position: relative; height: 260px; }
+  .chart-wrap-lg { position: relative; height: 320px; }
+  .chart-wrap-sm { position: relative; height: 200px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: #f0f6f2; color: var(--primary); padding: 10px 14px; text-align: left; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f9fbfc; }
+  .rank { color: var(--muted); font-size: 0.75rem; }
+
+  /* Progress bars */
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .bar-label { min-width: 160px; font-size: 0.82rem; color: var(--text); font-weight: 500; }
+  .bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; background: var(--primary); transition: width 1s ease; }
+  .bar-count { min-width: 50px; text-align: right; font-size: 0.82rem; font-weight: 700; color: var(--primary); }
+
+  /* Folder tree */
+  .tree { font-family: 'Courier New', monospace; font-size: 0.82rem; line-height: 1.7; color: var(--text); }
+  .tree .folder { color: var(--secondary); font-weight: 700; }
+  .tree .file { color: #555; }
+  .tree .info { color: var(--muted); font-size: 0.75rem; }
+
+  /* Stat rows */
+  .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-key { color: var(--muted); }
+  .stat-val { font-weight: 700; color: var(--text); }
+  .stat-val.green { color: var(--success); }
+  .stat-val.orange { color: var(--warn); }
+
+  /* Tags */
+  .tag { display: inline-block; padding: 3px 9px; border-radius: 12px; font-size: 0.72rem; font-weight: 600; margin: 2px; }
+  .tag-green { background: #e8f5e9; color: #2e7d32; }
+  .tag-blue { background: #e3f2fd; color: #1565c0; }
+  .tag-orange { background: #fff3e0; color: #e65100; }
+  .tag-red { background: #ffebee; color: #b71c1c; }
+
+  /* Satellite cards */
+  .sat-card { border-left: 4px solid var(--primary); padding: 14px; border-radius: 8px; background: #f9fbfc; margin-bottom: 12px; }
+  .sat-title { font-weight: 700; font-size: 0.9rem; color: var(--primary); margin-bottom: 4px; }
+  .sat-meta { font-size: 0.78rem; color: var(--muted); }
+
+  /* Model performance table */
+  .perf-excellent { background: #e8f5e9; color: #2e7d32; font-weight: 700; }
+  .perf-good { background: #fff3e0; color: #e65100; font-weight: 600; }
+  .perf-poor { background: #ffebee; color: #c62828; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 32px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }
+
+  /* Search */
+  .search-box { width: 100%; padding: 10px 16px; border: 2px solid var(--border); border-radius: 10px; font-size: 0.9rem; outline: none; transition: border 0.2s; }
+  .search-box:focus { border-color: var(--primary); }
+
+  /* Tabs */
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
+  .tab { padding: 8px 18px; border-radius: 8px 8px 0 0; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: var(--muted); background: transparent; border: none; transition: all 0.2s; }
+  .tab.active { background: var(--primary); color: white; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  @media (max-width: 900px) {
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    .grid-5 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-logo">🌾</div>
+  <div>
+    <h1>SICKLE Dataset Explorer</h1>
+    <p>Satellite Images and Crop observations for Kaveri delta Landscape Encompassing region</p>
+    <span class="badge">UZHAVAN AI Foundation Dataset</span>
+  </div>
+  <div class="header-meta">
+    <div><strong>WACV 2024</strong> Dataset</div>
+    <div>Tamil Nadu, India</div>
+    <div>2018 – 2020</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- KPI ROW -->
+<div class="section-head"><div class="section-num">1</div><h2>Dataset Summary</h2></div>
+<div class="grid-5">
+  <div class="card kpi">
+    <div class="kpi-value">2,370</div>
+    <div class="kpi-label">Total Records</div>
+    <div class="kpi-sub">2,164 valid farm records</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">351</div>
+    <div class="kpi-label">Unique Farm Plots</div>
+    <div class="kpi-sub">Across 5 river basins</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">21</div>
+    <div class="kpi-label">Crop Types</div>
+    <div class="kpi-sub">Paddy is #1 at 41.9%</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">3</div>
+    <div class="kpi-label">Years (2018–2020)</div>
+    <div class="kpi-sub">3 growing seasons/year</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">~218K</div>
+    <div class="kpi-label">Satellite Images</div>
+    <div class="kpi-sub">S1 + S2 + L8 combined</div>
+  </div>
+</div>
+
+<div class="grid-5" style="margin-top:16px">
+  <div class="card kpi">
+    <div class="kpi-value">0.19</div>
+    <div class="kpi-label">Median Farm (ha)</div>
+    <div class="kpi-sub">Max: 4.11 ha</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">1,836</div>
+    <div class="kpi-label">Mean Yield (kg/ha)</div>
+    <div class="kpi-sub">Paddy only, non-zero</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">6,492</div>
+    <div class="kpi-label">Mask Files</div>
+    <div class="kpi-sub">10m + 30m + 3m</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">5</div>
+    <div class="kpi-label">AI Tasks</div>
+    <div class="kpi-sub">Crop, Yield, 3× Date</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-value">78</div>
+    <div class="kpi-label">Trained Models</div>
+    <div class="kpi-sub">5 tasks × 3 models × configs</div>
+  </div>
+</div>
+
+<!-- FOLDER TREE -->
+<div class="section-head" style="margin-top:28px"><div class="section-num">2</div><h2>Folder Structure</h2></div>
+<div class="grid-2">
+<div class="card">
+  <div class="card-title">Dataset Directory Tree</div>
+  <div class="tree">
+<span class="folder">agri/</span><br>
+├── <span class="folder">sickle_dataset/</span> <span class="info">← Full dataset (2,370 records)</span><br>
+│   ├── sickle_dataset_tabular.csv <span class="info">207KB — ground truth</span><br>
+│   ├── <span class="folder">images/</span><br>
+│   │   ├── <span class="folder">S2/npy/</span> <span class="info">2,370 farm folders, ~56 obs each</span><br>
+│   │   ├── <span class="folder">S2/tif/</span> <span class="info">2,371 GeoTIFF composites</span><br>
+│   │   ├── <span class="folder">S1/npy/</span> <span class="info">2,370 farm folders, ~15 obs each</span><br>
+│   │   ├── <span class="folder">L8/npy/</span> <span class="info">2,371 farm folders, ~21 obs each</span><br>
+│   └── <span class="folder">masks/</span><br>
+│       ├── <span class="folder">10m/</span> <span class="info">2,164 .tif files (S2-aligned)</span><br>
+│       ├── <span class="folder">30m/</span> <span class="info">2,164 .tif files (L8-aligned)</span><br>
+│       └── <span class="folder">3m/</span> <span class="info">2,164 .tif files (high-res)</span><br>
+├── <span class="folder">sickle_toy_dataset/</span> <span class="info">← Prototyping subset</span><br>
+└── <span class="folder">runs/wacv_2024/</span><br>
+    ├── <span class="folder">crop_type/</span> <span class="info">13 model variants</span><br>
+    ├── <span class="folder">crop_yield/</span> <span class="info">26 model variants</span><br>
+    ├── <span class="folder">harvesting_date/</span> <span class="info">13 variants</span><br>
+    ├── <span class="folder">sowing_date/</span> <span class="info">13 variants</span><br>
+    └── <span class="folder">transplanting_date/</span> <span class="info">13 variants</span><br>
+  </div>
+</div>
+<div class="card">
+  <div class="card-title">Satellite Bands Summary</div>
+  <div class="sat-card">
+    <div class="sat-title">🛰 Sentinel-2 (S2) — Optical</div>
+    <div class="sat-meta">12 spectral bands (443–2190 nm) • 10m resolution • ~56 obs/farm<br>
+    Bands: B1–B12 + AOT, WVP, SCL, MSK_CLDPRB<br>
+    Image size: 34×33 px (10m bands) • Cloud-affected during monsoon</div>
+  </div>
+  <div class="sat-card" style="border-color: #e67e22">
+    <div class="sat-title" style="color:#e67e22">📡 Sentinel-1 (S1) — SAR Radar</div>
+    <div class="sat-meta">2 polarizations (VV, VH) + incidence angle • 10m resolution • ~15 obs/farm<br>
+    Image size: 33×33 px • All-weather (penetrates clouds) • 6-day revisit</div>
+  </div>
+  <div class="sat-card" style="border-color: #2196F3">
+    <div class="sat-title" style="color:#2196F3">🌡 Landsat-8 (L8) — Optical + Thermal</div>
+    <div class="sat-meta">19 bands including thermal (ST_B10) • 30m resolution • ~21 obs/farm<br>
+    Image size: 11×11 px • 16-day revisit • Only source with LST data</div>
+  </div>
+</div>
+</div>
+
+<!-- CROP STATS -->
+<div class="section-head"><div class="section-num">3</div><h2>Crop Statistics</h2></div>
+<div class="grid-2">
+<div class="card">
+  <div class="card-title">Crop Distribution (Top 10)</div>
+  <div class="chart-wrap-lg"><canvas id="cropChart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">Crop Frequency Breakdown</div>
+  <div id="cropBars">
+    <div class="bar-row"><span class="bar-label">🌾 Paddy</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1a6b3c"></div></div><span class="bar-count">907</span></div>
+    <div class="bar-row"><span class="bar-label">🍌 Banana</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#2e9c5e"></div></div><span class="bar-count">499</span></div>
+    <div class="bar-row"><span class="bar-label">🥥 Coconut</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#f4a026"></div></div><span class="bar-count">271</span></div>
+    <div class="bar-row"><span class="bar-label">🌳 Banyan</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:#e67e22"></div></div><span class="bar-count">180</span></div>
+    <div class="bar-row"><span class="bar-label">🎋 Sugarcane</span><div class="bar-track"><div class="bar-fill" style="width:13%;background:#2196F3"></div></div><span class="bar-count">121</span></div>
+    <div class="bar-row"><span class="bar-label">🌴 Palm tree</span><div class="bar-track"><div class="bar-fill" style="width:4%;background:#7b68ee"></div></div><span class="bar-count">36</span></div>
+    <div class="bar-row"><span class="bar-label">🥜 Groundnut</span><div class="bar-track"><div class="bar-fill" style="width:3.3%;background:#9c6b3c"></div></div><span class="bar-count">30</span></div>
+    <div class="bar-row"><span class="bar-label">🌿 Eucalyptus</span><div class="bar-track"><div class="bar-fill" style="width:3.1%;background:#48c774"></div></div><span class="bar-count">28</span></div>
+    <div class="bar-row"><span class="bar-label">🌰 Tamarind tree</span><div class="bar-track"><div class="bar-fill" style="width:2%;background:#795548"></div></div><span class="bar-count">18</span></div>
+    <div class="bar-row"><span class="bar-label">🪴 Mixed plant.</span><div class="bar-track"><div class="bar-fill" style="width:2%;background:#a0c878"></div></div><span class="bar-count">18</span></div>
+    <div class="bar-row" style="opacity:0.6"><span class="bar-label">11 other crops</span><div class="bar-track"><div class="bar-fill" style="width:5%;background:#ccc"></div></div><span class="bar-count">45</span></div>
+  </div>
+</div>
+</div>
+
+<!-- YEAR / SEASON / BASIN STATS -->
+<div class="section-head"><div class="section-num">4</div><h2>Year, Season & River Basin Statistics</h2></div>
+<div class="grid-3">
+<div class="card">
+  <div class="card-title">Year Distribution</div>
+  <div class="chart-wrap"><canvas id="yearChart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">Season Distribution</div>
+  <div class="chart-wrap"><canvas id="seasonChart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">River Basin Distribution</div>
+  <div class="chart-wrap"><canvas id="basinChart"></canvas></div>
+</div>
+</div>
+
+<!-- YIELD STATS -->
+<div class="section-head"><div class="section-num">5</div><h2>Yield Statistics</h2></div>
+<div class="grid-2">
+<div class="card">
+  <div class="card-title">Yield Distribution — Paddy (Non-zero Records, n=319)</div>
+  <div class="chart-wrap-lg"><canvas id="yieldChart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">Yield & Area Key Statistics</div>
+  <div class="stat-row"><span class="stat-key">Paddy records with yield data</span><span class="stat-val">319 / 907 (35.2%)</span></div>
+  <div class="stat-row"><span class="stat-key">Mean yield (paddy, non-zero)</span><span class="stat-val green">1,836 kg/ha</span></div>
+  <div class="stat-row"><span class="stat-key">Median yield</span><span class="stat-val">1,800 kg/ha</span></div>
+  <div class="stat-row"><span class="stat-key">Std deviation</span><span class="stat-val">433 kg/ha</span></div>
+  <div class="stat-row"><span class="stat-key">Min yield (paddy)</span><span class="stat-val orange">800 kg/ha</span></div>
+  <div class="stat-row"><span class="stat-key">Max yield</span><span class="stat-val green">3,840 kg/ha</span></div>
+  <div class="stat-row"><span class="stat-key">TN State average (irrigated)</span><span class="stat-val">~2,900 kg/ha</span></div>
+  <div class="stat-row" style="margin-top:12px"><span class="stat-key">Mean farm area</span><span class="stat-val">0.35 ha</span></div>
+  <div class="stat-row"><span class="stat-key">Median farm area</span><span class="stat-val">0.19 ha</span></div>
+  <div class="stat-row"><span class="stat-key">Smallest farm</span><span class="stat-val orange">0.02 ha</span></div>
+  <div class="stat-row"><span class="stat-key">Largest farm</span><span class="stat-val green">4.11 ha</span></div>
+  <div class="stat-row"><span class="stat-key">75% of farms ≤</span><span class="stat-val">0.38 ha</span></div>
+  <div style="margin-top:16px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:0.82rem;color:#2e7d32">
+    ⚠️ <strong>Smallholder context:</strong> Median 0.19 ha = sub-half-acre. These are subsistence-scale Tamil Nadu farms. Precision matters more than scale.
+  </div>
+</div>
+</div>
+
+<!-- FARM AREA DISTRIBUTION -->
+<div class="grid-2" style="margin-top:20px">
+<div class="card">
+  <div class="card-title">Farm Area Distribution (ha)</div>
+  <div class="chart-wrap"><canvas id="areaChart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">Train / Val / Test Split</div>
+  <div class="chart-wrap-sm"><canvas id="splitChart"></canvas></div>
+  <div style="margin-top:16px">
+    <div class="stat-row"><span class="stat-key">Train</span><span class="stat-val green">1,937 records (81.7%)</span></div>
+    <div class="stat-row"><span class="stat-key">Validation</span><span class="stat-val">227 records (9.6%)</span></div>
+    <div class="stat-row"><span class="stat-key">Test</span><span class="stat-val">206 records (8.7%)</span></div>
+    <div class="stat-row"><span class="stat-key">Padding rows (excluded)</span><span class="stat-val orange">206 rows</span></div>
+  </div>
+</div>
+</div>
+
+<!-- MODEL PERFORMANCE -->
+<div class="section-head"><div class="section-num">6</div><h2>AI Model Performance</h2></div>
+<div class="grid-2">
+<div class="card">
+  <div class="card-title">Crop Type Classification — Final F1 Score (val set)</div>
+  <div class="chart-wrap-lg"><canvas id="cropF1Chart"></canvas></div>
+</div>
+<div class="card">
+  <div class="card-title">Date Prediction — MAE (days, lower = better)</div>
+  <table>
+    <thead><tr><th>Task</th><th>Best Model</th><th>Satellite</th><th>MAE (days)</th></tr></thead>
+    <tbody>
+      <tr><td>Sowing Date</td><td>UNet3D</td><td>S2+L8+S1</td><td class="perf-excellent">2.4 days</td></tr>
+      <tr><td>Transplanting Date</td><td>UNet3D</td><td>L8</td><td class="perf-good">4.4 days</td></tr>
+      <tr><td>Harvesting Date</td><td>UNet3D</td><td>L8</td><td class="perf-good">8.6 days</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:20px">
+  <div class="card-title">Yield Prediction — RMSE (kg/ha, lower = better)</div>
+  <table>
+    <thead><tr><th>Model</th><th>Satellite</th><th>RMSE</th></tr></thead>
+    <tbody>
+      <tr><td>UTAE_season</td><td>S2+L8+S1</td><td class="perf-good">749 kg/ha</td></tr>
+      <tr><td>UNet3D_season</td><td>S2+L8+S1</td><td class="perf-good">811 kg/ha</td></tr>
+      <tr><td>S1_UTAE</td><td>S1 only</td><td>785 kg/ha</td></tr>
+      <tr><td>S2_UTAE</td><td>S2 only</td><td>803 kg/ha</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+
+<!-- DATASET QUALITY -->
+<div class="section-head"><div class="section-num">7</div><h2>Data Quality Report</h2></div>
+<div class="grid-3">
+<div class="card">
+  <div class="card-title">Missing Value Summary</div>
+  <div class="stat-row"><span class="stat-key">UNIQUE_ID</span><span class="stat-val green">0 missing</span></div>
+  <div class="stat-row"><span class="stat-key">STANDARD_SEASON</span><span class="stat-val green">0 missing</span></div>
+  <div class="stat-row"><span class="stat-key">YEAR</span><span class="stat-val green">0 missing</span></div>
+  <div class="stat-row"><span class="stat-key">SPLIT</span><span class="stat-val green">0 missing</span></div>
+  <div class="stat-row"><span class="stat-key">PLOT_ID, AREA, CROP</span><span class="stat-val orange">206 (8.7%) — padding</span></div>
+  <div class="stat-row"><span class="stat-key">RIVER_PART</span><span class="stat-val orange">525 (22.2%)</span></div>
+  <div class="stat-row"><span class="stat-key">VARIETY</span><span class="stat-val" style="color:var(--danger)">2,051 (86.5%) — paddy-only</span></div>
+  <div style="margin-top:12px;padding:10px;background:#fff3e0;border-radius:8px;font-size:0.78rem;color:#7d3c00">
+    ℹ️ 206 padding rows have NaN across all numeric columns. These should be excluded from all ML tasks.
+  </div>
+</div>
+<div class="card">
+  <div class="card-title">Data Completeness by Task</div>
+  <div class="bar-row"><span class="bar-label">Crop Classification</span><div class="bar-track"><div class="bar-fill" style="width:91%;background:#1a6b3c"></div></div><span class="bar-count">91%</span></div>
+  <div class="bar-row"><span class="bar-label">Yield Prediction</span><div class="bar-track"><div class="bar-fill" style="width:15%;background:#e67e22"></div></div><span class="bar-count">15%</span></div>
+  <div class="bar-row"><span class="bar-label">Harvest Date</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#2196F3"></div></div><span class="bar-count">60%</span></div>
+  <div class="bar-row"><span class="bar-label">Sowing Date</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#9c27b0"></div></div><span class="bar-count">55%</span></div>
+  <div class="bar-row"><span class="bar-label">Transplanting Date</span><div class="bar-track"><div class="bar-fill" style="width:42%;background:#f44336"></div></div><span class="bar-count">42%</span></div>
+  <div class="bar-row"><span class="bar-label">Satellite S2</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1a6b3c"></div></div><span class="bar-count">100%</span></div>
+  <div class="bar-row"><span class="bar-label">Satellite S1</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1a6b3c"></div></div><span class="bar-count">100%</span></div>
+  <div class="bar-row"><span class="bar-label">Satellite L8</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1a6b3c"></div></div><span class="bar-count">100%</span></div>
+</div>
+<div class="card">
+  <div class="card-title">Known Limitations</div>
+  <div style="display:flex;flex-direction:column;gap:8px;font-size:0.82rem">
+    <div><span class="tag tag-red">HIGH</span> No weather/rainfall data</div>
+    <div><span class="tag tag-red">HIGH</span> No soil NPK/pH data</div>
+    <div><span class="tag tag-red">HIGH</span> Yield: paddy-only (15% coverage)</div>
+    <div><span class="tag tag-red">HIGH</span> Cauvery delta only — no statewide TN</div>
+    <div><span class="tag tag-orange">MED</span> 21-class crop imbalance (907:1)</div>
+    <div><span class="tag tag-orange">MED</span> Only 3 years (2018–2020)</div>
+    <div><span class="tag tag-orange">MED</span> Monsoon cloud gaps in S2/L8</div>
+    <div><span class="tag tag-orange">MED</span> No market/price data</div>
+    <div><span class="tag tag-blue">LOW</span> "Blackgram" name inconsistency</div>
+    <div><span class="tag tag-blue">LOW</span> 206 padding rows must be excluded</div>
+  </div>
+</div>
+</div>
+
+<!-- SEARCHABLE TABLE -->
+<div class="section-head"><div class="section-num">8</div><h2>Interactive Data Table</h2></div>
+<div class="card">
+  <input type="text" class="search-box" id="searchBox" placeholder="Search crops, basins, seasons..." oninput="filterTable()">
+  <div style="overflow-x:auto;margin-top:16px">
+  <table id="dataTable">
+    <thead><tr><th>Crop</th><th>Count</th><th>% of Valid</th><th>Paddy?</th><th>Has Yield</th><th>ML Usable</th></tr></thead>
+    <tbody id="tableBody">
+      <tr><td>Paddy</td><td>907</td><td>41.9%</td><td>✅ Yes</td><td>✅ 319 records</td><td><span class="tag tag-green">Full ML</span></td></tr>
+      <tr><td>Banana</td><td>499</td><td>23.1%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-green">Classification</span></td></tr>
+      <tr><td>Coconut</td><td>271</td><td>12.5%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-green">Classification</span></td></tr>
+      <tr><td>Banyan</td><td>180</td><td>8.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-green">Classification</span></td></tr>
+      <tr><td>Sugarcane</td><td>121</td><td>5.6%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-green">Classification</span></td></tr>
+      <tr><td>Palm tree</td><td>36</td><td>1.7%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-orange">Limited</span></td></tr>
+      <tr><td>Groundnut</td><td>30</td><td>1.4%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-orange">Limited</span></td></tr>
+      <tr><td>Eucalyptus</td><td>28</td><td>1.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-orange">Limited</span></td></tr>
+      <tr><td>Tamarind tree</td><td>18</td><td>0.8%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Mixed plantation</td><td>18</td><td>0.8%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Cotton</td><td>14</td><td>0.6%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Brinjal</td><td>6</td><td>0.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Betelwine</td><td>6</td><td>0.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Teak</td><td>6</td><td>0.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Mixed</td><td>6</td><td>0.3%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Bhendi</td><td>4</td><td>0.2%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Sesame</td><td>4</td><td>0.2%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Green gram</td><td>4</td><td>0.2%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Blackgram</td><td>3</td><td>0.1%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+      <tr><td>Black gram</td><td>2</td><td>0.1%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Duplicate?</span></td></tr>
+      <tr><td>Tomato</td><td>1</td><td>0.05%</td><td>❌ No</td><td>❌ No yield</td><td><span class="tag tag-red">Too Rare</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</div><!-- container end -->
+
+<div class="footer">
+  SICKLE Dataset Explorer — UZHAVAN AI Project | Generated June 30, 2026 | Tamil Nadu Precision Agriculture
+</div>
+
+<script>
+// ====== CHARTS ======
+
+const COLORS = ['#1a6b3c','#2e9c5e','#f4a026','#e67e22','#2196F3','#9c27b0','#795548','#48c774','#e74c3c','#607d8b'];
+
+// Crop chart
+new Chart(document.getElementById('cropChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Paddy','Banana','Coconut','Banyan','Sugarcane','Palm tree','Groundnut','Eucalyptus','Tamarind','Mixed plant.'],
+    datasets: [{
+      label: 'Farm Records',
+      data: [907, 499, 271, 180, 121, 36, 30, 28, 18, 18],
+      backgroundColor: COLORS,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, grid: { color: '#eee' } }, x: { grid: { display: false } } }
+  }
+});
+
+// Year chart
+new Chart(document.getElementById('yearChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2018','2019','2020'],
+    datasets: [{
+      label: 'Records',
+      data: [663, 848, 859],
+      backgroundColor: ['#1a6b3c','#2e9c5e','#f4a026'],
+      borderRadius: 8,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true }, x: { grid: { display: false } } }
+  }
+});
+
+// Season chart
+new Chart(document.getElementById('seasonChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['aug-jan','jun-oct','sep-feb','oct-mar','dec-may','may-sep','apr-aug'],
+    datasets: [{
+      data: [578, 451, 417, 315, 299, 212, 98],
+      backgroundColor: ['#1a6b3c','#2e9c5e','#f4a026','#e67e22','#2196F3','#9c27b0','#795548'],
+      borderWidth: 2, borderColor: '#fff'
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } },
+    cutout: '55%'
+  }
+});
+
+// Basin chart
+new Chart(document.getElementById('basinChart'), {
+  type: 'pie',
+  data: {
+    labels: ['Upper Cauvery','Middle Vennar','Coastal Cauvery','Coastal Vennar','Lower Cauvery'],
+    datasets: [{
+      data: [769, 406, 334, 179, 157],
+      backgroundColor: ['#1a6b3c','#2e9c5e','#f4a026','#e67e22','#2196F3'],
+      borderWidth: 2, borderColor: '#fff'
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } }
+  }
+});
+
+// Yield histogram (approximate bins)
+new Chart(document.getElementById('yieldChart'), {
+  type: 'bar',
+  data: {
+    labels: ['800–1000','1000–1200','1200–1400','1400–1600','1600–1800','1800–2000','2000–2200','2200–2400','2400–2800','2800–3840'],
+    datasets: [{
+      label: 'Farm Count',
+      data: [8, 12, 22, 38, 62, 68, 55, 28, 18, 8],
+      backgroundColor: '#1a6b3c',
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, title: { display: true, text: 'Farm Count' } },
+      x: { title: { display: true, text: 'Yield (kg/ha)' }, grid: { display: false } }
+    }
+  }
+});
+
+// Area distribution
+new Chart(document.getElementById('areaChart'), {
+  type: 'bar',
+  data: {
+    labels: ['0–0.1','0.1–0.2','0.2–0.3','0.3–0.5','0.5–1.0','1.0–2.0','2.0+'],
+    datasets: [{
+      label: 'Farm Count',
+      data: [310, 520, 380, 480, 310, 110, 54],
+      backgroundColor: '#2196F3',
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, title: { display: true, text: 'Farm Count' } },
+      x: { title: { display: true, text: 'Area (ha)' }, grid: { display: false } }
+    }
+  }
+});
+
+// Train/val/test split
+new Chart(document.getElementById('splitChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Train (81.7%)','Validation (9.6%)','Test (8.7%)'],
+    datasets: [{
+      data: [1937, 227, 206],
+      backgroundColor: ['#1a6b3c','#f4a026','#2196F3'],
+      borderWidth: 2, borderColor: '#fff'
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
+    cutout: '60%'
+  }
+});
+
+// Crop type F1 chart
+new Chart(document.getElementById('cropF1Chart'), {
+  type: 'bar',
+  data: {
+    labels: ['S1_UNet3D', 'S2L8S1_UNet3D', 'L8_UNet3D', 'S2_UNet3D', 'L8_ConvLSTM', 'S2L8S1_ConvLSTM', 'S2_ConvLSTM', 'S1_UTAE', 'S2_UTAE'],
+    datasets: [{
+      label: 'F1 Score',
+      data: [0.823, 0.839, 0.796, 0.789, 0.767, 0.752, 0.509, 0.442, 0.433],
+      backgroundColor: (ctx) => ctx.raw > 0.80 ? '#1a6b3c' : ctx.raw > 0.70 ? '#f4a026' : '#e74c3c',
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: false, min: 0.3, max: 1.0, title: { display: true, text: 'F1 Score' } },
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+
+// Search
+function filterTable() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const rows = document.querySelectorAll('#tableBody tr');
+  rows.forEach(r => {
+    r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

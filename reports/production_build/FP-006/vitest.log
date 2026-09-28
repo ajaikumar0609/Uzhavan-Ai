@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/ajaikumarn/Desktop/agri/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  37 passed (37)
+   Start at  16:31:17
+   Duration  2.56s (transform 35ms, setup 0ms, import 99ms, tests 2.02s, environment 349ms)
+

@@ -1,0 +1,596 @@
+EEEEEEEEEE.............................................................. [ 90%]
+........                                                                 [100%]
+==================================== ERRORS ====================================
+___________________ ERROR at setup of test_send_otp_success ____________________
+
+self = <Coroutine test_send_otp_success>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+________________ ERROR at setup of test_send_otp_invalid_phone _________________
+
+self = <Coroutine test_send_otp_invalid_phone>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+_________________ ERROR at setup of test_send_otp_rate_limited _________________
+
+self = <Coroutine test_send_otp_rate_limited>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+__________________ ERROR at setup of test_verify_otp_success ___________________
+
+self = <Coroutine test_verify_otp_success>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+___________________ ERROR at setup of test_verify_otp_wrong ____________________
+
+self = <Coroutine test_verify_otp_wrong>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+__________________ ERROR at setup of test_verify_otp_expired ___________________
+
+self = <Coroutine test_verify_otp_expired>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+________________ ERROR at setup of test_verify_otp_no_otp_found ________________
+
+self = <Coroutine test_verify_otp_no_otp_found>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+____________________ ERROR at setup of test_get_me_no_token ____________________
+
+self = <Coroutine test_get_me_no_token>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+_________________ ERROR at setup of test_get_me_invalid_token __________________
+
+self = <Coroutine test_get_me_invalid_token>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+____________________ ERROR at setup of test_get_me_success _____________________
+
+self = <Coroutine test_get_me_success>
+
+    def setup(self) -> None:
+        runner_fixture_id = f"_{self._loop_scope}_scoped_runner"
+        if runner_fixture_id not in self.fixturenames:
+            self.fixturenames.append(runner_fixture_id)
+        # When loop factories are configured, resolve the loop factory
+        # fixture early so that a factory variant change cascades cache
+        # invalidation before any async fixture checks its cache.
+        hook_caller = self.config.hook.pytest_asyncio_loop_factories
+        if hook_caller.get_hookimpls():
+            _ = self._request.getfixturevalue(_asyncio_loop_factory.__name__)
+>       return super().setup()
+               ^^^^^^^^^^^^^^^
+
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:558: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:944: in pytest_fixture_setup
+    hook_result = yield
+                  ^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:407: in _asyncgen_fixture_wrapper
+    result = runner.run(setup(), context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py:127: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+/opt/homebrew/lib/python3.14/site-packages/pytest_asyncio/plugin.py:403: in setup
+    res = await gen_obj.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/conftest.py:36: in auth_client
+    from api.auth.main import app, get_db, get_redis
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """UZHAVAN AI — Farmer Authentication Service (FP-001).
+    
+    Routes:
+      POST /auth/send-otp      — request OTP (rate-limited)
+      POST /auth/verify-otp    — verify OTP, get JWT
+      POST /farmers/profile    — create/update farmer profile (requires JWT)
+      POST /farms              — register a farm (requires JWT)
+      GET  /farmers/me         — fetch farmer profile + farms (requires JWT)
+    """
+    
+    import os
+    import re
+    from contextlib import asynccontextmanager
+    from datetime import datetime, timedelta, timezone
+    from typing import Annotated, Any, AsyncGenerator
+    
+>   import asyncpg
+E   ModuleNotFoundError: No module named 'asyncpg'
+
+api/auth/main.py:17: ModuleNotFoundError
+=========================== short test summary info ============================
+ERROR tests/api/auth/test_main.py::test_send_otp_success - ModuleNotFoundErro...
+ERROR tests/api/auth/test_main.py::test_send_otp_invalid_phone - ModuleNotFou...
+ERROR tests/api/auth/test_main.py::test_send_otp_rate_limited - ModuleNotFoun...
+ERROR tests/api/auth/test_main.py::test_verify_otp_success - ModuleNotFoundEr...
+ERROR tests/api/auth/test_main.py::test_verify_otp_wrong - ModuleNotFoundErro...
+ERROR tests/api/auth/test_main.py::test_verify_otp_expired - ModuleNotFoundEr...
+ERROR tests/api/auth/test_main.py::test_verify_otp_no_otp_found - ModuleNotFo...
+ERROR tests/api/auth/test_main.py::test_get_me_no_token - ModuleNotFoundError...
+ERROR tests/api/auth/test_main.py::test_get_me_invalid_token - ModuleNotFound...
+ERROR tests/api/auth/test_main.py::test_get_me_success - ModuleNotFoundError:...
+70 passed, 10 errors in 31.33s
+python3 -m pytest -q 2>&1  1.48s user 0.17s system 5% cpu 31.933 total

@@ -1,0 +1,111 @@
+{
+ "root": "/var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my",
+ "results": [
+  {
+   "test": "T1 runtime loss exit code",
+   "pass": true,
+   "detail": "exit 137"
+  },
+  {
+   "test": "T1 one experiment dir",
+   "pass": true,
+   "detail": "['UZ-M4-v1.0-866b3c56-s1-SMOKE']"
+  },
+  {
+   "test": "T1 checkpoint_last after kill",
+   "pass": true,
+   "detail": "last_completed_epoch=1"
+  },
+  {
+   "test": "T1 status left 'running' (hard kill, like a Colab disconnect)",
+   "pass": true,
+   "detail": "running"
+  },
+  {
+   "test": "T1 no .tmp files left",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "test": "T1 resumed at epoch 2",
+   "pass": true,
+   "detail": "[resume] found checkpoint: /var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my/t1/UZ-M4-v1.0-866b3c56-s1-SMOKE/checkpoint_last.pt | [resume] last completed epoch 1, best val macro-F1 0.3095; resuming from epoch 2"
+  },
+  {
+   "test": "T1 epochs executed after resume = [2] only",
+   "pass": true,
+   "detail": "no epoch 0/1 re-run"
+  },
+  {
+   "test": "T1 model state restored exactly",
+   "pass": true,
+   "detail": "c819f1e541be2446 == c819f1e541be2446"
+  },
+  {
+   "test": "T1 phase boundary: epoch 2 starts the full fine-tune with a NEW optimizer (as in v1.0)",
+   "pass": true,
+   "detail": "True"
+  },
+  {
+   "test": "T1 history preserved + extended",
+   "pass": true,
+   "detail": "epochs [0, 1, 2]"
+  },
+  {
+   "test": "T1 still one dir; status completed",
+   "pass": true,
+   "detail": "completed"
+  },
+  {
+   "test": "T2 resumed at epoch 3",
+   "pass": true,
+   "detail": "3"
+  },
+  {
+   "test": "T2 optimizer loaded (mid-phase) and exact",
+   "pass": true,
+   "detail": "fcc62e25f4f6b632 == fcc62e25f4f6b632"
+  },
+  {
+   "test": "T2 model exact",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "T3 resumed at epoch 1 with head-phase optimizer restored exactly",
+   "pass": true,
+   "detail": "{'resumed_from': '/var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my/t3/UZ-M4-v1.0-866b3c56-s1-SMOKE/checkpoint_last.pt', 'start_epoch': 1, 'history_len': 1, 'model_state_sha': '6094d9e5da686bab', 'checkpoint_model_sha': '6094d9e5da686bab', 'optimizer_state_sha': 'b4c3d66203a7a875', 'checkpoint_optimizer_sha': 'b4c3d66203a7a875', 'optimizer_state_loaded': True, 'phase_boundary_new_optimizer': False, 'time': '2026-09-26T19:52:10'}"
+  },
+  {
+   "test": "T4 SIGTERM -> exit 130, status interrupted",
+   "pass": true,
+   "detail": "exit 130, status interrupted"
+  },
+  {
+   "test": "T4 prints where to resume",
+   "pass": true,
+   "detail": "[resume] INTERRUPTED (signal 15). Last completed epoch 0. Resume with the same command (--resume auto) or --resume /var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my/t4/UZ-M4-v1"
+  },
+  {
+   "test": "T4 checkpoint preserved",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "T4 resume completes",
+   "pass": true,
+   "detail": "completed"
+  },
+  {
+   "test": "T5 completed run skipped, no file changed",
+   "pass": true,
+   "detail": "[resume] UZ-M4-v1.0-866b3c56-s1-SMOKE is already COMPLETED; nothing to do (never overwritten)."
+  },
+  {
+   "test": "T6 resumed run identical to uninterrupted run",
+   "pass": true,
+   "detail": "straight [(0, 1.857698, 0.277778), (1, 1.670938, 0.309524), (2, 1.801561, 0.309524)] | resumed [(0, 1.857698, 0.277778), (1, 1.670938, 0.309524), (2, 1.801561, 0.309524)]"
+  }
+ ],
+ "t1_resume_log": "[resume] found checkpoint: /var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my/t1/UZ-M4-v1.0-866b3c56-s1-SMOKE/checkpoint_last.pt\n[resume] last completed epoch 1, best val macro-F1 0.3095; resuming from epoch 2\n{\"epoch\": 2, \"loss\": 1.8016, \"val_mean_macro_f1\": 0.3095}\n[checkpoint] epoch 2 saved -> /var/folders/k1/kj5jn_l96j588ts0_sq5mvmw0000gn/T/m4_resume_tests_b9_be_my/t1/UZ-M4-v1.0-866b3c56-s1-SMOKE/checkpoint_last.pt\ndone UZ-M4-v1.0-866b3c56-s1-SMOKE"
+}

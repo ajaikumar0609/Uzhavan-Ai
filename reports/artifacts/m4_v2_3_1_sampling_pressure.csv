@@ -1,0 +1,12 @@
+Metric,V2.2 S42,V2.3 S42,V2.3.1 S42
+Sampler Replacement Mode,False (Natural Shuffle),True (Replacement),True (Replacement)
+Assigned Weight w_green,1.000000,7.845614,3.922807
+Batch Draw Prob: Pure-Green Healthy,4.81%,28.41%,16.56%
+Batch Draw Prob: Nutrient Deficiency,19.66%,14.79%,17.24%
+Batch Draw Prob: Rust,37.75%,28.40%,33.10%
+Batch Draw Prob: Tikka,37.77%,28.41%,33.11%
+Exposure Ratio Green : Tikka,0.1275 (1:7.8),1.0000 (1:1.0),0.5000 (1:2.0)
+Expected Draws for 285 Green/Epoch,285.0,1681.8,980.1
+Expected Repeats per Green Image,1.00x,5.90x,3.44x
+Expected Unique Green Seen / Epoch,285 / 285 (100%),284.2 / 285 (99.7%),275.9 / 285 (96.8%)
+15-Epoch Total Green Exposure,"4,275 draws","25,226 draws","14,701 draws"

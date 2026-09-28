@@ -1,0 +1,13 @@
+Component,V2.2 S42,V2.3 S42,V2.3.1 S42,Shift
+Raw Healthy Weight,1.361859,1.361859,1.361859,0.00%
+Raw Rust Weight,0.882923,0.882923,1.103654,+25.00%
+Raw Tikka Weight,0.882528,0.882528,0.882528,0.00%
+Mean Divisor (mu),1.042437,1.042437,1.116014,+7.06% inflation
+Normalized Healthy Weight,1.3064,1.3064,1.2203,-6.59% unintended drop
+Normalized Rust Weight,0.8470,0.8470,0.9889,+16.76% net increase
+Normalized Tikka Weight,0.8466,0.8466,0.7908,-6.59% unintended drop
+Relative Weight Tikka / Rust,1.0000,1.0000,0.7996,-20.04% Tikka loss suppression
+Relative Weight Healthy / Rust,1.5424,1.5424,1.2340,-20.00% Healthy loss suppression
+Effective Pressure: Healthy,33.33%,53.99%,41.17%,54.0% -> 41.2% drop vs V2.3
+Effective Pressure: Rust,33.33%,23.01%,32.68%,23.0% -> 32.7% surge vs V2.3
+Effective Pressure: Tikka,33.33%,23.01%,26.14%,23.0% -> 26.1% vs V2.3

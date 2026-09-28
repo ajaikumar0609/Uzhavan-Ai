@@ -1,0 +1,817 @@
+{
+  "evaluation_version": "m4_v2",
+  "threshold_policy": "fixed_0.70",
+  "gates": {
+    "f1": 0.85,
+    "per_disease_recall": 0.7,
+    "unsure_precision_target": 0.9
+  },
+  "seeds": [
+    {
+      "experiment": "UZ-M4-v1.0-a898475e-s1",
+      "banana": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1342,
+          "raw_accuracy": 0.996274217585693,
+          "coverage_at_threshold": 0.9992548435171386,
+          "accepted_accuracy": 0.9962714392244594,
+          "false_rejection_rate": 0.0007479431563201197
+        },
+        "internal_test": {
+          "n": 1346,
+          "macro_f1": 0.9933466580683297,
+          "recall": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 0.9880952380952381,
+            "banana__healthy": 1.0,
+            "banana__insect_pest_unspecified": 0.9903846153846154,
+            "banana__moko_wilt": 0.9850746268656716,
+            "banana__panama_wilt": 1.0,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 0.9919614147909968
+          },
+          "precision": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 1.0,
+            "banana__healthy": 0.9938650306748467,
+            "banana__insect_pest_unspecified": 1.0,
+            "banana__moko_wilt": 0.9705882352941176,
+            "banana__panama_wilt": 0.9757575757575757,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 0.9983818770226537
+          },
+          "coverage_at_threshold": 0.9977711738484398,
+          "accepted_accuracy": 0.9947877885331348,
+          "false_rejection_rate": 0.0014947683109118087,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "coconut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 872,
+          "raw_accuracy": 1.0,
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0
+        },
+        "internal_test": {
+          "n": 866,
+          "macro_f1": 1.0,
+          "recall": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 1.0,
+            "coconut__leaf_rot": 1.0,
+            "coconut__stem_bleeding": 1.0
+          },
+          "precision": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 1.0,
+            "coconut__leaf_rot": 1.0,
+            "coconut__stem_bleeding": 1.0
+          },
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "groundnut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1267,
+          "raw_accuracy": 0.9992107340173638,
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 0.9992107340173638,
+          "false_rejection_rate": 0.0
+        },
+        "internal_test": {
+          "n": 1276,
+          "macro_f1": 1.0,
+          "recall": {
+            "groundnut__early_leaf_spot": 1.0,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 1.0,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "precision": {
+            "groundnut__early_leaf_spot": 1.0,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 1.0,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        },
+        "cross_source_test": {
+          "n_total_external": 1695,
+          "n_scorable_exact": 720,
+          "closed_set_exact": {
+            "macro_f1": 0.4580732954812069,
+            "recall": {
+              "groundnut__healthy": 0.055,
+              "groundnut__rust": 0.6833333333333333
+            },
+            "precision": {
+              "groundnut__healthy": 1.0,
+              "groundnut__rust": 1.0
+            },
+            "coverage_at_threshold": 0.13472222222222222,
+            "accuracy_on_accepted": 0.4948453608247423
+          },
+          "open_set_exact_accounting_all_samples": {
+            "open_macro_f1": 0.43287740811958064,
+            "recall": {
+              "groundnut__healthy": 0.055,
+              "groundnut__rust": 0.6833333333333333
+            },
+            "open_precision": {
+              "groundnut__healthy": 0.8048780487804879,
+              "groundnut__rust": 0.8631578947368421
+            },
+            "open_f1": {
+              "groundnut__healthy": 0.1029641185647426,
+              "groundnut__rust": 0.7627906976744186
+            }
+          },
+          "coarse_tikka_diagnostic": {
+            "n_tikka": 432,
+            "raw_coarse_accuracy": 0.9652777777777778,
+            "accepted_coarse_accuracy": 1.0,
+            "unsure_rate": 0.3541666666666667,
+            "note": "Reported separately as an auxiliary complex metric. Never counted as exact early/late ground truth."
+          },
+          "out_of_taxonomy_evaluation": {
+            "n_out_of_taxonomy": 543,
+            "unsure_rate": 0.6335174953959485,
+            "coverage_accepted": 0.3664825046040516,
+            "classes_present": {
+              "groundnut__alternaria_leaf_spot": 448,
+              "groundnut__rosette_virus": 95
+            }
+          },
+          "confusion_matrix_all_1695": {}
+        }
+      },
+      "sugarcane": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 346,
+          "raw_accuracy": 0.9797687861271677,
+          "coverage_at_threshold": 0.9710982658959537,
+          "accepted_accuracy": 0.9910714285714286,
+          "false_rejection_rate": 0.017699115044247787
+        },
+        "internal_test": {
+          "n": 350,
+          "macro_f1": 0.9853425289104856,
+          "recall": {
+            "sugarcane__healthy": 1.0,
+            "sugarcane__mosaic_virus": 0.9649122807017544,
+            "sugarcane__red_rot": 1.0,
+            "sugarcane__rust": 0.9558823529411765,
+            "sugarcane__yellow_leaf_disease": 1.0
+          },
+          "precision": {
+            "sugarcane__healthy": 0.9863013698630136,
+            "sugarcane__mosaic_virus": 1.0,
+            "sugarcane__red_rot": 0.9873417721518988,
+            "sugarcane__rust": 1.0,
+            "sugarcane__yellow_leaf_disease": 0.9615384615384616
+          },
+          "coverage_at_threshold": 0.98,
+          "accepted_accuracy": 0.9883381924198251,
+          "false_rejection_rate": 0.017391304347826087,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "black_gram": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 151,
+          "raw_accuracy": 0.9933774834437086,
+          "coverage_at_threshold": 0.9933774834437086,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0
+        },
+        "internal_test": {
+          "n": 152,
+          "macro_f1": 0.9932413404674738,
+          "recall": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 1.0,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 0.9629629629629629,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "precision": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 0.9705882352941176,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 1.0,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "coverage_at_threshold": 0.993421052631579,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "chilli": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 150,
+          "raw_accuracy": 0.9333333333333333,
+          "coverage_at_threshold": 0.9333333333333333,
+          "accepted_accuracy": 0.9714285714285714,
+          "false_rejection_rate": 0.02857142857142857
+        },
+        "internal_test": {
+          "n": 155,
+          "macro_f1": 0.8759785600463567,
+          "recall": {
+            "chilli__anthracnose": 0.9666666666666667,
+            "chilli__cercospora_leaf_spot": 0.9230769230769231,
+            "chilli__healthy": 0.9871794871794872,
+            "chilli__leaf_curl_virus": 0.8181818181818182,
+            "chilli__leaf_yellowing": 0.8,
+            "chilli__whitefly": 0.7692307692307693
+          },
+          "precision": {
+            "chilli__anthracnose": 1.0,
+            "chilli__cercospora_leaf_spot": 1.0,
+            "chilli__healthy": 0.9871794871794872,
+            "chilli__leaf_curl_virus": 0.6,
+            "chilli__leaf_yellowing": 0.8,
+            "chilli__whitefly": 0.9090909090909091
+          },
+          "coverage_at_threshold": 0.9032258064516129,
+          "accepted_accuracy": 0.95,
+          "false_rejection_rate": 0.08275862068965517,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      }
+    },
+    {
+      "experiment": "UZ-M4-v1.0-a898475e-s2",
+      "banana": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1342,
+          "raw_accuracy": 0.9918032786885246,
+          "coverage_at_threshold": 0.9895678092399404,
+          "accepted_accuracy": 0.9969879518072289,
+          "false_rejection_rate": 0.005259203606311044
+        },
+        "internal_test": {
+          "n": 1346,
+          "macro_f1": 0.9921472817084422,
+          "recall": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 0.9880952380952381,
+            "banana__healthy": 1.0,
+            "banana__insect_pest_unspecified": 0.9807692307692307,
+            "banana__moko_wilt": 0.9850746268656716,
+            "banana__panama_wilt": 0.9937888198757764,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 0.9919614147909968
+          },
+          "precision": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 1.0,
+            "banana__healthy": 0.9938650306748467,
+            "banana__insect_pest_unspecified": 1.0,
+            "banana__moko_wilt": 0.9705882352941176,
+            "banana__panama_wilt": 0.975609756097561,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 0.9951612903225806
+          },
+          "coverage_at_threshold": 0.9918276374442794,
+          "accepted_accuracy": 0.9962546816479401,
+          "false_rejection_rate": 0.004491017964071856,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "coconut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 872,
+          "raw_accuracy": 1.0,
+          "coverage_at_threshold": 0.9988532110091743,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0011467889908256881
+        },
+        "internal_test": {
+          "n": 866,
+          "macro_f1": 0.9985573720084047,
+          "recall": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 0.9968354430379747,
+            "coconut__leaf_rot": 0.9959514170040485,
+            "coconut__stem_bleeding": 1.0
+          },
+          "precision": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 0.9968354430379747,
+            "coconut__leaf_rot": 0.9959514170040485,
+            "coconut__stem_bleeding": 1.0
+          },
+          "coverage_at_threshold": 0.9965357967667436,
+          "accepted_accuracy": 0.9988412514484357,
+          "false_rejection_rate": 0.0023148148148148147,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "groundnut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1267,
+          "raw_accuracy": 0.9984214680347278,
+          "coverage_at_threshold": 0.9984214680347278,
+          "accepted_accuracy": 0.9984189723320158,
+          "false_rejection_rate": 0.0015810276679841897
+        },
+        "internal_test": {
+          "n": 1276,
+          "macro_f1": 0.9991229862047364,
+          "recall": {
+            "groundnut__early_leaf_spot": 0.9945945945945946,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 1.0,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "precision": {
+            "groundnut__early_leaf_spot": 1.0,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 0.9966555183946488,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "coverage_at_threshold": 0.9992163009404389,
+          "accepted_accuracy": 0.9992156862745099,
+          "false_rejection_rate": 0.000784313725490196,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        },
+        "cross_source_test": {
+          "n_total_external": 1695,
+          "n_scorable_exact": 720,
+          "closed_set_exact": {
+            "macro_f1": 0.49762616493757694,
+            "recall": {
+              "groundnut__healthy": 0.008333333333333333,
+              "groundnut__rust": 0.9583333333333334
+            },
+            "precision": {
+              "groundnut__healthy": 1.0,
+              "groundnut__rust": 1.0
+            },
+            "coverage_at_threshold": 0.5722222222222222,
+            "accuracy_on_accepted": 0.24757281553398058
+          },
+          "open_set_exact_accounting_all_samples": {
+            "open_macro_f1": 0.4538401618232759,
+            "recall": {
+              "groundnut__healthy": 0.008333333333333333,
+              "groundnut__rust": 0.9583333333333334
+            },
+            "open_precision": {
+              "groundnut__healthy": 0.29411764705882354,
+              "groundnut__rust": 0.8333333333333334
+            },
+            "open_f1": {
+              "groundnut__healthy": 0.01620745542949757,
+              "groundnut__rust": 0.8914728682170543
+            }
+          },
+          "coarse_tikka_diagnostic": {
+            "n_tikka": 432,
+            "raw_coarse_accuracy": 0.9976851851851852,
+            "accepted_coarse_accuracy": 0.9971264367816092,
+            "unsure_rate": 0.19444444444444445,
+            "note": "Reported separately as an auxiliary complex metric. Never counted as exact early/late ground truth."
+          },
+          "out_of_taxonomy_evaluation": {
+            "n_out_of_taxonomy": 543,
+            "unsure_rate": 0.6832412523020258,
+            "coverage_accepted": 0.31675874769797424,
+            "classes_present": {
+              "groundnut__alternaria_leaf_spot": 448,
+              "groundnut__rosette_virus": 95
+            }
+          },
+          "confusion_matrix_all_1695": {}
+        }
+      },
+      "sugarcane": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 346,
+          "raw_accuracy": 0.9739884393063584,
+          "coverage_at_threshold": 0.9595375722543352,
+          "accepted_accuracy": 0.9849397590361446,
+          "false_rejection_rate": 0.02967359050445104
+        },
+        "internal_test": {
+          "n": 350,
+          "macro_f1": 0.961491155583871,
+          "recall": {
+            "sugarcane__healthy": 1.0,
+            "sugarcane__mosaic_virus": 0.9122807017543859,
+            "sugarcane__red_rot": 0.9871794871794872,
+            "sugarcane__rust": 0.9411764705882353,
+            "sugarcane__yellow_leaf_disease": 0.96
+          },
+          "precision": {
+            "sugarcane__healthy": 0.9230769230769231,
+            "sugarcane__mosaic_virus": 0.9629629629629629,
+            "sugarcane__red_rot": 0.9871794871794872,
+            "sugarcane__rust": 1.0,
+            "sugarcane__yellow_leaf_disease": 0.9473684210526315
+          },
+          "coverage_at_threshold": 0.96,
+          "accepted_accuracy": 0.9732142857142857,
+          "false_rejection_rate": 0.02967359050445104,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "black_gram": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 151,
+          "raw_accuracy": 1.0,
+          "coverage_at_threshold": 0.9867549668874173,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.013245033112582781
+        },
+        "internal_test": {
+          "n": 152,
+          "macro_f1": 0.9932413404674738,
+          "recall": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 1.0,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 0.9629629629629629,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "precision": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 0.9705882352941176,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 1.0,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "coverage_at_threshold": 0.9868421052631579,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.006622516556291391,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "chilli": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 150,
+          "raw_accuracy": 0.92,
+          "coverage_at_threshold": 0.9,
+          "accepted_accuracy": 0.9703703703703703,
+          "false_rejection_rate": 0.050724637681159424
+        },
+        "internal_test": {
+          "n": 155,
+          "macro_f1": 0.8670763477951668,
+          "recall": {
+            "chilli__anthracnose": 0.9666666666666667,
+            "chilli__cercospora_leaf_spot": 0.9230769230769231,
+            "chilli__healthy": 0.9871794871794872,
+            "chilli__leaf_curl_virus": 0.7272727272727273,
+            "chilli__leaf_yellowing": 0.8,
+            "chilli__whitefly": 0.7692307692307693
+          },
+          "precision": {
+            "chilli__anthracnose": 1.0,
+            "chilli__cercospora_leaf_spot": 0.9230769230769231,
+            "chilli__healthy": 0.9746835443037974,
+            "chilli__leaf_curl_virus": 0.5714285714285714,
+            "chilli__leaf_yellowing": 0.8888888888888888,
+            "chilli__whitefly": 0.9090909090909091
+          },
+          "coverage_at_threshold": 0.8774193548387097,
+          "accepted_accuracy": 0.9852941176470589,
+          "false_rejection_rate": 0.06944444444444445,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      }
+    },
+    {
+      "experiment": "UZ-M4-v1.0-a898475e-s3",
+      "banana": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1342,
+          "raw_accuracy": 0.9970193740685543,
+          "coverage_at_threshold": 0.992548435171386,
+          "accepted_accuracy": 0.9984984984984985,
+          "false_rejection_rate": 0.005979073243647235
+        },
+        "internal_test": {
+          "n": 1346,
+          "macro_f1": 0.9971614351751709,
+          "recall": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 1.0,
+            "banana__healthy": 1.0,
+            "banana__insect_pest_unspecified": 1.0,
+            "banana__moko_wilt": 0.9850746268656716,
+            "banana__panama_wilt": 1.0,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 0.9967845659163987
+          },
+          "precision": {
+            "banana__bract_mosaic_virus": 1.0,
+            "banana__cordana_leaf_spot": 1.0,
+            "banana__healthy": 1.0,
+            "banana__insect_pest_unspecified": 1.0,
+            "banana__moko_wilt": 0.9850746268656716,
+            "banana__panama_wilt": 0.9877300613496932,
+            "banana__pestalotiopsis_leaf_spot": 1.0,
+            "banana__sigatoka_leaf_spot": 1.0
+          },
+          "coverage_at_threshold": 0.9947994056463596,
+          "accepted_accuracy": 0.9985063480209111,
+          "false_rejection_rate": 0.004467609828741623,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "coconut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 872,
+          "raw_accuracy": 1.0,
+          "coverage_at_threshold": 0.9988532110091743,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0011467889908256881
+        },
+        "internal_test": {
+          "n": 866,
+          "macro_f1": 1.0,
+          "recall": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 1.0,
+            "coconut__leaf_rot": 1.0,
+            "coconut__stem_bleeding": 1.0
+          },
+          "precision": {
+            "coconut__bud_rot": 1.0,
+            "coconut__button_shedding": 1.0,
+            "coconut__grey_leaf_blight": 1.0,
+            "coconut__leaf_rot": 1.0,
+            "coconut__stem_bleeding": 1.0
+          },
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "groundnut": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 1267,
+          "raw_accuracy": 0.9992107340173638,
+          "coverage_at_threshold": 0.9992107340173638,
+          "accepted_accuracy": 0.9992101105845181,
+          "false_rejection_rate": 0.0007898894154818325
+        },
+        "internal_test": {
+          "n": 1276,
+          "macro_f1": 0.9973743459648009,
+          "recall": {
+            "groundnut__early_leaf_spot": 0.9945945945945946,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 0.9932885906040269,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "precision": {
+            "groundnut__early_leaf_spot": 0.989247311827957,
+            "groundnut__healthy": 1.0,
+            "groundnut__late_leaf_spot": 0.9966329966329966,
+            "groundnut__nutrient_deficiency": 1.0,
+            "groundnut__rust": 1.0
+          },
+          "coverage_at_threshold": 0.9976489028213166,
+          "accepted_accuracy": 0.9992144540455616,
+          "false_rejection_rate": 0.0007855459544383347,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        },
+        "cross_source_test": {
+          "n_total_external": 1695,
+          "n_scorable_exact": 720,
+          "closed_set_exact": {
+            "macro_f1": 0.49102559563847487,
+            "recall": {
+              "groundnut__healthy": 0.0016666666666666668,
+              "groundnut__rust": 0.9583333333333334
+            },
+            "precision": {
+              "groundnut__healthy": 1.0,
+              "groundnut__rust": 1.0
+            },
+            "coverage_at_threshold": 0.39861111111111114,
+            "accuracy_on_accepted": 0.34494773519163763
+          },
+          "open_set_exact_accounting_all_samples": {
+            "open_macro_f1": 0.44220285193916026,
+            "recall": {
+              "groundnut__healthy": 0.0016666666666666668,
+              "groundnut__rust": 0.9583333333333334
+            },
+            "open_precision": {
+              "groundnut__healthy": 0.034482758620689655,
+              "groundnut__rust": 0.8156028368794326
+            },
+            "open_f1": {
+              "groundnut__healthy": 0.003179650238473768,
+              "groundnut__rust": 0.8812260536398467
+            }
+          },
+          "coarse_tikka_diagnostic": {
+            "n_tikka": 432,
+            "raw_coarse_accuracy": 0.9398148148148148,
+            "accepted_coarse_accuracy": 0.9961832061068703,
+            "unsure_rate": 0.39351851851851855,
+            "note": "Reported separately as an auxiliary complex metric. Never counted as exact early/late ground truth."
+          },
+          "out_of_taxonomy_evaluation": {
+            "n_out_of_taxonomy": 543,
+            "unsure_rate": 0.7440147329650092,
+            "coverage_accepted": 0.2559852670349908,
+            "classes_present": {
+              "groundnut__alternaria_leaf_spot": 448,
+              "groundnut__rosette_virus": 95
+            }
+          },
+          "confusion_matrix_all_1695": {}
+        }
+      },
+      "sugarcane": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 346,
+          "raw_accuracy": 0.9624277456647399,
+          "coverage_at_threshold": 0.9335260115606936,
+          "accepted_accuracy": 0.9814241486068112,
+          "false_rejection_rate": 0.04804804804804805
+        },
+        "internal_test": {
+          "n": 350,
+          "macro_f1": 0.9503992948529254,
+          "recall": {
+            "sugarcane__healthy": 0.9027777777777778,
+            "sugarcane__mosaic_virus": 1.0,
+            "sugarcane__red_rot": 0.9615384615384616,
+            "sugarcane__rust": 0.9411764705882353,
+            "sugarcane__yellow_leaf_disease": 0.96
+          },
+          "precision": {
+            "sugarcane__healthy": 1.0,
+            "sugarcane__mosaic_virus": 0.8382352941176471,
+            "sugarcane__red_rot": 0.9868421052631579,
+            "sugarcane__rust": 1.0,
+            "sugarcane__yellow_leaf_disease": 0.935064935064935
+          },
+          "coverage_at_threshold": 0.9628571428571429,
+          "accepted_accuracy": 0.9614243323442137,
+          "false_rejection_rate": 0.02702702702702703,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "black_gram": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 151,
+          "raw_accuracy": 0.9933774834437086,
+          "coverage_at_threshold": 0.9933774834437086,
+          "accepted_accuracy": 0.9933333333333333,
+          "false_rejection_rate": 0.006666666666666667
+        },
+        "internal_test": {
+          "n": 152,
+          "macro_f1": 1.0,
+          "recall": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 1.0,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 1.0,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "precision": {
+            "black_gram__anthracnose": 1.0,
+            "black_gram__healthy": 1.0,
+            "black_gram__leaf_crinkle_virus": 1.0,
+            "black_gram__powdery_mildew": 1.0,
+            "black_gram__yellow_mosaic_virus": 1.0
+          },
+          "coverage_at_threshold": 1.0,
+          "accepted_accuracy": 1.0,
+          "false_rejection_rate": 0.0,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      },
+      "chilli": {
+        "unsure_threshold": 0.7,
+        "threshold_policy": "fixed_0.70",
+        "val_diagnostics": {
+          "n": 150,
+          "raw_accuracy": 0.9466666666666667,
+          "coverage_at_threshold": 0.9066666666666666,
+          "accepted_accuracy": 0.9852941176470589,
+          "false_rejection_rate": 0.056338028169014086
+        },
+        "internal_test": {
+          "n": 155,
+          "macro_f1": 0.8225510215551238,
+          "recall": {
+            "chilli__anthracnose": 0.9666666666666667,
+            "chilli__cercospora_leaf_spot": 0.8461538461538461,
+            "chilli__healthy": 1.0,
+            "chilli__leaf_curl_virus": 0.5454545454545454,
+            "chilli__leaf_yellowing": 0.8,
+            "chilli__whitefly": 0.7692307692307693
+          },
+          "precision": {
+            "chilli__anthracnose": 1.0,
+            "chilli__cercospora_leaf_spot": 1.0,
+            "chilli__healthy": 0.9873417721518988,
+            "chilli__leaf_curl_virus": 0.5454545454545454,
+            "chilli__leaf_yellowing": 0.6666666666666666,
+            "chilli__whitefly": 0.7692307692307693
+          },
+          "coverage_at_threshold": 0.8580645161290322,
+          "accepted_accuracy": 0.9774436090225563,
+          "false_rejection_rate": 0.08450704225352113,
+          "note": "same-source held-out groups (leakage-safe); NOT the production gate"
+        }
+      }
+    }
+  ],
+  "decision": {
+    "banana": {
+      "status": "RESEARCH-ONLY",
+      "reason": "no_cross_source_test (single source held)"
+    },
+    "coconut": {
+      "status": "RESEARCH-ONLY",
+      "reason": "no_cross_source_test (single source held)"
+    },
+    "groundnut": {
+      "status": "RESEARCH-ONLY",
+      "closed_set_macro_f1_mean": 0.48224168535241957,
+      "closed_set_macro_f1_sd": 0.01730077417329956,
+      "open_set_macro_f1_mean": 0.44297347396067227,
+      "open_set_macro_f1_sd": 0.008575338844052632,
+      "min_per_disease_recall": 0.0016666666666666668,
+      "coarse_tikka_mean_accuracy": 0.9675925925925926,
+      "oot_mean_unsure_rate": 0.6869244935543278
+    },
+    "sugarcane": {
+      "status": "RESEARCH-ONLY",
+      "reason": "no_cross_source_test (single source held)"
+    },
+    "black_gram": {
+      "status": "RESEARCH-ONLY",
+      "reason": "no_cross_source_test (single source held)"
+    },
+    "chilli": {
+      "status": "RESEARCH-ONLY",
+      "reason": "no_cross_source_test (single source held)"
+    }
+  }
+}

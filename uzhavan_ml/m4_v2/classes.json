@@ -1,0 +1,46 @@
+{
+ "banana": [
+  "banana__bract_mosaic_virus",
+  "banana__cordana_leaf_spot",
+  "banana__healthy",
+  "banana__insect_pest_unspecified",
+  "banana__moko_wilt",
+  "banana__panama_wilt",
+  "banana__pestalotiopsis_leaf_spot",
+  "banana__sigatoka_leaf_spot"
+ ],
+ "coconut": [
+  "coconut__bud_rot",
+  "coconut__button_shedding",
+  "coconut__grey_leaf_blight",
+  "coconut__leaf_rot",
+  "coconut__stem_bleeding"
+ ],
+ "groundnut": [
+  "groundnut__healthy_or_abiotic",
+  "groundnut__rust",
+  "groundnut__tikka_leaf_spot"
+ ],
+ "sugarcane": [
+  "sugarcane__healthy",
+  "sugarcane__mosaic_virus",
+  "sugarcane__red_rot",
+  "sugarcane__rust",
+  "sugarcane__yellow_leaf_disease"
+ ],
+ "black_gram": [
+  "black_gram__anthracnose",
+  "black_gram__healthy",
+  "black_gram__leaf_crinkle_virus",
+  "black_gram__powdery_mildew",
+  "black_gram__yellow_mosaic_virus"
+ ],
+ "chilli": [
+  "chilli__anthracnose",
+  "chilli__cercospora_leaf_spot",
+  "chilli__healthy",
+  "chilli__leaf_curl_virus",
+  "chilli__leaf_yellowing",
+  "chilli__whitefly"
+ ]
+}

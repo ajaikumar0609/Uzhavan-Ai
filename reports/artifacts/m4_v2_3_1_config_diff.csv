@@ -1,0 +1,25 @@
+Parameter,V2.2 S42,V2.3 S42,V2.3.1 S42,Status
+Dataset Manifest,groundnut_v2.csv,groundnut_v2.csv,groundnut_v2.csv,IDENTICAL
+Manifest SHA256,6768c740a0bc32ec45be...,6768c740a0bc32ec45be...,6768c740a0bc32ec45be...,IDENTICAL
+Taxonomy / Classes,"3 Classes (Healthy, Rust, Tikka)","3 Classes (Healthy, Rust, Tikka)","3 Classes (Healthy, Rust, Tikka)",IDENTICAL
+Train Split Size,"5,920","5,920","5,920",IDENTICAL
+Validation Split Size,"1,268","1,268","1,268",IDENTICAL
+Model Backbone,EfficientNetV2-S,EfficientNetV2-S,EfficientNetV2-S,IDENTICAL
+Pretrained Weights,IMAGENET1K_V1,IMAGENET1K_V1,IMAGENET1K_V1,IDENTICAL
+Dropout Rate,0.2,0.2,0.2,IDENTICAL
+Optimizer,AdamW,AdamW,AdamW,IDENTICAL
+Learning Rate,1e-4,1e-4,1e-4,IDENTICAL
+Weight Decay,1e-2,1e-2,1e-2,IDENTICAL
+Batch Size,32,32,32,IDENTICAL
+Total Epochs,15,15,15,IDENTICAL
+Mixed Precision (AMP),float16,float16,float16,IDENTICAL
+Random Seed,42,42,42,IDENTICAL
+Sampler Policy,Natural Random,Weighted (1:1 Green vs Tikka),Weighted (1:2 Green vs Tikka),INTENDED CHANGE
+Green Sampler Weight,1.000000,7.845614,3.922807,INTENDED CHANGE
+Rust Loss Multiplier,1.00x,1.00x,1.25x,INTENDED CHANGE
+Normalized WCE Weights,"[1.3064, 0.8470, 0.8466]","[1.3064, 0.8470, 0.8466]","[1.2203, 0.9889, 0.7908]",NORMALIZATION SHIFT
+Aug: Crop Scale Range,"[0.75, 1.0]","[0.6, 1.0]","[0.6, 1.0]",DISCREPANCY (V2.3 drift)
+Aug: Aspect Ratio Range,"[0.9, 1.1]","[0.8, 1.25]","[0.8, 1.25]",DISCREPANCY (V2.3 drift)
+Aug: Rotation Degrees,15 deg,20 deg,20 deg,DISCREPANCY (V2.3 drift)
+Aug: ColorJitter B/C/S,0.25 / 0.25 / 0.25,0.20 / 0.20 / 0.20,0.20 / 0.20 / 0.20,DISCREPANCY (V2.3 drift)
+Aug: ColorJitter Hue,0.04,0.05,0.05,DISCREPANCY (V2.3 drift)

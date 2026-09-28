@@ -1,0 +1,1 @@
+npx tsc --noEmit -p tsconfig.json  3.32s user 0.25s system 166% cpu 2.144 total

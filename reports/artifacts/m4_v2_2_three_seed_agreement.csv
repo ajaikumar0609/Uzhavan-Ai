@@ -1,0 +1,5 @@
+subset,total_samples,all_three_agree_count,all_three_agree_pct,two_of_three_agree_count,two_of_three_agree_pct,all_disagree_count,all_disagree_pct,three_correct_count,three_correct_pct,two_correct_count,two_correct_pct,one_correct_count,one_correct_pct,zero_correct_count,zero_correct_pct
+All Scorable (N=1152),1152,715,62.07,433,37.59,4,0.35,697,60.5,271,23.52,166,14.41,18,1.56
+Healthy (N=600),600,207,34.5,393,65.5,0,0.0,192,32.0,241,40.17,152,25.33,15,2.5
+Rust (N=120),120,99,82.5,19,15.83,2,1.67,97,80.83,14,11.67,7,5.83,2,1.67
+Tikka (N=432),432,409,94.68,21,4.86,2,0.46,408,94.44,16,3.7,7,1.62,1,0.23

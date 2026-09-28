@@ -1,0 +1,10 @@
+seed,true_class,pred_healthy,pred_rust,pred_tikka,total,recall,healthy_to_rust,healthy_to_tikka,rust_to_healthy,rust_to_tikka,tikka_to_healthy,tikka_to_rust
+Seed_42,groundnut__healthy_or_abiotic,422,0,178,600,0.7033,0,178,0,0,0,0
+Seed_42,groundnut__rust,1,114,5,120,0.95,0,0,1,5,0,0
+Seed_42,groundnut__tikka_leaf_spot,2,11,419,432,0.9699,0,0,0,0,2,11
+Seed_1337,groundnut__healthy_or_abiotic,204,0,396,600,0.34,0,396,0,0,0,0
+Seed_1337,groundnut__rust,2,114,4,120,0.95,0,0,2,4,0,0
+Seed_1337,groundnut__tikka_leaf_spot,1,7,424,432,0.9815,0,0,0,0,1,7
+Seed_2024,groundnut__healthy_or_abiotic,584,0,16,600,0.9733,0,16,0,0,0,0
+Seed_2024,groundnut__rust,1,98,21,120,0.8167,0,0,1,21,0,0
+Seed_2024,groundnut__tikka_leaf_spot,11,1,420,432,0.9722,0,0,0,0,11,1

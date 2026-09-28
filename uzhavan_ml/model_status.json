@@ -1,0 +1,82 @@
+{
+ "generated": "2026-09-25",
+ "models": [
+  {
+   "model": "M1 paddy/non-paddy map",
+   "candidate": "[S2,L8,S1]_unet3d checkpoint_last",
+   "status": "RESEARCH-ONLY",
+   "evidence": "val F1 0.833, paddy IoU 0.612 (227 rows); best-ckpt 0.874 is val-selected",
+   "why": "SICKLE farmer-facing gate (licence, scope, protocol) not satisfied; Cauvery Delta only; binary paddy only"
+  },
+  {
+   "model": "M1 UTAE variants",
+   "candidate": "[S2]/[L8]/[S2,L8,S1]_utae",
+   "status": "RESEARCH-ONLY (excluded)",
+   "evidence": "paddy F1 = 0.000: collapsed",
+   "why": "degenerate"
+  },
+  {
+   "model": "M2 sowing date",
+   "candidate": "[S2,L8,S1]_unet3d checkpoint_last",
+   "status": "RESEARCH-ONLY",
+   "evidence": "plot MAE 3.00 d (95% CI 1.9\u20134.3), gate \u22644 met on point estimate; beats no-imagery baseline by 1.2 d (CI \u22122.4 to \u22120.2); n=14 plots",
+   "why": "SICKLE farmer-facing gate unmet; CI upper bound exceeds the gate"
+  },
+  {
+   "model": "M2 transplanting date",
+   "candidate": "[S2,L8,S1]_convlstm checkpoint_last",
+   "status": "RESEARCH-ONLY",
+   "evidence": "plot MAE 4.70 d (CI 2.9\u20137.3), gate \u22646 met on point estimate; NOT distinguishable from no-imagery baseline (diff \u22120.7, CI \u22122.3 to +0.5); n=14 plots",
+   "why": "SICKLE gate unmet; no demonstrated value over the seasonal median"
+  },
+  {
+   "model": "M2 harvest date",
+   "candidate": "[L8]_unet3d checkpoint_last",
+   "status": "RESEARCH-ONLY",
+   "evidence": "plot MAE 8.12 d (CI 5.7\u201311.0) > gate 7; beats baseline by 4.0 d",
+   "why": "fails the fixed gate (best-ckpt 7.77 also fails)"
+  },
+  {
+   "model": "M3 plot yield",
+   "candidate": "[S2,L8,S1]_utae_season checkpoint_last",
+   "status": "RESEARCH-ONLY",
+   "evidence": "MAPE 34%, pixel-sum MAE 565 (units unconfirmed); 37 rows",
+   "why": "spec: research-only; yield units unverified"
+  },
+  {
+   "model": "M4 leaf disease (6 crops)",
+   "candidate": "EfficientNetV2-S, m4_v1",
+   "status": "PLANNED (ready for Colab)",
+   "evidence": "data + splits + package + scripts smoke-tested",
+   "why": "awaiting user-run Colab 3-seed training. Only groundnut CAN reach PRODUCTION-ELIGIBLE (only crop with a cross-source test); the other 5 are research-only by design"
+  },
+  {
+   "model": "M5 rice disease",
+   "candidate": "-",
+   "status": "BLOCKED",
+   "evidence": "Paddy Doctor not obtained (0 images)",
+   "why": "needs a legitimate IEEE/Kaggle login"
+  },
+  {
+   "model": "M6 mandi price forecast",
+   "candidate": "LightGBM quantile (planned)",
+   "status": "PLANNED",
+   "evidence": "16 eligible market\u00d7commodity pairs (paddy 12, groundnut 3, maize 1); 7 coconut on hold; 2,010 current-price-only",
+   "why": "step 9 runs after M4 independent evaluation"
+  },
+  {
+   "model": "M7 district yield benchmark",
+   "candidate": "-",
+   "status": "PLANNED",
+   "evidence": "-",
+   "why": "after M6"
+  },
+  {
+   "model": "R1 RAG / W1 weather / S1 soil / V1 speech",
+   "candidate": "-",
+   "status": "PLANNED (evaluation-only)",
+   "evidence": "-",
+   "why": "not trained by design; evaluations pending (speech blocked on consented eval set)"
+  }
+ ]
+}

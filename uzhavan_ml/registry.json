@@ -1,0 +1,157 @@
+{
+ "entries": {
+  "UZ-M4-BENCH-v1.0-20260925": {
+   "experiment_id": "UZ-M4-BENCH-v1.0-20260925",
+   "model": "M4",
+   "model_version": "v1.0 (benchmark)",
+   "dataset_version": "m4_v1",
+   "split_version": "n/a",
+   "seed": "n/a",
+   "hyperparameters": {
+    "backbone": "efficientnet_v2_s",
+    "img": 224,
+    "batch": [
+     16,
+     32
+    ],
+    "synthetic_steps": 10
+   },
+   "training_duration_s": 0,
+   "hardware": {
+    "device": "mps",
+    "name": "Apple M4 (10-core GPU), 16 GiB"
+   },
+   "key_metric": "24.0 img/s bs32; ~20.0 h for 3 seeds x 30 epochs on M4",
+   "metrics": {
+    "device": "mps",
+    "torch": "2.14.0",
+    "machine": "arm64",
+    "weights": "IMAGENET1K_V1 (torchvision)",
+    "train_img_per_s_bs16": 21.7,
+    "mps_driver_mem_gb_bs16": 4.04,
+    "train_img_per_s_bs32": 24.0,
+    "mps_driver_mem_gb_bs32": 6.75,
+    "decode_img_per_s_in_blackgram_bpld_ap": 152.1,
+    "decode_img_per_s_in_coconut_tree_disease": 95.2,
+    "decode_img_per_s_in_groundnut_wb_sasmal": 8.7,
+    "decode_img_per_s_in_sugarcane_leaf_disease_mh": 173.9,
+    "decode_img_per_s_in_tn_multicrop_vitc": 354.0,
+    "train_images": 19192,
+    "est_minutes_per_epoch_compute_only": 13.3,
+    "est_hours_3seeds_x30epochs_compute_only": 20.0
+   },
+   "checkpoint": null,
+   "license_data_use": "no weights saved; torchvision ImageNet weights downloaded",
+   "status": "benchmark",
+   "notes": "Throughput only (synthetic batches), run while SICKLE eval used CPU. Confirms cloud GPU for the 3-seed run. WB groundnut decode 8.7 img/s, so the package is pre-resized.",
+   "path": "experiments/UZ-M4-BENCH-v1.0-20260925"
+  },
+  "UZ-SICKLE-BASELINE-v1.0-20260925-7ec31eda": {
+   "experiment_id": "UZ-SICKLE-BASELINE-v1.0-20260925-7ec31eda",
+   "model": "M1/M2/M3 (SICKLE WACV-2024 checkpoints)",
+   "model_version": "authors' WACV-2024 (not trained by us)",
+   "dataset_version": "SICKLE local copy (csv sha256 6f414d88\u2026)",
+   "split_version": "authors' val (227 rows crop_type; 37 rows / 14 plots calendar+yield)",
+   "seed": "n/a (inference)",
+   "hyperparameters": "authors' conf.json per run",
+   "training_duration_s": 0,
+   "hardware": {
+    "device": "cpu",
+    "name": "Apple M4, 16 GiB"
+   },
+   "evaluation_duration_s": 1905,
+   "key_metric": "crop_type F1 0.833 (last); sowing 3.00 d, transplanting 4.70 d, harvest 8.12 d plot-MAE (last); yield MAPE 34%",
+   "metrics": {
+    "calendar_ci": {
+     "sowing_date": {
+      "run": "[S2,L8,S1]_unet3d",
+      "n_instances": 41,
+      "n_plots": 14,
+      "mae_last": 3.0025292809416606,
+      "ci95_last": [
+       1.9047568646615203,
+       4.289267184297766
+      ],
+      "mae_best": 2.8079487114417843,
+      "ci95_best": [
+       1.7291956369989159,
+       4.010757024682452
+      ],
+      "mae_baseline": 4.219512195121951,
+      "ci95_baseline": [
+       2.9761904761904763,
+       6.0006249999999905
+      ],
+      "diff_last_minus_baseline": -1.2169829141802904,
+      "ci95_diff": [
+       -2.3657121893763544,
+       -0.24717035155074746
+      ],
+      "gate_mae_days": 4.0,
+      "within7_last": 0.8292682926829268
+     },
+     "transplanting_date": {
+      "run": "[S2,L8,S1]_convlstm",
+      "n_instances": 41,
+      "n_plots": 14,
+      "mae_last": 4.697025996882741,
+      "ci95_last": [
+       2.904356320623006,
+       7.271505116369666
+      ],
+      "mae_best": 4.790308091698623,
+      "ci95_best": [
+       3.1022866954073383,
+       7.365220771517069
+      ],
+      "mae_baseline": 5.414634146341464,
+      "ci95_baseline": [
+       3.199891304347826,
+       8.638988095238094
+      ],
+      "diff_last_minus_baseline": -0.7176081494587224,
+      "ci95_diff": [
+       -2.262920678666223,
+       0.5454436490410244
+      ],
+      "gate_mae_days": 6.0,
+      "within7_last": 0.8048780487804879
+     },
+     "harvesting_date": {
+      "run": "[L8]_unet3d",
+      "n_instances": 41,
+      "n_plots": 14,
+      "mae_last": 8.122158515744093,
+      "ci95_last": [
+       5.698139599512733,
+       10.995703560427613
+      ],
+      "mae_best": 7.768665778927687,
+      "ci95_best": [
+       5.77327702978383,
+       9.888779368278307
+      ],
+      "mae_baseline": 12.121951219512194,
+      "ci95_baseline": [
+       8.511890243902439,
+       15.711282051282048
+      ],
+      "diff_last_minus_baseline": -3.9997927037681023,
+      "ci95_diff": [
+       -5.968865135588297,
+       -1.8620020099927495
+      ],
+      "gate_mae_days": 7.0,
+      "within7_last": 0.5609756097560976
+     }
+    }
+   },
+   "checkpoint": "~/Desktop/agri/runs/wacv_2024 (unchanged)",
+   "license_data_use": "SICKLE data + checkpoints: licence UNVERIFIED; SICKLE code has no licence file (local research use only)",
+   "status": "BASELINE",
+   "notes": "72 runs x {last,best} evaluated on authors' val; the only labelled plots unseen in training. checkpoint_best is val-selected (optimistic). UTAE crop_type collapsed (excluded).",
+   "path": "experiments/UZ-SICKLE-BASELINE-v1.0-20260925-7ec31eda"
+  }
+ },
+ "updated": "2026-09-25T10:56:19"
+}

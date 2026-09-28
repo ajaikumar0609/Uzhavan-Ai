@@ -1,0 +1,12 @@
+Metric,V2.2 S42,V2.3 S42,V2.3.1 S42
+Healthy recall,70.33%,84.67%,33.67%
+Rust recall,95.00%,60.00%,96.67%
+Tikka recall,96.99%,99.07%,99.07%
+Macro-F1,0.8548,0.8399,0.7197
+Accuracy,82.90%,87.50%,64.76%
+τ=.70 coverage,68.40%,80.47%,87.76%
+τ=.70 accepted accuracy,93.27%,92.66%,66.77%
+Open-set F1,0.6964,0.6651,0.6147
+Healthy → Tikka,178,92,398
+Rust → Tikka,5,47,4
+Rust → Healthy,1,1,0

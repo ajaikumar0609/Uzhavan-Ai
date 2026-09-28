@@ -1,0 +1,45 @@
+{
+ "experiment_id": "UZ-M4-BENCH-v1.0-20260925",
+ "model": "M4",
+ "model_version": "v1.0 (benchmark)",
+ "dataset_version": "m4_v1",
+ "split_version": "n/a",
+ "seed": "n/a",
+ "hyperparameters": {
+  "backbone": "efficientnet_v2_s",
+  "img": 224,
+  "batch": [
+   16,
+   32
+  ],
+  "synthetic_steps": 10
+ },
+ "training_duration_s": 0,
+ "hardware": {
+  "device": "mps",
+  "name": "Apple M4 (10-core GPU), 16 GiB"
+ },
+ "key_metric": "24.0 img/s bs32; ~20.0 h for 3 seeds x 30 epochs on M4",
+ "metrics": {
+  "device": "mps",
+  "torch": "2.14.0",
+  "machine": "arm64",
+  "weights": "IMAGENET1K_V1 (torchvision)",
+  "train_img_per_s_bs16": 21.7,
+  "mps_driver_mem_gb_bs16": 4.04,
+  "train_img_per_s_bs32": 24.0,
+  "mps_driver_mem_gb_bs32": 6.75,
+  "decode_img_per_s_in_blackgram_bpld_ap": 152.1,
+  "decode_img_per_s_in_coconut_tree_disease": 95.2,
+  "decode_img_per_s_in_groundnut_wb_sasmal": 8.7,
+  "decode_img_per_s_in_sugarcane_leaf_disease_mh": 173.9,
+  "decode_img_per_s_in_tn_multicrop_vitc": 354.0,
+  "train_images": 19192,
+  "est_minutes_per_epoch_compute_only": 13.3,
+  "est_hours_3seeds_x30epochs_compute_only": 20.0
+ },
+ "checkpoint": null,
+ "license_data_use": "no weights saved; torchvision ImageNet weights downloaded",
+ "status": "benchmark",
+ "notes": "Throughput only (synthetic batches), run while SICKLE eval used CPU. Confirms cloud GPU for the 3-seed run. WB groundnut decode 8.7 img/s, so the package is pre-resized."
+}

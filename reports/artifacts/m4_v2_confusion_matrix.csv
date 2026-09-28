@@ -1,0 +1,16 @@
+seed,true_category,early_leaf_spot,healthy,late_leaf_spot,nutrient_deficiency,rust,total
+s1,healthy,231,33,1,335,0,600
+s1,rust,0,0,38,0,82,120
+s1,tikka_leaf_spot,314,0,103,10,5,432
+s1,alternaria_leaf_spot,182,28,74,156,8,448
+s1,rosette_virus,12,0,2,81,0,95
+s2,healthy,523,5,0,72,0,600
+s2,rust,0,0,5,0,115,120
+s2,tikka_leaf_spot,377,0,54,0,1,432
+s2,alternaria_leaf_spot,310,0,32,104,2,448
+s2,rosette_virus,35,0,1,59,0,95
+s3,healthy,67,1,0,532,0,600
+s3,rust,0,0,5,0,115,120
+s3,tikka_leaf_spot,334,0,72,13,13,432
+s3,alternaria_leaf_spot,98,0,62,284,4,448
+s3,rosette_virus,6,0,0,89,0,95

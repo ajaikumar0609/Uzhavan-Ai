@@ -1,0 +1,11 @@
+Evaluation Dimension,V2.2 S42,V2.3 S42,V2.3.1 S42,Status
+Canonical Universe N,"1,152","1,152","1,152",IDENTICAL
+Untouched Universe N,928,928,928,IDENTICAL
+Image Transform (Eval),Resize(256) + CenterCrop(224),Resize(256) + CenterCrop(224),Resize(256) + CenterCrop(224),IDENTICAL
+Image Normalization,ImageNet Mean/Std,ImageNet Mean/Std,ImageNet Mean/Std,IDENTICAL
+Batch Size (Inference),64,64,64,IDENTICAL
+Decision Mechanism,argmax(softmax(logits)),argmax(softmax(logits)),argmax(softmax(logits)),IDENTICAL
+Thresholding Logic,max_prob >= tau (0.70),max_prob >= tau (0.70),max_prob >= tau (0.70),IDENTICAL
+Macro-F1 Formula,Unweighted mean of class F1s,Unweighted mean of class F1s,Unweighted mean of class F1s,IDENTICAL
+Unicode Encoding Exception,None (Linux/Bash),None (Linux/Bash),CharmapError on print('\u03c4'),PRINTING ONLY (Artifacts Intact)
+Saved Metrics Integrity,Verified Valid JSON,Verified Valid JSON,Verified Valid JSON,100% UNCORRUPTED

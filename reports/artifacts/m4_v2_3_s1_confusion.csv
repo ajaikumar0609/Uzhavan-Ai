@@ -1,0 +1,10 @@
+model_version,cohort,true_class,pred_healthy,pred_rust,pred_tikka,total,recall,precision,f1,healthy_to_rust,healthy_to_tikka,rust_to_healthy,rust_to_tikka,tikka_to_healthy,tikka_to_rust
+V2.2_S42,canonical_1152,groundnut__healthy_or_abiotic,422,0,178,600,0.7033,0.9929,0.8234,0,178,0,0,0,0
+V2.2_S42,canonical_1152,groundnut__rust,1,114,5,120,0.9500,0.9120,0.9306,0,0,1,5,0,0
+V2.2_S42,canonical_1152,groundnut__tikka_leaf_spot,2,11,419,432,0.9699,0.6960,0.8105,0,0,0,0,2,11
+V2.3_S42,canonical_1152,groundnut__healthy_or_abiotic,508,0,92,600,0.8467,0.9903,0.9128,0,92,0,0,0,0
+V2.3_S42,canonical_1152,groundnut__rust,1,72,47,120,0.6000,1.0000,0.7500,0,0,1,47,0,0
+V2.3_S42,canonical_1152,groundnut__tikka_leaf_spot,4,0,428,432,0.9907,0.7548,0.8569,0,0,0,0,4,0
+V2.3_S42,untouched_final_928,groundnut__healthy_or_abiotic,405,0,78,483,0.8385,0.9926,0.9091,0,78,0,0,0,0
+V2.3_S42,untouched_final_928,groundnut__rust,0,56,43,99,0.5657,1.0000,0.7226,0,0,0,43,0,0
+V2.3_S42,untouched_final_928,groundnut__tikka_leaf_spot,3,0,343,346,0.9913,0.7392,0.8469,0,0,0,0,3,0

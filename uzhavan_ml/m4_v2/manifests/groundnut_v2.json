@@ -1,0 +1,64 @@
+{
+  "manifest_version": "m4_v2_groundnut",
+  "source_manifest": "uzhavan_ml/packages/m4_v1/manifest.csv",
+  "sha256": "6768c740a0bc32ec45be08237c564e0be153a610caab9909196c1a0c123a4cfe",
+  "total_samples": 10158,
+  "splits": {
+    "train": {
+      "total": 5920,
+      "sources": [
+        "in_tn_multicrop_vitc"
+      ],
+      "classes": {
+        "groundnut__tikka_leaf_spot": 2236,
+        "groundnut__rust": 2235,
+        "groundnut__healthy_or_abiotic": 1449
+      }
+    },
+    "val": {
+      "total": 1267,
+      "sources": [
+        "in_tn_multicrop_vitc"
+      ],
+      "classes": {
+        "groundnut__tikka_leaf_spot": 478,
+        "groundnut__rust": 478,
+        "groundnut__healthy_or_abiotic": 311
+      }
+    },
+    "test": {
+      "total": 1276,
+      "sources": [
+        "in_tn_multicrop_vitc"
+      ],
+      "classes": {
+        "groundnut__tikka_leaf_spot": 483,
+        "groundnut__rust": 481,
+        "groundnut__healthy_or_abiotic": 312
+      }
+    },
+    "external_test": {
+      "total": 1695,
+      "sources": [
+        "in_groundnut_wb_sasmal"
+      ],
+      "classes": {
+        "groundnut__healthy_or_abiotic": 600,
+        "groundnut__alternaria_leaf_spot": 448,
+        "groundnut__tikka_leaf_spot": 432,
+        "groundnut__rust": 120,
+        "groundnut__rosette_virus": 95
+      }
+    }
+  },
+  "taxonomy_mapping": {
+    "groundnut__early_leaf_spot": "groundnut__tikka_leaf_spot",
+    "groundnut__late_leaf_spot": "groundnut__tikka_leaf_spot",
+    "groundnut__rust": "groundnut__rust",
+    "groundnut__healthy": "groundnut__healthy_or_abiotic",
+    "groundnut__nutrient_deficiency": "groundnut__healthy_or_abiotic",
+    "groundnut__tikka_leaf_spot": "groundnut__tikka_leaf_spot",
+    "groundnut__alternaria_leaf_spot": "groundnut__alternaria_leaf_spot",
+    "groundnut__rosette_virus": "groundnut__rosette_virus"
+  }
+}

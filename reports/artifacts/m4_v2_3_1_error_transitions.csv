@@ -1,0 +1,12 @@
+Transition Category,Count,Percentage,Description
+ALL_THREE_CORRECT,692,60.07%,Consistently correct across all runs (clear canonical disease presentations)
+ALL_THREE_WRONG,38,3.30%,Persistent hard edge cases (mostly shadow/tearing or mixed lesion presentations)
+HEALTHY_V23_RESCUED_V231_LOST,306,26.56%,Healthy field leaves rescued by V2.3 (84.7%) that collapsed into Tikka under V2.3.1 (33.7%)
+HEALTHY_PERSISTENT_CORRECT,202,17.53%,Pristine vibrant green leaves classified correctly by all versions
+HEALTHY_SWALLOWED_BY_TIKKA_V231,398,34.55%,Total Healthy leaves misclassified as Tikka in V2.3.1 (up from 92 in V2.3 and 178 in V2.2)
+RUST_V23_COLLAPSED_V231_RESCUED,44,3.82%,Rust lesions swallowed by Tikka in V2.3 that were successfully saved by V2.3.1 (1.25x loss weight)
+RUST_PERSISTENT_CORRECT,72,6.25%,Prototypical raised orange/brown rust pustules classified correctly by all versions
+RUST_SWALLOWED_BY_TIKKA_V231,4,0.35%,Rust leaves misclassified as Tikka in V2.3.1 (down from 47 in V2.3)
+TIKKA_STABLE_CORRECT,418,36.28%,Mature Tikka circular lesions correctly classified by all versions
+TIKKA_TO_RUST_ERROR,1,0.09%,Tikka misclassified as Rust in V2.3.1 (down from 11 in V2.2 and 0 in V2.3)
+TIKKA_TO_HEALTHY_ERROR,3,0.26%,Faint early-stage leaf spots overwhelmed by green foliage

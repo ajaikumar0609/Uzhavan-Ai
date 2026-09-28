@@ -1,0 +1,14 @@
+group crop_type ('L8',) season=False: 6 models, 227 rows, 89s
+group crop_type ('S1',) season=False: 6 models, 227 rows, 179s
+group crop_type ('S2',) season=False: 6 models, 227 rows, 417s
+group crop_type ('S2', 'L8', 'S1') season=False: 6 models, 227 rows, 800s
+group regression ('L8',) season=False: 24 models, 37 rows, 39s
+group regression ('L8',) season=True: 6 models, 37 rows, 10s
+group regression ('S1',) season=False: 24 models, 37 rows, 74s
+group regression ('S1',) season=True: 6 models, 37 rows, 18s
+group regression ('S2',) season=False: 24 models, 37 rows, 196s
+group regression ('S2',) season=True: 6 models, 37 rows, 49s
+group regression ('S2', 'L8', 'S1') season=False: 24 models, 37 rows, 340s
+group regression ('S2', 'L8', 'S1') season=True: 6 models, 37 rows, 83s
+done 144
+.venv_ml/bin/python uzhavan_ml/scripts/eval_sickle_baseline.py --exp_dir $EXP  6486.47s user 750.21s system 313% cpu 38:26.23 total
