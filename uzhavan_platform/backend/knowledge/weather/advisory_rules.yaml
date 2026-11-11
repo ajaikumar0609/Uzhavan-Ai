@@ -1,0 +1,69 @@
+# Weather advisory rules (API contract §4, FP-010).
+#
+# Policy: a rule is included ONLY if the practice it states is written in a citable agronomic
+# source, and every numeric trigger is either stated in that source or in a cited official
+# definition. No rule invents a threshold. The advisory list is empty when no rule fires.
+#
+# Local source texts (read-only):
+#   uzhavan_data/07_tnau_knowledge/cleaned/cpg/Agriculture-CPG-2020.txt
+#     (TNAU / TN Dept of Agriculture, "Crop Production Guide - Agriculture 2020";
+#      original PDF: datasets/Agriculture-CPG-2020.pdf)
+#
+# Trigger semantics (evaluated by backend/knowledge/weather/advisories.py):
+#   crops / crop_stages : the farm's crop_id / crop_stage_id must be in the list
+#                         (so crop rules need a farm_id; without one they never fire).
+#   forecast            : any of the first `days` forecast days has `field` `op` `value`.
+#
+# Tamil text: null until a verified translation exists (the client shows English).
+
+version: 1
+rules:
+  - rule_id: groundnut_harvest_rain_wet_heaps
+    severity: caution
+    crops: [groundnut]
+    crop_stages: [harvest, maturity]
+    forecast:
+      field: precipitation_mm
+      op: gt
+      value: 0
+      days: 2
+    text:
+      en: >-
+        Rain is forecast in the next 2 days. TNAU advises: do not keep pulled-out groundnut
+        plants in heaps when they are wet, especially bunch varieties, as the pods will start sprouting.
+      ta: null
+    trigger_note: >-
+      "Wet" is operationalised as any forecast rainfall (> 0 mm) on today or tomorrow; the
+      source gives no rainfall amount.
+    rule_source:
+      title: "TNAU Crop Production Guide - Agriculture 2020, Groundnut (rainfed), Harvesting, NOTE"
+      document: "Agriculture-CPG-2020.pdf"
+      page: "printed p.187 (PDF p.194); repeated for irrigated groundnut on printed p.192"
+      quote: "Do not keep the pulled out plants in heaps when they are wet, especially the bunch varieties, as the pods will start sprouting."
+      url: null  # no verified public URL for this edition; local copy: datasets/Agriculture-CPG-2020.pdf
+
+  - rule_id: paddy_sri_nursery_heavy_rain
+    severity: caution
+    crops: [paddy]
+    crop_stages: [nursery]
+    forecast:
+      field: precipitation_mm
+      op: gte
+      value: 64.5
+      days: 2
+    text:
+      en: >-
+        Heavy rain (64.5 mm or more in a day) is forecast in the next 2 days. For a SRI mat
+        nursery, TNAU advises protecting the nursery from heavy rains for the first 5 days after sowing.
+      ta: null
+    trigger_note: >-
+      "Heavy rain" uses the India Meteorological Department rainfall-intensity definition
+      (heavy rain = 64.5-115.5 mm/day; very heavy and extremely heavy are higher), per the IMD
+      Hydrology Standard Operating Procedure, "Rainfall intensity" table (p.3):
+      https://mausam.imd.gov.in/imd_latest/contents/pdf/hydrology_sop.pdf
+    rule_source:
+      title: "TNAU Crop Production Guide - Agriculture 2020, Rice, 1.8 Integrated Crop Management (SRI), 1.8.3 Nursery, Watering"
+      document: "Agriculture-CPG-2020.pdf"
+      page: "printed p.29 (PDF p.36)"
+      quote: "Protect the nursery from heavy rains for the first 5 DAS."
+      url: null  # no verified public URL for this edition; local copy: datasets/Agriculture-CPG-2020.pdf

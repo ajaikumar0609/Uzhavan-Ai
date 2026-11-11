@@ -1,0 +1,7 @@
+# Test/dev dependencies. Install: .venv/bin/pip install -r requirements-dev.txt
+-r requirements.txt
+pytest==9.1.1
+pytest-asyncio==1.4.0
+fakeredis==2.38.0
+# Data loaders (scripts/load_mandi_prices.py reads parquet) and their tests
+pyarrow==25.0.1

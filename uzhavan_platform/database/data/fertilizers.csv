@@ -1,0 +1,26 @@
+fertilizer_id,name,tamil_name,type,n_percent,p_percent,k_percent,secondary_nutrients,form,application_method,recommended_dose_kg_ha,cost_per_kg_inr,notes,source
+1,Urea,யூரியா,Chemical - N,46,0,0,,Granular/Prilled,Basal + Top dress,100-200,15,Split application recommended; loss by volatilization if surface applied,TNAU
+2,DAP (Diammonium Phosphate),டிఎపి,Chemical - NP,18,46,0,,Granular,Basal,100-150,30,Best applied at sowing; do not mix with urea,TNAU
+3,MOP (Muriate of Potash),MOP,Chemical - K,0,0,60,,Granular,Basal + Top dress,50-100,25,Avoid on saline soils; split for sandy soils,TNAU
+4,SSP (Single Super Phosphate),SSP,Chemical - P,0,16,0,12% S,Powder/Granular,Basal,200-400,10,Good source of sulphur too; apply as basal dose,TNAU
+5,NPK 17-17-17,NPK 17-17-17,Chemical - Complex,17,17,17,,Granular,Basal,200-300,22,Balanced fertilizer for most crops; common complex,TNAU
+6,NPK 10-26-26,NPK 10-26-26,Chemical - Complex,10,26,26,,Granular,Basal,200-300,24,High P and K; good for root and fruit development,TNAU
+7,NPK 20-20-0,NPK 20-20-0,Chemical - Complex,20,20,0,,Granular,Basal,150-250,20,Suitable where K is sufficient in soil,TNAU
+8,Ammonium Sulphate,அம்மோனியம் சல்பேட்,Chemical - N,21,0,0,24% S,Granular,Top dress,200-300,18,Good for alkaline soils; contains sulphur,TNAU
+9,Zinc Sulphate (ZnSO4),ஜிங்க் சல்பேட்,Micronutrient - Zn,0,0,0,21% Zn,Granular/Powder,Basal/Foliar,25-50 basal; 0.5% foliar,80,Apply once in 2-3 years as basal; foliar spray for quick correction,TNAU
+10,Ferrous Sulphate (FeSO4),ஃபெரஸ் சல்பேட்,Micronutrient - Fe,0,0,0,19% Fe,Powder,Foliar,0.5-1% foliar spray,30,Foliar spray more effective than soil application,TNAU
+11,Manganese Sulphate,மாங்கனீஸ் சல்பேட்,Micronutrient - Mn,0,0,0,30-32% Mn,Powder,Foliar/Basal,0.5% foliar,40,Apply when pH > 7.5 soils show Mn deficiency,TNAU
+12,Borax,போராக்ஸ்,Micronutrient - B,0,0,0,11% B,Powder,Basal/Foliar,2-5 kg basal; 0.2% foliar,60,Critical for groundnut and sunflower; deficiency causes hollow heart,TNAU
+13,FYM (Farm Yard Manure),தொழு உரம்,Organic,0.5,0.25,0.5,,Solid,Basal,10000-25000,1-2,C:N ratio 30:1; apply 2-3 weeks before planting,TNAU
+14,Vermicompost,மண்புழு உரம்,Organic,2,1,1,,Solid,Basal,2500-5000,8-12,Higher nutrient content than FYM; apply 2-4 weeks before planting,TNAU
+15,Green Manure (Dhaincha),பசுந்தாள் உரம்,Organic,2.5,0.5,1,,Living crop,In-situ,Incorporate at flowering,500/kg seed,Sesbania aculeata is best; fixes N and improves soil structure,TNAU
+16,Neem Cake,வேப்பம் புண்ணாக்கு,Organic,5.2,1.0,1.4,,Powder,Basal,200-500,15,Also acts as neem-coated urea when mixed; nitrification inhibitor,TNAU
+17,Rhizobium,ரைசோபியம்,Biofertilizer,,,,,Liquid/Powder,Seed treatment,200 g/kg seed,30/pack,Legume-specific; do not mix with chemical fertilizers or fungicides,TNAU
+18,Azospirillum,அஸோஸ்பைரில்லம்,Biofertilizer,,,,,Liquid/Powder,Seed treatment + soil,600 g/acre,30/pack,Free-living N-fixer for cereals and grasses; saves 25% N fertilizer,TNAU
+19,Phosphobacteria (PSB),பாஸ்போபாக்டீரியா,Biofertilizer,,,,,Liquid/Powder,Seed treatment + soil,600 g/acre,30/pack,Solubilizes bound phosphorus; saves 25-30% P fertilizer,TNAU
+20,Potassium Mobilizing Bacteria (KMB),KMB,Biofertilizer,,,,,Liquid/Powder,Seed treatment,600 g/acre,30/pack,Mobilizes fixed K; saves 20% K fertilizer input,TNAU
+21,VAM (Vesicular Arbuscular Mycorrhizae),VAM,Biofertilizer,,,,,Powder,Soil application,1-2 kg/acre,50/pack,Enhances P and micronutrient uptake; improves drought tolerance,TNAU
+22,Trichoderma,ட்ரைக்கோடெர்மா,Bio-control + Organic,,,,,Powder,Seed/Soil treatment,2-4 kg/acre,40/pack,Also controls soil-borne diseases (root rot / wilt),TNAU
+23,Pseudomonas fluorescens,சூடோமோனாஸ்,Bio-control,,,,,Powder,Seed treatment,10 g/kg seed,40/pack,Controls bacterial blight and wilt diseases,TNAU
+24,Gypsum (Calcium Sulphate),ஜிப்சம்,Soil Amendment,0,0,0,23% Ca + 18% S,Granular,Basal,400-800,8,Essential for groundnut pod filling; corrects soil salinity,TNAU
+25,Lime (Agricultural),சுண்ணாம்பு,Soil Amendment,0,0,0,38% Ca,Powder,Basal,1000-2000,5,Corrects soil acidity; raises pH; apply 1 month before planting,TNAU

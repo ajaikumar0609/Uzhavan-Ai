@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl libgomp1 && rm -rf /var/lib/apt/lists/*
+
+# Copy disease detection service
+COPY api/disease_detection/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY api/disease_detection/ /app/
+# Also copy original backend (model_loader, predict, utils)
+COPY ../plant-disease-repo/backend/ /app/backend/
+
+ENV PYTHONPATH=/app/backend
+
+EXPOSE 8001
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]

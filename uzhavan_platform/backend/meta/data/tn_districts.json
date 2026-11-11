@@ -1,0 +1,391 @@
+{
+ "source": {
+  "coordinates": "GeoNames India extract via uzhavan_data/03_weather/processed/tn_district_hq_points.csv (CC BY 4.0)",
+  "coordinates_url": "https://download.geonames.org/export/dump/IN.zip",
+  "district_list_url": "https://www.tn.gov.in/district_list.php",
+  "tamil_names": "Tamil Mannvalam portal, TN Dept of Agriculture - Farmers Welfare (uzhavan_data/04_soil/soil_health_card/raw/tn_mannvalam/districts.json)",
+  "tamil_names_url": "https://www.tnagrisnet.tn.gov.in/mannvalam/welcome/index/en"
+ },
+ "districts": [
+  {
+   "id": "ariyalur",
+   "name": {
+    "en": "Ariyalur",
+    "ta": "அரியலூர்"
+   },
+   "lat": 11.13849,
+   "lon": 79.07556,
+   "hq_town": "Ariyalur"
+  },
+  {
+   "id": "chengalpattu",
+   "name": {
+    "en": "Chengalpattu",
+    "ta": "செங்கல்பட்டு"
+   },
+   "lat": 12.69184,
+   "lon": 79.97661,
+   "hq_town": "Chengalpattu"
+  },
+  {
+   "id": "chennai",
+   "name": {
+    "en": "Chennai",
+    "ta": "சென்னை"
+   },
+   "lat": 13.08784,
+   "lon": 80.27847,
+   "hq_town": "Chennai"
+  },
+  {
+   "id": "coimbatore",
+   "name": {
+    "en": "Coimbatore",
+    "ta": "கோயம்புத்தூர்"
+   },
+   "lat": 11.00555,
+   "lon": 76.96612,
+   "hq_town": "Coimbatore"
+  },
+  {
+   "id": "cuddalore",
+   "name": {
+    "en": "Cuddalore",
+    "ta": "கடலூர்"
+   },
+   "lat": 11.75617,
+   "lon": 79.76693,
+   "hq_town": "Cuddalore"
+  },
+  {
+   "id": "dharmapuri",
+   "name": {
+    "en": "Dharmapuri",
+    "ta": "தர்மபுரி"
+   },
+   "lat": 12.1277,
+   "lon": 78.15794,
+   "hq_town": "Dharmapuri"
+  },
+  {
+   "id": "dindigul",
+   "name": {
+    "en": "Dindigul",
+    "ta": "திண்டுக்கல்"
+   },
+   "lat": 10.36896,
+   "lon": 77.98036,
+   "hq_town": "Dindigul"
+  },
+  {
+   "id": "erode",
+   "name": {
+    "en": "Erode",
+    "ta": "ஈரோடு"
+   },
+   "lat": 11.3428,
+   "lon": 77.72741,
+   "hq_town": "Erode"
+  },
+  {
+   "id": "kallakurichi",
+   "name": {
+    "en": "Kallakurichi",
+    "ta": "கள்ளக்குறிச்சி"
+   },
+   "lat": 11.73379,
+   "lon": 78.95925,
+   "hq_town": "Kallakurichi"
+  },
+  {
+   "id": "kancheepuram",
+   "name": {
+    "en": "Kancheepuram",
+    "ta": "காஞ்சிபுரம்"
+   },
+   "lat": 12.83515,
+   "lon": 79.70006,
+   "hq_town": "Kanchipuram"
+  },
+  {
+   "id": "kanniyakumari",
+   "name": {
+    "en": "Kanniyakumari",
+    "ta": "கன்னியாகுமரி"
+   },
+   "lat": 8.17899,
+   "lon": 77.43227,
+   "hq_town": "Nagercoil"
+  },
+  {
+   "id": "karur",
+   "name": {
+    "en": "Karur",
+    "ta": "கரூர்"
+   },
+   "lat": 10.95771,
+   "lon": 78.08095,
+   "hq_town": "Karur"
+  },
+  {
+   "id": "krishnagiri",
+   "name": {
+    "en": "Krishnagiri",
+    "ta": "கிருஷ்ணகிரி"
+   },
+   "lat": 12.51921,
+   "lon": 78.21382,
+   "hq_town": "Krishnagiri"
+  },
+  {
+   "id": "madurai",
+   "name": {
+    "en": "Madurai",
+    "ta": "மதுரை"
+   },
+   "lat": 9.919,
+   "lon": 78.11953,
+   "hq_town": "Madurai"
+  },
+  {
+   "id": "mayiladuthurai",
+   "name": {
+    "en": "Mayiladuthurai",
+    "ta": "மயிலாடுதுறை"
+   },
+   "lat": 11.10354,
+   "lon": 79.655,
+   "hq_town": "Mayiladuthurai"
+  },
+  {
+   "id": "nagapattinam",
+   "name": {
+    "en": "Nagapattinam",
+    "ta": "நாகப்பட்டினம்"
+   },
+   "lat": 10.76377,
+   "lon": 79.84313,
+   "hq_town": "Nagapattinam"
+  },
+  {
+   "id": "namakkal",
+   "name": {
+    "en": "Namakkal",
+    "ta": "நாமக்கல்"
+   },
+   "lat": 11.22126,
+   "lon": 78.16524,
+   "hq_town": "Namakkal"
+  },
+  {
+   "id": "perambalur",
+   "name": {
+    "en": "Perambalur",
+    "ta": "பெரம்பலூர்"
+   },
+   "lat": 11.23333,
+   "lon": 78.88333,
+   "hq_town": "Perambalur"
+  },
+  {
+   "id": "pudukkottai",
+   "name": {
+    "en": "Pudukkottai",
+    "ta": "புதுக்கோட்டை"
+   },
+   "lat": 10.38128,
+   "lon": 78.82141,
+   "hq_town": "Pudukkottai"
+  },
+  {
+   "id": "ramanathapuram",
+   "name": {
+    "en": "Ramanathapuram",
+    "ta": "இராமநாதபுரம்"
+   },
+   "lat": 9.37158,
+   "lon": 78.83077,
+   "hq_town": "Ramanathapuram"
+  },
+  {
+   "id": "ranipet",
+   "name": {
+    "en": "Ranipet",
+    "ta": "இராணிப்பேட்டை"
+   },
+   "lat": 12.92471,
+   "lon": 79.33331,
+   "hq_town": "Ranipet"
+  },
+  {
+   "id": "salem",
+   "name": {
+    "en": "Salem",
+    "ta": "சேலம்"
+   },
+   "lat": 11.65376,
+   "lon": 78.15538,
+   "hq_town": "Salem"
+  },
+  {
+   "id": "sivaganga",
+   "name": {
+    "en": "Sivaganga",
+    "ta": "சிவகங்கை"
+   },
+   "lat": 9.84701,
+   "lon": 78.48358,
+   "hq_town": "Sivaganga"
+  },
+  {
+   "id": "tenkasi",
+   "name": {
+    "en": "Tenkasi",
+    "ta": "தென்காசி"
+   },
+   "lat": 8.96003,
+   "lon": 77.31525,
+   "hq_town": "Tenkasi"
+  },
+  {
+   "id": "thanjavur",
+   "name": {
+    "en": "Thanjavur",
+    "ta": "தஞ்சாவூர்"
+   },
+   "lat": 10.78523,
+   "lon": 79.13909,
+   "hq_town": "Thanjavur"
+  },
+  {
+   "id": "theni",
+   "name": {
+    "en": "Theni",
+    "ta": "தேனி"
+   },
+   "lat": 10.01115,
+   "lon": 77.47772,
+   "hq_town": "Theni"
+  },
+  {
+   "id": "the_nilgiris",
+   "name": {
+    "en": "The Nilgiris",
+    "ta": "நீலகிரி"
+   },
+   "lat": 11.4134,
+   "lon": 76.69521,
+   "hq_town": "Udhagamandalam (Ooty)"
+  },
+  {
+   "id": "thoothukudi",
+   "name": {
+    "en": "Thoothukudi",
+    "ta": "தூத்துக்குடி"
+   },
+   "lat": 8.76735,
+   "lon": 78.13425,
+   "hq_town": "Thoothukudi"
+  },
+  {
+   "id": "tiruchirappalli",
+   "name": {
+    "en": "Tiruchirappalli",
+    "ta": "திருச்சிராப்பள்ளி"
+   },
+   "lat": 10.8155,
+   "lon": 78.69651,
+   "hq_town": "Tiruchirappalli"
+  },
+  {
+   "id": "tirunelveli",
+   "name": {
+    "en": "Tirunelveli",
+    "ta": "திருநெல்வேலி"
+   },
+   "lat": 8.72742,
+   "lon": 77.6838,
+   "hq_town": "Tirunelveli"
+  },
+  {
+   "id": "tirupathur",
+   "name": {
+    "en": "Tirupathur",
+    "ta": "திருப்பத்தூர்"
+   },
+   "lat": 12.49239,
+   "lon": 78.56804,
+   "hq_town": "Tirupattur"
+  },
+  {
+   "id": "tiruppur",
+   "name": {
+    "en": "Tiruppur",
+    "ta": "திருப்பூர்"
+   },
+   "lat": 11.11541,
+   "lon": 77.35456,
+   "hq_town": "Tiruppur"
+  },
+  {
+   "id": "tiruvallur",
+   "name": {
+    "en": "Tiruvallur",
+    "ta": "திருவள்ளூர்"
+   },
+   "lat": 13.14376,
+   "lon": 79.90889,
+   "hq_town": "Tiruvallur"
+  },
+  {
+   "id": "tiruvannamalai",
+   "name": {
+    "en": "Tiruvannamalai",
+    "ta": "திருவண்ணாமலை"
+   },
+   "lat": 12.22662,
+   "lon": 79.07461,
+   "hq_town": "Tiruvannamalai"
+  },
+  {
+   "id": "tiruvarur",
+   "name": {
+    "en": "Tiruvarur",
+    "ta": "திருவாரூர்"
+   },
+   "lat": 10.77269,
+   "lon": 79.6368,
+   "hq_town": "Thiruvarur"
+  },
+  {
+   "id": "vellore",
+   "name": {
+    "en": "Vellore",
+    "ta": "வேலூர்"
+   },
+   "lat": 12.9184,
+   "lon": 79.13255,
+   "hq_town": "Vellore"
+  },
+  {
+   "id": "viluppuram",
+   "name": {
+    "en": "Viluppuram",
+    "ta": "விழுப்புரம்"
+   },
+   "lat": 11.93975,
+   "lon": 79.49244,
+   "hq_town": "Villupuram"
+  },
+  {
+   "id": "virudhunagar",
+   "name": {
+    "en": "Virudhunagar",
+    "ta": "விருதுநகர்"
+   },
+   "lat": 9.58509,
+   "lon": 77.95787,
+   "hq_town": "Virudhunagar"
+  }
+ ]
+}

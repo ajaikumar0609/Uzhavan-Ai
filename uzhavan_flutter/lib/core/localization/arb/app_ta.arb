@@ -1,0 +1,650 @@
+{
+  "@@locale": "ta",
+  "appTitle": "UZHAVAN AI",
+  "languageSwitchLabel": "தமிழ் → English",
+  "languageSwitchTooltip": "மொழியை மாற்று",
+  "languageTamil": "தமிழ்",
+  "languageEnglish": "English",
+  "notSet": "அமைக்கப்படவில்லை",
+  "optionalSuffix": "(விருப்பம்)",
+  "retry": "மீண்டும் முயற்சி",
+  "loading": "ஏற்றுகிறது…",
+  "stateError": "ஏதோ தவறு நடந்தது",
+  "stateUnsure": "உறுதியாகச் சொல்ல முடியவில்லை: வேளாண் அலுவலரை அணுகவும்",
+  "stateUnavailable": "இந்தச் சேவை தற்போது கிடைக்கவில்லை",
+  "stateEmpty": "காட்ட எதுவும் இல்லை",
+  "comingSoon": "இந்த வசதி அடுத்த புதுப்பிப்பில் வரும்",
+  "navHome": "முகப்பு",
+  "navAssistant": "உதவி",
+  "navScan": "ஸ்கேன்",
+  "navMarket": "சந்தை",
+  "navMore": "மேலும்",
+  "featureHome": "முகப்பு",
+  "featureAssistant": "வேளாண் உதவியாளர்",
+  "featureScan": "பயிர் நோய் ஸ்கேன்",
+  "featureMarket": "சந்தை விலைகள்",
+  "featureWeather": "வானிலை",
+  "featureSchemes": "அரசு திட்டங்கள்",
+  "featureSoil": "மண்",
+  "featureFarms": "என் பண்ணைகள்",
+  "featureDiary": "பண்ணை நாட்குறிப்பு",
+  "featureSatellite": "செயற்கைக்கோள்",
+  "featureProfile": "சுயவிவரம்",
+  "featureSettings": "அமைப்புகள்",
+  "back": "பின்செல்",
+  "loginTitle": "உள்நுழைக",
+  "loginSubtitle": "உங்கள் தொலைபேசி எண்ணை உள்ளிடுங்கள்",
+  "phoneLabel": "தொலைபேசி எண்",
+  "phonePrefix": "+91",
+  "phoneHint": "10 இலக்க எண்",
+  "phoneInvalid": "6, 7, 8 அல்லது 9 இல் தொடங்கும் 10 இலக்க எண்ணை உள்ளிடுங்கள்",
+  "sendOtp": "OTP அனுப்பு",
+  "otpTitle": "தொலைபேசி சரிபார்ப்பு",
+  "otpSentTo": "+91 {phone} க்கு OTP அனுப்பப்பட்டது",
+  "@otpSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "otpLabel": "6 இலக்க OTP",
+  "otpInvalid": "6 இலக்கக் குறியீட்டை உள்ளிடுங்கள்",
+  "verify": "சரிபார்",
+  "resendOtp": "குறியீட்டை மீண்டும் அனுப்பு",
+  "resendIn": "{seconds} வினாடிகளில் மீண்டும் அனுப்பலாம்",
+  "@resendIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNumber": "எண்ணை மாற்று",
+  "otpResent": "புதிய குறியீடு அனுப்பப்பட்டது",
+  "errOtpIncorrect": "தவறான குறியீடு. மீண்டும் முயற்சிக்கவும்.",
+  "errOtpExpired": "குறியீடு காலாவதியானது. புதிய குறியீட்டைக் கோருங்கள்.",
+  "errOtpAttemptsExceeded": "பல தவறான முயற்சிகள். புதிய குறியீட்டைக் கோருங்கள்.",
+  "errOtpNotFound": "செயலில் உள்ள குறியீடு இல்லை. புதிய குறியீட்டைக் கோருங்கள்.",
+  "errRateLimited": "பல கோரிக்கைகள். சிறிது நேரம் கழித்து முயற்சிக்கவும்.",
+  "errRateLimitedSeconds": "பல கோரிக்கைகள். {seconds} வினாடிகளில் மீண்டும் முயற்சிக்கவும்.",
+  "@errRateLimitedSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "errRateLimitedMinutes": "பல கோரிக்கைகள். {minutes} நிமிடங்களில் மீண்டும் முயற்சிக்கவும்.",
+  "@errRateLimitedMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "errOtpDeliveryNotConfigured": "SMS சேவை தற்போது கிடைக்கவில்லை. பின்னர் முயற்சிக்கவும்.",
+  "errServerUnreachable": "UZHAVAN சேவையகத்தை அணுக முடியவில்லை",
+  "errSessionExpired": "உங்கள் அமர்வு முடிந்தது. மீண்டும் உள்நுழையவும்.",
+  "errValidation": "உள்ளிட்ட விவரங்களைச் சரிபார்க்கவும்",
+  "errNotFound": "கோரிய தகவல் கிடைக்கவில்லை",
+  "profileName": "பெயர்",
+  "profileDistrict": "மாவட்டம்",
+  "profileVillage": "கிராமம்",
+  "profilePhone": "தொலைபேசி",
+  "profileLanguage": "விருப்ப மொழி",
+  "profileEdit": "சுயவிவரத்தைத் திருத்து",
+  "profileUnavailable": "சுயவிவரத் தரவு கிடைக்கவில்லை",
+  "profileStillIncomplete": "சுயவிவரம் இன்னும் முழுமையடையவில்லை. தேவையான விவரங்களை நிரப்பவும்.",
+  "onboardingTitle": "உங்கள் விவரங்கள்",
+  "onboardingSubtitle": "சிறந்த ஆலோசனைக்கு உதவும்",
+  "onboardingContinue": "தொடரவும்",
+  "nameInvalid": "பெயர் 2 முதல் 100 எழுத்துகள் இருக்க வேண்டும்",
+  "districtRequired": "மாவட்டத்தைத் தேர்ந்தெடுக்கவும்",
+  "districtPickerTitle": "மாவட்டத்தைத் தேர்ந்தெடுக்கவும்",
+  "searchHint": "தேடு",
+  "districtsUnavailable": "மாவட்டப் பட்டியல் கிடைக்கவில்லை",
+  "optionsUnavailable": "தேர்வுப் பட்டியல் கிடைக்கவில்லை",
+  "noMatches": "பொருத்தம் எதுவும் இல்லை",
+  "pickerNone": "தேர்வு செய்யவில்லை",
+  "save": "சேமி",
+  "cancel": "ரத்து செய்",
+  "saved": "சேமிக்கப்பட்டது",
+  "delete": "நீக்கு",
+  "edit": "திருத்து",
+  "logout": "வெளியேறு",
+  "logoutConfirm": "UZHAVAN AI இலிருந்து வெளியேற வேண்டுமா?",
+  "farmAdd": "பண்ணையைச் சேர்",
+  "farmEdit": "பண்ணையைத் திருத்து",
+  "farmDeleteConfirm": "\"{name}\" பண்ணையை நீக்க வேண்டுமா?",
+  "@farmDeleteConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "farmDeleted": "பண்ணை நீக்கப்பட்டது",
+  "farmsEmpty": "இன்னும் பண்ணைகள் சேர்க்கப்படவில்லை",
+  "farmsUnavailable": "பண்ணை தரவு கிடைக்கவில்லை",
+  "farmName": "பண்ணையின் பெயர்",
+  "farmNameRequired": "பண்ணையின் பெயரை உள்ளிடுங்கள்",
+  "farmLocation": "இருப்பிடம்",
+  "farmLocationHelp": "அட்சரேகை, தீர்க்கரேகை இரண்டையும் உள்ளிடுங்கள் அல்லது இரண்டையும் காலியாக விடுங்கள்",
+  "farmLatitude": "அட்சரேகை",
+  "farmLongitude": "தீர்க்கரேகை",
+  "farmLatInvalid": "அட்சரேகை 8.0 முதல் 13.6 வரை இருக்க வேண்டும் (தமிழ்நாடு)",
+  "farmLonInvalid": "தீர்க்கரேகை 76.2 முதல் 80.4 வரை இருக்க வேண்டும் (தமிழ்நாடு)",
+  "farmLatLonPair": "அட்சரேகை, தீர்க்கரேகை இரண்டும் தேவை",
+  "farmCoordinatesValue": "{lat}, {lon}",
+  "@farmCoordinatesValue": {
+    "placeholders": {
+      "lat": {
+        "type": "String"
+      },
+      "lon": {
+        "type": "String"
+      }
+    }
+  },
+  "farmArea": "நில அளவு (ஏக்கர்)",
+  "farmAreaInvalid": "சரியான ஏக்கர் அளவை உள்ளிடுங்கள்",
+  "farmAreaValue": "{acres} ஏக்கர்",
+  "@farmAreaValue": {
+    "placeholders": {
+      "acres": {
+        "type": "String"
+      }
+    }
+  },
+  "farmCrop": "பயிர்",
+  "farmStage": "பயிர் நிலை",
+  "farmSeason": "பருவம்",
+  "farmIrrigation": "பாசன வகை",
+  "settingsLanguage": "மொழி",
+  "settingsTheme": "தீம்",
+  "themeLight": "வெளிச்சம்",
+  "themeDark": "இருள்",
+  "themeSystem": "சாதன அமைப்பு",
+  "settingsAbout": "பயன்பாட்டைப் பற்றி",
+  "aboutDescription": "தமிழ்நாடு விவசாயிகளுக்கான வேளாண் உதவியாளர்",
+  "appVersion": "பதிப்பு {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "apiBaseUrlDebug": "API முகவரி (டீபக்): {url}",
+  "@apiBaseUrlDebug": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "configErrorTitle": "அமைப்புப் பிழை",
+  "configErrorInsecure": "இந்த வெளியீட்டுப் பதிப்புக்கு பாதுகாப்பான (https) API முகவரி தேவை.",
+  "configErrorInvalid": "API முகவரி தவறானது.",
+  "configErrorDetail": "API_BASE_URL: {url}",
+  "@configErrorDetail": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "farmLimitReached": "அதிகபட்சம் 5 பண்ணைகள் மட்டுமே சேர்க்கலாம்",
+  "errInvalidDistrict": "தேர்ந்தெடுத்த மாவட்டம் சரியானதல்ல",
+  "errInvalidLanguage": "தேர்ந்தெடுத்த மொழி சரியானதல்ல",
+  "errInvalidVillage": "கிராமத்தின் பெயரைச் சரிபார்க்கவும்",
+  "errInvalidLocation": "இருப்பிட மதிப்புகள் சரியானவை அல்ல",
+  "errLocationOutsideTn": "இருப்பிடம் தமிழ்நாட்டுக்குள் இருக்க வேண்டும்",
+  "errInvalidBoundary": "பண்ணை எல்லை சரியானதல்ல",
+  "errInvalidCrop": "தேர்ந்தெடுத்த பயிர் சரியானதல்ல",
+  "errInvalidCropStage": "தேர்ந்தெடுத்த பயிர் நிலை சரியானதல்ல",
+  "errInvalidSeason": "தேர்ந்தெடுத்த பருவம் சரியானதல்ல",
+  "errInvalidIrrigationType": "தேர்ந்தெடுத்த பாசன வகை சரியானதல்ல",
+  "notAvailable": "கிடைக்கவில்லை",
+  "sourceLabel": "ஆதாரம்: {source}",
+  "@sourceLabel": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedAt": "புதுப்பித்தது {time}",
+  "@updatedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "observedOn": "பதிவான நாள் {date}",
+  "@observedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "oldData": "பழைய தரவு",
+  "kindCurrent": "தற்போது",
+  "kindForecast": "முன்னறிவிப்பு",
+  "kindHistorical": "கடந்த கால தரவு",
+  "kindLatestObserved": "சமீபத்திய பதிவு",
+  "kindEstimated": "மாதிரி மதிப்பீடு",
+  "kindMeasured": "அளவிடப்பட்டது",
+  "kindReference": "குறிப்புத் தகவல்",
+  "linkOpenFailed": "இணைப்பைத் திறக்க முடியவில்லை",
+  "farmPickerLabel": "பண்ணை",
+  "locationMissing": "பண்ணையைச் சேர்க்கவும் அல்லது சுயவிவரத்தில் மாவட்டத்தை அமைக்கவும்",
+  "close": "மூடு",
+  "weatherUnavailable": "வானிலை தரவு தற்போது கிடைக்கவில்லை",
+  "weatherNow": "தற்போதைய வானிலை",
+  "weatherLocation": "இடம்: {name}",
+  "@weatherLocation": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherFeelsLike": "உணரும் வெப்பம்",
+  "weatherHumidity": "ஈரப்பதம்",
+  "weatherRain": "மழை",
+  "weatherWind": "காற்று",
+  "weatherModelTime": "மாதிரி நேரம்",
+  "weatherForecast7": "7 நாள் முன்னறிவிப்பு",
+  "weatherToday": "இன்றைய முன்னறிவிப்பு",
+  "weatherForecastEmpty": "முன்னறிவிப்பு தரவு இல்லை",
+  "weatherMaxMin": "அதிகம் {max} · குறைவு {min}",
+  "@weatherMaxMin": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      },
+      "min": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherRainLine": "மழை {mm} · வாய்ப்பு {pct}",
+  "@weatherRainLine": {
+    "placeholders": {
+      "mm": {
+        "type": "String"
+      },
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherAdvisories": "வானிலை அறிவுரைகள்",
+  "weatherNoAdvisories": "தற்போது எந்த விதியும் பொருந்தவில்லை",
+  "severityCaution": "எச்சரிக்கை",
+  "severityInfo": "தகவல்",
+  "ruleSource": "விதியின் ஆதாரம்: {source}",
+  "@ruleSource": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "marketUnavailable": "சந்தை தரவு தற்போது கிடைக்கவில்லை",
+  "marketEmpty": "இந்தத் தேர்வுக்கு விலைப் பதிவுகள் இல்லை",
+  "marketDistrictFilter": "மாவட்டம்",
+  "allCommodities": "அனைத்தும்",
+  "marketLatestTitle": "சமீபத்திய விலைப் பதிவுகள்",
+  "marketTapForTrend": "கடந்த கால விலைப் போக்கைப் பார்க்க ஒரு பதிவைத் தொடவும்",
+  "marketMinMax": "குறைந்தது ₹ {min} – அதிகம் ₹ {max}",
+  "@marketMinMax": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "unitRsPerQuintal": "ரூ/குவிண்டால்",
+  "unitNoteLabel": "அலகுக் குறிப்பு: {note}",
+  "@unitNoteLabel": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "marketTrend": "விலைப் போக்கு (கடந்த காலம்)",
+  "marketTrendTitle": "{name}: கடந்த கால விலைப் போக்கு",
+  "@marketTrendTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "marketTrendCaption": "{market} · கடந்த {days} நாட்கள் · பொதுவான (modal) விலை",
+  "@marketTrendCaption": {
+    "placeholders": {
+      "market": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "marketTrendEmpty": "இந்தச் சந்தைக்குக் கடந்த கால விலைகள் இல்லை",
+  "schemesUnavailable": "திட்டத் தரவு தற்போது கிடைக்கவில்லை",
+  "schemesEmpty": "இந்தத் தேடலுக்குத் திட்டங்கள் இல்லை",
+  "schemeSearchHint": "திட்டங்களைத் தேடுங்கள்",
+  "levelAll": "அனைத்தும்",
+  "levelCentral": "மத்திய அரசு",
+  "levelState": "மாநில அரசு",
+  "schemeCropFilter": "பயிர்",
+  "schemesCount": "{count} திட்டங்கள்",
+  "@schemesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "schemeInactive": "மூலத்தில் செயலில் இல்லை",
+  "schemeLevel": "நிலை",
+  "schemeAuthority": "பொறுப்பு அமைப்பு",
+  "schemeDateChecked": "சரிபார்த்த நாள்",
+  "schemeLastUpdatedOnSource": "மூலத்தில் புதுப்பித்த நாள்",
+  "schemeOfficialLink": "அதிகாரப்பூர்வ இணையப் பக்கம்",
+  "schemeDescription": "விளக்கம்",
+  "schemeEligibilityText": "தகுதி விவரம் (அதிகாரப்பூர்வ உரை)",
+  "schemeBenefits": "பயன்கள்",
+  "schemeHowToApply": "விண்ணப்பிக்கும் முறை",
+  "schemeDocuments": "தேவையான ஆவணங்கள்",
+  "schemeSourceDocuments": "மூல ஆவணங்கள்",
+  "eligibilityTitle": "உங்கள் தகுதி சரிபார்ப்பு",
+  "eligibilityUnavailable": "தகுதி சரிபார்ப்பு தற்போது கிடைக்கவில்லை",
+  "eligMeetsKnown": "அறியப்பட்ட நிபந்தனைகளைப் பூர்த்தி செய்கிறீர்கள்",
+  "eligFailsKnown": "அறியப்பட்ட நிபந்தனைகளைப் பூர்த்தி செய்யவில்லை",
+  "eligMoreInfo": "மேலும் தகவல் தேவை",
+  "eligCannotDetermine": "தீர்மானிக்க முடியவில்லை",
+  "eligibilityNoResult": "தகுதி முடிவு கிடைக்கவில்லை",
+  "eligibilityReasons": "காரணங்கள்",
+  "eligibilityMissing": "தேவைப்படும் விவரங்கள்",
+  "eligibilityCriteriaSource": "நிபந்தனைகளின் ஆதாரம்",
+  "eligibilityDisclaimer": "இது அறியப்பட்ட நிபந்தனைகளை மட்டுமே சரிபார்க்கிறது; இறுதி முடிவு அரசு அலுவலகத்தினுடையது.",
+  "soilUnavailable": "மண் தரவு தற்போது கிடைக்கவில்லை",
+  "soilRegionalTitle": "பிராந்தியத் தகவல்",
+  "soilTypes": "இப்பகுதியின் மண் வகைகள்",
+  "soilNutrientStatus": "மாவட்ட ஊட்டச்சத்து நிலை",
+  "soilNutrientStatusCaption": "ஒவ்வொரு வகையிலும் உள்ள மாதிரிகளின் சதவீதம்",
+  "soilEstimatedTitle": "மதிப்பிடப்பட்ட (மாதிரி) மதிப்புகள்",
+  "soilEstimatedWarning": "இவை கணினி மாதிரி (model) மதிப்பீடுகள், உங்கள் நிலத்தின் அளவீடுகள் அல்ல",
+  "soilDepth": "ஆழம்",
+  "soilMeasuredTitle": "உங்கள் மண் பரிசோதனைகள் (அளவிடப்பட்டவை)",
+  "soilNoTests": "இன்னும் மண் பரிசோதனை முடிவுகள் சேர்க்கப்படவில்லை",
+  "soilAddTest": "மண் பரிசோதனை சேர்",
+  "soilAddTestNeedsFarm": "மண் பரிசோதனை சேர்க்க முதலில் ஒரு பண்ணையைச் சேர்க்கவும்",
+  "soilSampleOn": "மாதிரி எடுத்த நாள்: {date}",
+  "@soilSampleOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "soilLab": "ஆய்வகம்: {lab}",
+  "@soilLab": {
+    "placeholders": {
+      "lab": {
+        "type": "String"
+      }
+    }
+  },
+  "soilFarmerEntered": "நீங்கள் உள்ளிட்டது",
+  "soilSampleDate": "மாதிரி எடுத்த நாள்",
+  "soilPickDate": "நாளைத் தேர்ந்தெடுக்கவும்",
+  "soilLabName": "ஆய்வகத்தின் பெயர்",
+  "soilValuesHint": "உங்கள் மண் பரிசோதனை அட்டையில் உள்ள மதிப்புகளை மட்டும் உள்ளிடவும்; மற்றவற்றைக் காலியாக விடவும்.",
+  "soilValueInvalid": "சரியான எண்ணை உள்ளிடவும்",
+  "soilValueRange": "அனுமதி: {min} – {max}",
+  "@soilValueRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "soilFarmRequired": "பண்ணையைத் தேர்ந்தெடுக்கவும்",
+  "soilDateRequired": "மாதிரி எடுத்த நாளைத் தேர்ந்தெடுக்கவும்",
+  "soilAtLeastOne": "குறைந்தது ஒரு மதிப்பையாவது உள்ளிடவும்",
+  "soilPh": "pH",
+  "soilSoc": "மண் கரிமக் கார்பன்",
+  "soilClay": "களிமண்",
+  "soilSand": "மணல்",
+  "soilSilt": "வண்டல்",
+  "soilCec": "நேர்மின் அயனி பரிமாற்றத் திறன் (CEC)",
+  "soilBdod": "மண் அடர்த்தி",
+  "soilNitrogenEst": "மொத்த நைட்ரஜன்",
+  "soilEc": "மின் கடத்துத்திறன் (EC)",
+  "soilOc": "கரிமக் கார்பன் (OC)",
+  "soilN": "தழைச்சத்து (N)",
+  "soilP": "மணிச்சத்து (P)",
+  "soilK": "சாம்பல்சத்து (K)",
+  "soilS": "கந்தகம் (S)",
+  "soilZn": "துத்தநாகம் (Zn)",
+  "soilFe": "இரும்பு (Fe)",
+  "soilCu": "தாமிரம் (Cu)",
+  "soilMn": "மாங்கனீசு (Mn)",
+  "soilB": "போரான் (B)",
+  "diaryUnavailable": "நாட்குறிப்பு தற்போது கிடைக்கவில்லை",
+  "diaryEmpty": "இன்னும் பதிவுகள் இல்லை",
+  "diaryAdd": "பதிவு சேர்",
+  "diaryKindNote": "குறிப்பு",
+  "diaryKindObservation": "கவனிப்பு",
+  "diaryKindExpense": "செலவு",
+  "diaryKindIncome": "வருமானம்",
+  "diaryKindQuestion": "கேள்வி",
+  "diaryKindScan": "ஸ்கேன்",
+  "diaryHistory": "வரலாறு",
+  "diaryText": "விவரம்",
+  "diaryTextRequired": "விவரத்தை உள்ளிடவும்",
+  "diaryAmount": "தொகை (ரூ)",
+  "diaryAmountInvalid": "சரியான தொகையை உள்ளிடவும்",
+  "diaryDate": "நாள்",
+  "satelliteUnavailable": "செயற்கைக்கோள் நிலை தற்போது கிடைக்கவில்லை",
+  "satelliteUnderValidation": "செயற்கைக்கோள் நுண்ணறிவு சரிபார்ப்பில் உள்ளது",
+  "satelliteAvailable": "செயற்கைக்கோள் நுண்ணறிவு கிடைக்கிறது",
+  "satelliteNoPredictions": "அனைத்துச் சரிபார்ப்புகளும் முடியும் வரை படங்களோ கணிப்புகளோ காட்டப்படாது.",
+  "satelliteGates": "சரிபார்ப்பு நிலைகள்",
+  "gateLicence": "தரவு உரிமம்",
+  "gateUnits": "அலகுகள் சரிபார்ப்பு",
+  "gateGeography": "புவியியல் வரம்பு",
+  "gateEvaluation": "சுயாதீன மதிப்பீடு",
+  "gatePassed": "முடிந்தது",
+  "gateNotPassed": "இன்னும் முடியவில்லை",
+  "assistantUnavailable": "உதவியாளர் சேவை தற்போது கிடைக்கவில்லை",
+  "assistantError": "பதிலைப் பெற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
+  "assistantIntro": "பயிர், வானிலை, திட்டங்கள் பற்றி தமிழிலோ ஆங்கிலத்திலோ கேளுங்கள்.",
+  "assistantSuggestions": "இவற்றில் ஒன்றைக் கேட்கலாம்:",
+  "assistantHint": "உங்கள் கேள்வியை எழுதுங்கள்",
+  "assistantSend": "அனுப்பு",
+  "assistantNewChat": "புதிய உரையாடல்",
+  "assistantSources": "ஆதாரங்கள்",
+  "assistantFallbackNote": "இந்தப் பதிலுக்குச் சரிபார்க்கப்பட்ட ஆதாரம் கிடைக்கவில்லை. வேளாண் அலுவலரிடம் உறுதி செய்யவும்.",
+  "suggest1": "நெல் நாற்றங்காலை எப்படித் தயாரிப்பது?",
+  "suggest2": "இந்த வாரம் மழை பெய்யுமா?",
+  "suggest3": "எனக்குப் பொருந்தும் அரசு திட்டங்கள் எவை?",
+  "suggest4": "மண் பரிசோதனை ஏன் செய்ய வேண்டும்?",
+  "stageStarting": "தொடங்குகிறது…",
+  "stageUnderstanding": "கேள்வியைப் புரிந்துகொள்கிறது…",
+  "stagePlanning": "திட்டமிடுகிறது…",
+  "stageGathering": "தகவல் சேகரிக்கிறது…",
+  "stageEvidence": "ஆதாரங்களைச் சரிபார்க்கிறது…",
+  "stageGrounding": "ஆதாரங்களுடன் ஒப்பிடுகிறது…",
+  "stageWriting": "பதில் எழுதுகிறது…",
+  "voiceStart": "குரலில் கேளுங்கள்",
+  "voiceStop": "நிறுத்து",
+  "voiceListening": "கேட்கிறது…",
+  "voiceThinking": "சிந்திக்கிறது…",
+  "voiceSpeaking": "பதில் கூறுகிறது…",
+  "voiceModeOn": "குரல் உரையாடல் முறை ஆன்",
+  "voiceModeOff": "குரல் உரையாடல் முறை ஆஃப்",
+  "voicePermissionDenied": "மைக்ரோஃபோன் அனுமதி இல்லை. அமைப்புகளில் அனுமதி தரவும்.",
+  "voiceNotAvailable": "இந்தக் கைபேசியில் குரல் உள்ளீடு கிடைக்கவில்லை",
+  "speakAnswer": "பதிலைக் கேளுங்கள்",
+  "ttsNotAvailable": "இந்த மொழிக்கு குரல் வாசிப்பு கிடைக்கவில்லை",
+  "scanCrop": "பயிர்",
+  "scanPaddyExcluded": "நெல்லுக்கான ஸ்கேன் தற்போது இல்லை",
+  "scanCamera": "படம் எடு",
+  "scanGallery": "கேலரியிலிருந்து",
+  "scanYourPhoto": "நீங்கள் எடுத்த படம்",
+  "scanRetake": "மீண்டும் எடு",
+  "scanRemove": "நீக்கு",
+  "scanSubmit": "பரிசோதனைக்கு அனுப்பு",
+  "scanPickCropFirst": "முதலில் பயிரைத் தேர்ந்தெடுக்கவும்",
+  "scanUploading": "பதிவேற்றுகிறது…",
+  "scanUploadingPct": "பதிவேற்றுகிறது… {pct}%",
+  "@scanUploadingPct": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "scanModelUnavailable": "சரிபார்க்கப்பட்ட நோய் கண்டறியும் மாதிரி இன்னும் கிடைக்கவில்லை. உள்ளூர் வேளாண் அலுவலரை அணுகவும்.",
+  "scanUnsure": "உறுதியாகச் சொல்ல முடியவில்லை. வேளாண் அலுவலரை அணுகவும்.",
+  "scanImageTooLarge": "படம் மிகப் பெரியது. சிறிய படத்தை முயற்சிக்கவும்.",
+  "scanUnsupportedImage": "இந்தப் படத்தைப் பயன்படுத்த முடியாது. JPEG, PNG அல்லது WebP படத்தை முயற்சிக்கவும்.",
+  "scanPickFailed": "படத்தைப் பெற முடியவில்லை",
+  "cameraPermissionDenied": "கேமரா அனுமதி இல்லை. அமைப்புகளில் அனுமதி தரவும்.",
+  "galleryPermissionDenied": "படங்களை அணுக அனுமதி இல்லை",
+  "scanResultTitle": "மாதிரியின் முடிவு",
+  "scanProbability": "நிகழ்தகவு",
+  "scanModelVersion": "மாதிரிப் பதிப்பு",
+  "scanInferredAt": "கணித்த நேரம்",
+  "scanGuidance": "வழிகாட்டுதல்",
+  "scanConfirmWithOfficer": "நடவடிக்கைக்கு முன் வேளாண் அலுவலரிடம் உறுதி செய்யவும்.",
+  "errValueOutOfRange": "ஒரு மதிப்பு அனுமதிக்கப்பட்ட வரம்பிற்கு வெளியே உள்ளது. சரிபார்க்கவும்.",
+  "weatherIssuedNotProvided": "முன்னறிவிப்பு வெளியான நேரம் வழங்கப்படவில்லை",
+  "weatherIssuedAt": "முன்னறிவிப்பு வெளியானது {time}",
+  "@weatherIssuedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "marketVariety": "ரகம்",
+  "marketVarietyValue": "ரகம்: {variety}",
+  "@marketVarietyValue": {
+    "placeholders": {
+      "variety": {
+        "type": "String"
+      }
+    }
+  },
+  "schemeStatus": "நிலை (மூலத்தில்)",
+  "schemeActiveOnSource": "மூலத்தில் செயலில் உள்ளது",
+  "schemeStatusNotStated": "மூலத்தில் நிலை குறிப்பிடப்படவில்லை",
+  "schemeComponents": "திட்டக் கூறுகள்",
+  "eligibilitySignIn": "தகுதியைச் சரிபார்க்க மீண்டும் உள்நுழையவும்",
+  "soilSurvey": "ஆய்வு",
+  "soilCycle": "சுழற்சி",
+  "soilParamSamples": "{param} ({samples} மாதிரிகள்)",
+  "@soilParamSamples": {
+    "placeholders": {
+      "param": {
+        "type": "String"
+      },
+      "samples": {
+        "type": "int"
+      }
+    }
+  },
+  "soilLow": "குறைவு",
+  "soilMedium": "நடுத்தரம்",
+  "soilHigh": "அதிகம்",
+  "homeGreeting": "வணக்கம், {name}",
+  "@homeGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeGreetingNoName": "வணக்கம்",
+  "homeNoFarm": "இன்னும் பண்ணை சேர்க்கப்படவில்லை",
+  "homeSetCrop": "சந்தை விலைகளைப் பொருத்த, பண்ணையில் பயிரை அமைக்கவும்",
+  "homeMarketSnapshot": "சந்தை விலைகள் (சமீபத்திய பதிவு)",
+  "homeMarketNeedsFarm": "சந்தை விலைகளைக் காண பண்ணை அல்லது மாவட்டத்தை அமைக்கவும்",
+  "homeRecentActivity": "சமீபத்திய செயல்பாடு",
+  "homeShortcuts": "விரைவு அணுகல்",
+  "homeSeeAll": "அனைத்தும்",
+  "soilSamplesCount": "{count} மாதிரிகள்",
+  "@soilSamplesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNoMarketForCrop": "இந்தப் பயிருக்குச் சந்தை விலைத் தரவு இல்லை",
+  "voiceOfflineUnavailable": "இந்தக் கைபேசியில் ஆஃப்லைன் குரல் அறிதல் இல்லை. எனவே எதுவும் பதிவு செய்யப்படவில்லை, பதிவேற்றப்படவில்லை. கேள்வியை தட்டச்சு செய்யவும்.",
+  "voiceOfflineLanguageMissing": "இந்த மொழிக்கான ஆஃப்லைன் பேச்சுத் தொகுப்பு நிறுவப்படவில்லை. கைபேசியின் பேச்சு அமைப்புகளில் நிறுவவும் (எ.கா. Google ஆப் > Settings > Voice > Offline speech recognition). அதுவரை கேள்வியை தட்டச்சு செய்யலாம்.",
+  "voiceTtsMissingTamil": "ஆஃப்லைன் தமிழ் குரல் நிறுவப்படவில்லை, அதனால் பதிலை வாசிக்க முடியவில்லை. நிறுவ: Settings > General management > Text-to-speech output > engine settings > Install voice data > Tamil.",
+  "voiceTtsMissingEnglish": "ஆஃப்லைன் ஆங்கிலக் குரல் நிறுவப்படவில்லை, அதனால் பதிலை வாசிக்க முடியவில்லை. நிறுவ: Settings > General management > Text-to-speech output > engine settings > Install voice data.",
+  "voiceTtsFailed": "பதிலை வாசிக்க முடியவில்லை. ஒலிபெருக்கி படத்தைத் தட்டி மீண்டும் முயற்சிக்கவும்.",
+  "voiceSttError": "குரல் உள்ளீடு எதிர்பாராமல் நின்றது. மீண்டும் முயற்சிக்கவும் அல்லது தட்டச்சு செய்யவும்.",
+  "voiceDismiss": "மூடு",
+  "brandTagline": "தமிழ்நாட்டு விவசாயிகளுக்கான வழிகாட்டுதல், தமிழிலும் ஆங்கிலத்திலும்",
+  "loginPhoneHelp": "இந்த எண்ணுக்கு ஒருமுறை குறியீடு அனுப்பப்படும். கடவுச்சொல் தேவையில்லை.",
+  "homeFarmLabel": "உங்கள் நிலம்",
+  "homeAskTitle": "வேளாண் உதவியாளரிடம் கேளுங்கள்",
+  "homeAskSubtitle": "பயிர், மண், வானிலை, திட்டங்கள். ஆதாரங்கள் கிடைத்தால் காட்டப்படும்.",
+  "homeAskAction": "கேள்வி கேளுங்கள்",
+  "homeServices": "சேவைகள்",
+  "moreInfoSection": "விவசாயத் தகவல்",
+  "moreRecordsSection": "உங்கள் பதிவுகள்",
+  "moreAccountSection": "கணக்கு",
+  "moreWeatherSub": "தற்போதைய நிலை மற்றும் 7 நாள் முன்னறிவிப்பு",
+  "moreMarketSub": "பதிவான விலைகள்; நேரடி விலை அல்ல",
+  "moreSchemesSub": "மத்திய, மாநில திட்டங்கள்",
+  "moreSoilSub": "பகுதி மண் தகவல் மற்றும் உங்கள் மண் பரிசோதனைகள்",
+  "moreScanSub": "சரிபார்ப்பில் உள்ளது; நோய் கண்டறிதல் இன்னும் இல்லை",
+  "moreFarmsSub": "நிலங்களைச் சேர்க்க அல்லது திருத்த",
+  "moreDiarySub": "குறிப்புகள் மற்றும் பண்ணை நடவடிக்கைகள்",
+  "moreSatelliteSub": "செயற்கைக்கோள் வசதிகளின் நிலை",
+  "moreProfileSub": "பெயர், மாவட்டம், மொழி",
+  "moreSettingsSub": "மொழி, தோற்றம், பற்றி",
+  "assistantEmptyTitle": "உங்கள் விவசாயத்திற்கு எப்படி உதவலாம்?",
+  "assistantCopy": "பதிலை நகலெடு",
+  "assistantCopied": "பதில் நகலெடுக்கப்பட்டது",
+  "assistantGeneralGuidance": "பொது வழிகாட்டுதல்",
+  "assistantGeneralGuidanceNote": "TNAU ஆதாரம் இல்லாமல்",
+  "assistantSourcesNote": "இந்தப் பதிலுக்காகப் பெறப்பட்ட ஆவணங்கள். ஒவ்வொரு வாக்கியத்தையும் இவை உறுதிப்படுத்தாமல் இருக்கலாம்.",
+  "assistantNoAnswerTitle": "சரிபார்க்கப்பட்ட பதில் இல்லை",
+  "voiceTapToStop": "நிறுத்த தட்டவும்",
+  "voiceSpeakAnswer": "கேளுங்கள்",
+  "scanValidationBadge": "சரிபார்ப்பில் உள்ளது",
+  "scanValidationTitle": "நோய் கண்டறிதல் இன்னும் கிடைக்கவில்லை",
+  "scanValidationBody": "நோய் மாதிரி விவசாயிகள் பயன்பாட்டிற்கு இன்னும் அங்கீகரிக்கப்படவில்லை. நீங்கள் அனுப்பும் புகைப்படத்திற்கு நோய் கண்டறிதல் வழங்கப்படாது. பயிர் பிரச்சனைக்கு உங்கள் பகுதி வேளாண் அலுவலரை அணுகவும்.",
+  "scanHowTitle": "இங்கே என்ன செய்யலாம்",
+  "scanHowBody": "பயிரையும் பாதிக்கப்பட்ட இலையின் தெளிவான புகைப்படத்தையும் தேர்ந்தெடுக்கவும். சரிபார்க்கப்பட்ட முடிவு கிடைக்குமா என்பதை ஆப் நேர்மையாகத் தெரிவிக்கும்.",
+  "marketSnapshotBadge": "பதிவான விலை; நேரடி அல்ல",
+  "settingsAppearance": "தோற்றம்",
+  "settingsPrivacy": "தனியுரிமை",
+  "settingsPrivacyBody": "உங்கள் கேள்விகளுக்கு UZHAVAN சேவையகத்தில் இயங்கும் மாதிரி பதிலளிக்கிறது; கட்டண மேகக்கணி AI சேவை பயன்படுத்தப்படவில்லை. பேச்சு இந்தக் கைபேசியின் சொந்தக் குரலில் உருவாகிறது. வானிலை Open-Meteo-விலிருந்து, உங்கள் மாவட்ட இருப்பிடத்தை மட்டும் பயன்படுத்திப் பெறப்படுகிறது.",
+  "settingsVoice": "குரல்",
+  "settingsVoiceBody": "பதில்கள் இந்தக் கைபேசியின் குரலில் வாசிக்கப்படும். குரல் உள்ளீட்டிற்கு Android 12 அல்லது புதியதும் ஆஃப்லைன் மொழித் தொகுப்பும் தேவை; இல்லையெனில் கேள்வியைத் தட்டச்சு செய்யவும்."
+}

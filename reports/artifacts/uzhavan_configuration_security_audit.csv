@@ -1,0 +1,12 @@
+id,setting,location,default,local_dev_value,production_behaviour_before,production_behaviour_after,risk,status
+CFG-01,M4_DEMO_MODE,settings.py:108; disease_scan.py:53,false,true,"NOT rejected by validate_for_env; if true in prod the route skipped DISEASE_MODEL_APPROVED and called the M4 model","Rejected at startup (SettingsError); route also ignores it when ENV=production (defence in depth)",HIGH,FIXED
+CFG-02,AUTH_DEMO_MODE,settings.py:72; routes/auth.py:89,false,true,Rejected at startup (existing),Unchanged,HIGH (if enabled: fixed demo OTP),ALREADY PROTECTED
+CFG-03,ALLOW_ANONYMOUS,settings.py:60,true outside prod / false in prod,true,Rejected at startup (existing),Unchanged,MEDIUM,ALREADY PROTECTED
+CFG-04,OTP_DEV_LOG,settings.py:63,false,true,Rejected at startup (existing); logging only when ENV=development,Unchanged,MEDIUM,ALREADY PROTECTED
+CFG-05,DEMO_OTP / DEMO_PHONE_NUMBER,settings.py:73-74,"hard-coded default demo credentials in source",set,Inert unless AUTH_DEMO_MODE=true (rejected in prod),Unchanged,LOW,RECOMMEND no source default in a later sprint (not changed: authentication logic is protected)
+CFG-06,DISEASE_MODEL_APPROVED,settings.py:107; disease_scan.py:137; disease_agent.py:109,false,unset (false),"Not validated; true is the legitimate future release switch","Unchanged. Default fail-closed (503 model_unavailable) verified by test",MEDIUM,VERIFIED CLOSED
+CFG-07,ENV,settings.py:53,"required, no default",development,Required; invalid value rejected,Unchanged,LOW,OK
+CFG-08,JWT_SECRET,settings.py,required,set (value not read),">=32 chars and non-placeholder enforced in prod",Unchanged,HIGH if weak,OK (enforced)
+CFG-09,Flutter release signing,uzhavan_flutter/android/app/build.gradle.kts:34,debug keystore,n/a,"release build signed with the DEBUG key","Unchanged (not in scope)",HIGH for any store/public release,OPEN - needs release keystore before distribution
+CFG-10,Flutter default API URL,lib/core/config/app_config.dart:26,http://10.0.2.2:8000 (cleartext) while manifest usesCleartextTraffic=false,n/a,n/a,Unchanged,LOW-MEDIUM,OPEN - confirm build passes an https API_BASE_URL via --dart-define for release
+CFG-11,root .gitignore lacks .env patterns,.gitignore,n/a,n/a,"Secrets protected only by uzhavan_platform/.gitignore and frontend/.gitignore","Unchanged (plan proposes adding)",MEDIUM,OPEN - see git recovery plan

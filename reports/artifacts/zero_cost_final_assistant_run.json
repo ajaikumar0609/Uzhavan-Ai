@@ -1,0 +1,251 @@
+[
+ {
+  "q": "What is photosynthesis?",
+  "lang": "English",
+  "http": 200,
+  "seconds": 38.4,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 2,
+   "failed": 1
+  },
+  "grounding_mode": "general_guidance",
+  "grounded": false,
+  "is_fallback": false,
+  "sources": [],
+  "answer": "General guidance (not from TNAU sources): Photosynthesis is the process by which plants make their own food using sunlight. In simple terms, it's like how a plant converts light energy from the sun into chemical energy stored in sugar molecules. This process also produces oxygen as a byproduct.\n\nSince we don't have details about your specific crop and its growth stage, I can’t give you exact advice tailored to that context. However, this is crucial for all plants—whether they are just sprouting or fully grown. For example, during the growing season, ensuring adequate sunlight helps maximize photosynthesis in crops like rice or vegetables.\n\nTo support healthy photosynthesis:\n1. Make sure your fields get plenty of sunlight.\n2. Keep soil moisture levels appropriate to avoid stress on plants.\n\nFor more specific guidance based on crop and stage details, please record them next time you reach out!"
+ },
+ {
+  "q": "What is NPK fertilizer?",
+  "lang": "English",
+  "http": 200,
+  "seconds": 21.9,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 2,
+   "failed": 1
+  },
+  "grounding_mode": "",
+  "grounded": false,
+  "is_fallback": true,
+  "sources": [],
+  "answer": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622"
+ },
+ {
+  "q": "Why are rice leaves turning yellow?",
+  "lang": "English",
+  "http": 200,
+  "seconds": 29.3,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 3,
+   "failed": 0
+  },
+  "grounding_mode": "general_guidance",
+  "grounded": false,
+  "is_fallback": false,
+  "sources": [],
+  "answer": "General guidance (not from TNAU sources): The yellowing of rice leaves can be due to several reasons such as nutrient deficiencies, water stress, or pest/disease issues. Based on the information provided and guidance from TNAU (Tamil Nadu Agricultural University), we don't have specific details about your crop stage or soil conditions.\n\nFor paddy crops in Thanjavur district, a general recommendation is to apply NPK fertilizers at rates of 120 kg nitrogen (N), 50 kg phosphorus (P), and 50 kg potassium (K) per hectare. However, without knowing the exact crop stage or soil nutrient levels, we cannot provide precise fertilizer dosages.\n\nTo address leaf yellowing:\n- Check if there is enough water in the field to avoid stress.\n- Observe for any signs of pests or diseases; contact a local agricultural officer if needed.\n- Consider applying NPK fertilizers based on your current crop stage and soil conditions. \n\nFor accurate diagnosis, it's best to consult with an agronomist from TNAU or a nearby agriculture extension office who can visit the field and provide specific advice tailored to your situation."
+ },
+ {
+  "q": "How can I improve soil health?",
+  "lang": "English",
+  "http": 200,
+  "seconds": 21.7,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 2,
+   "failed": 1
+  },
+  "grounding_mode": "grounded_verified",
+  "grounded": true,
+  "is_fallback": false,
+  "sources": [
+   [
+    "Major Areas :: Disaster Management",
+    0.568
+   ],
+   [
+    "Horticulture :: Fruits:: Guava",
+    0.567
+   ],
+   [
+    "TNAU Agritech Portal :: Important Links",
+    0.544
+   ],
+   [
+    "Horticulture :: Plantation Crops :: Arecanut",
+    0.531
+   ],
+   [
+    "Horticulture :: Vegetable Crops :: Paprika",
+    0.52
+   ],
+   [
+    "TNAU Agritech Portal :: TNAU Press Notes",
+    0.509
+   ]
+  ],
+  "answer": "To improve soil health on your farm in Thanjavur district, you can adopt mulching techniques and erosion control measures recommended by TNAU. For instance, using wood chips or industrial solid wastes like coir waste, press mud, flyash, and sewage sludge can enhance the organic content of your soil.\n\nAdditionally, consider applying dormancy breaking treatments for establishing fodder crops, shrubs, and tree species to promote healthy root growth and overall soil structure improvement.\n\nRegularly incorporating such practices will help in maintaining a balanced nutrient cycle and improving long-term soil health."
+ },
+ {
+  "q": "Explain the importance of crop rotation.",
+  "lang": "English",
+  "http": 200,
+  "seconds": 20.9,
+  "intent": "crop",
+  "tools": {
+   "tools_run": [
+    "crop.recommend",
+    "crop.fertilizer_plan",
+    "crop.crop_calendar",
+    "rag.search_tnau"
+   ],
+   "succeeded": 2,
+   "failed": 2
+  },
+  "grounding_mode": "grounded_verified",
+  "grounded": true,
+  "is_fallback": false,
+  "sources": [
+   [
+    "Horticulture :: Vegetables:: Potato",
+    0.499
+   ]
+  ],
+  "answer": "Crop rotation is important because it helps maintain soil health and fertility by growing different types of crops sequentially on the same land. This practice prevents depletion of specific nutrients from the soil that one crop might deplete heavily, thus avoiding soil degradation.\n\nRotating crops also disrupts pest and disease cycles, reducing their population naturally without relying solely on chemical pesticides. For example, pests that thrive in a continuous paddy field may not find suitable hosts when sugarcane or banana is planted next season.\n\nIn Thanjavur district, where you might be growing kharif crops like paddy followed by rabi crops such as bananas and possibly sugarcane, rotating these can help manage soil nutrients better. It's recommended to consult the TNAU Crop Production Guide for specific crop rotation sequences suitable for your area.\n\nActionable recommendation: Plan a diverse cropping system based on local conditions and guidance from agricultural experts like those at TNAU."
+ },
+ {
+  "q": "நெல் இலைகள் மஞ்சளாக மாறுவது ஏன்?",
+  "lang": "Tamil",
+  "http": 200,
+  "seconds": 38.3,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 3,
+   "failed": 0
+  },
+  "grounding_mode": "grounded_verified",
+  "grounded": true,
+  "is_fallback": false,
+  "sources": [
+   [
+    "Agriculture :: Mineral Nutrition :: Introduction",
+    0.546
+   ],
+   [
+    "Agriculture :: Mineral Nutrition :: Introduction",
+    0.529
+   ],
+   [
+    "Agriculture :: Mineral Nutrition :: Introduction",
+    0.499
+   ],
+   [
+    "Agriculture :: Mineral Nutrition :: Introduction",
+    0.497
+   ],
+   [
+    "TNAU Agritech Portal :: Sustainable Agriculture",
+    0.492
+   ],
+   [
+    "TNAU Agritech Portal :: Important Links",
+    0.487
+   ]
+  ],
+  "answer": "நெல் இலைகள் மஞ்சளான வடிவில் மாறுவது, அதன் பிரinciப்ளஸ் (factors) தரம், உரம் மற்றும் இலையின் நிலைகள் என்பவையாகும். அத்தகவல்களில் வழங்கப்பட்ட உரம் (fertilizer) மற்றும் இலை நிலையான சரி ஆகத்துவம் என்பவை வசதியாகப் பண்ணுகின்றன.\n\nஇறுதியில், நீட்டல் (irrigation) மற்றும் உரம"
+ },
+ {
+  "q": "What dose of chlorpyrifos in ml per litre should I spray on paddy for stem borer?",
+  "lang": "English",
+  "http": 200,
+  "seconds": 31.2,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 3,
+   "failed": 0
+  },
+  "grounding_mode": "",
+  "grounded": false,
+  "is_fallback": true,
+  "sources": [],
+  "answer": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622"
+ },
+ {
+  "q": "தாவரங்களுக்கு NPK உரம் என்றால் என்ன?",
+  "lang": "Tamil",
+  "http": 200,
+  "seconds": 41.4,
+  "intent": "advisory",
+  "tools": {
+   "tools_run": [
+    "weather.irrigation_advice",
+    "crop.fertilizer_plan",
+    "rag.search_tnau"
+   ],
+   "succeeded": 2,
+   "failed": 1
+  },
+  "grounding_mode": "grounded_verified",
+  "grounded": true,
+  "is_fallback": false,
+  "sources": [
+   [
+    "Agriculture :: Mineral Nutrition :: History",
+    0.514
+   ],
+   [
+    "TNAU Agritech Portal :: Post Harvest Technology",
+    0.498
+   ],
+   [
+    "Horticulture :: Vegetables::Cucumber",
+    0.496
+   ],
+   [
+    "Horticulture :: Vegetable Crops :: Paprika",
+    0.493
+   ],
+   [
+    "Agriculture :: Mineral Nutrition :: Introduction",
+    0.493
+   ],
+   [
+    "Horticulture :: Flower Crops :: Anthurium",
+    0.486
+   ]
+  ],
+  "answer": "தாவரங்களுக்கு NPK உரம் வழங்குவதற்கான தரைப் பயணல் முடியவில்லை. இதனால், நாம் எச்சரித்துள்ள NPK உறவின் வழக்கப்படி ஒரு முதலிய அணைப்பு ஆனது. TNAU இயங்கம் நிரூபித்துள்ளது, NPK உறவின் வழக்கால் எச்சரிக்கப்பட்ட முன்னணி 10:20:35 (MN) ஆகும். \n\nஇதையே தவறாக, நாம் எ"
+ }
+]

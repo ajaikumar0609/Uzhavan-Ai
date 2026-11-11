@@ -1,0 +1,70 @@
+id,area,test,environment,result,evidence
+A01,STT,Native recognizer uses only createOnDeviceSpeechRecognizer; default recognizer symbol absent,built debug APK (dex strings),PASS,createSpeechRecognizer count=0; createOnDeviceSpeechRecognizer count=1; speech_to_text plugin classes in APK = 0
+A02,STT,Availability states map to ready / offlineLanguageMissing / offlineUnavailable,Flutter unit (mock channel),PASS,local_voice_test.dart
+A03,STT,Permission denied => no availability probe and no recognizer start,Flutter unit,PASS,local_voice_test.dart
+A04,STT,Partials never submit; final delivered exactly once; duplicate final ignored,Flutter unit,PASS,local_voice_test.dart
+A05,STT,no_speech ends quietly (no result no error),Flutter unit,PASS,local_voice_test.dart
+A06,STT,Native refusal => offline_unavailable surfaced; exactly one start attempt (no fallback attempt),Flutter unit,PASS,also fixed a real bug: error event was dropped
+A07,STT,cancel() delivers nothing; late final ignored,Flutter unit,PASS,local_voice_test.dart
+A08,STT,Only documented on-device channel methods are ever invoked,Flutter unit,PASS,local_voice_test.dart
+A09,TTS,Tamil voice not installed => voiceMissing and nothing spoken,Flutter unit (mock flutter_tts),PASS,local_voice_test.dart
+A10,TTS,Installed Tamil => picks local voice (network_required=0) never the network voice; notInstalled voice rejected,Flutter unit,PASS,local_voice_test.dart
+A11,TTS,Each speak() cuts previous audio first (no overlap),Flutter unit,PASS,local_voice_test.dart
+A12,Loop,speak -> final transcript -> auto-submit (no Send tap) -> Tamil TTS -> idle,Flutter widget,PASS,local_voice_test.dart
+A13,Loop,English preference => en-IN recognition and en-IN speech,Flutter widget,PASS,local_voice_test.dart
+A14,Loop,Duplicate / empty transcripts never double-submit,Flutter widget,PASS,local_voice_test.dart
+A15,Loop,Silence returns to idle and sends nothing,Flutter widget,PASS,local_voice_test.dart
+A16,Loop,Multi-turn shares one session id; both answers spoken,Flutter controller,PASS,widget-level second request stalls only under the FakeAsync test clock (repo and controller layers verified directly)
+A17,Loop,Offline recognition unavailable => explicit notice; recognizer never started; typing still works,Flutter widget,PASS,EN + TA text
+A18,Loop,Offline language pack missing => install instructions,Flutter widget,PASS,local_voice_test.dart
+A19,Loop,Missing offline Tamil TTS voice => install notice; written answer still shown,Flutter widget,PASS,local_voice_test.dart
+A20,Loop,Mic tapped during TTS => speech stopped first then listening; stale completion cannot clobber state,Flutter widget,PASS,local_voice_test.dart
+A21,Loop,Stop button interrupts; late completion cannot restart speech; no repeated TTS,Flutter widget,PASS,local_voice_test.dart
+A22,Loop,Manual speaker button works via the same single-utterance path,Flutter widget,PASS,local_voice_test.dart
+A23,Lifecycle,Backgrounding cancels the mic and stops speech,Flutter widget,PASS,local_voice_test.dart
+A24,Privacy,App never calls backend /voice endpoints,Flutter widget,PASS,local_voice_test.dart
+A25,Privacy,No cloud speech/AI/telemetry host strings and no analytics/Firebase deps,APK dex + pubspec,PASS,none found
+A26,Build,flutter analyze,host,PASS,No issues found
+A27,Build,flutter test (whole suite),host,PASS,176 passed (was 148)
+A28,Build,flutter build apk --debug,host,PASS,build/app/outputs/flutter-apk/app-debug.apk
+P01,Device,Tamil/English voice recognition,Oppo CPH1937 Android 11 (API 30),BLOCKED,[was: NOT POSSIBLE ON THIS PHONE] log: availability: unsupported_api api=30 (on-device recognizer needs API 31+); app showed the offline-unavailable notice; recognizer never started; no audio captured
+P02,Device,Offline recognition confirmation,Oppo CPH1937,BLOCKED,[was: NOT TESTABLE] needs an Android 12+ phone with an offline Tamil speech pack
+P03,Device,Automatic transcript submission from speech,Oppo CPH1937,BLOCKED,[was: NOT TESTABLE] depends on P01 (covered by host tests only)
+P04,Device,Backend reached from phone over adb reverse + Qwen/RAG answer,Oppo CPH1937,PASS,typed English and tapped Tamil question; answers returned in ~15-30 s; sourced answer shown with TNAU source label (oppo11.png)
+P05,Device,Automatic English TTS after answer,Oppo CPH1937,PASS,[TTS_VOICE] local voice selected en-IN network_required=0; [TTS_START]; banner Speaking (oppo9/oppo11.png)
+P05b,Device,Automatic Tamil TTS after answer (voice pack installed),Oppo CPH1937,PASS,[TTS_START] ta-IN; engine log TTS dispatch ta-in-x-tac-seanet-embedded; [TTS_COMPLETE]; banner cleared (oppo16/oppo23.png)
+P05c,Device,Tamil TTS BEFORE the voice pack was installed,Oppo CPH1937,FAIL,[was: FAIL (finding)] engine dispatched ta-in-x-tac-server and tried to download the pack; network synthesis timed out (status -7); app stayed in SPEAKING (fixed: see report)
+P06,Device,Stop during TTS,Oppo CPH1937,PASS,[was: PASS (log+UI; audio not heard by tester)] [TTS_STOP] 28 ms after tap; Speaking banner removed
+P07,Device,Mic tapped during TTS,Oppo CPH1937,PASS,[TTS_STOP] then availability check 18 ms later: speech cut before mic logic (oppo13.png)
+P08,Device,Multi-turn context on phone,Oppo CPH1937,NOT RUN,phone locked/screen black on 2026-11-10; typed multi-turn on the Oppo not performed (host controller test covers session reuse)
+P09,Device,English speech input,Oppo CPH1937,BLOCKED,[was: NOT POSSIBLE] same as P01; English TTS output passed (P05)
+P10,Device,App background/foreground lifecycle,Oppo CPH1937,NOT RUN,[was: PARTIAL] onPause cancel logged twice when the permission dialog covered the app; app survived reinstall/relaunch with session; no full background/foreground cycle with an open mic (mic cannot open on this phone) | full background/foreground cycle with an open mic not performed
+P11,Device,Offline (airplane mode) Tamil TTS,Oppo CPH1937,PASS,"airplane_mode_on=1, Active default network: none, USB reverse up; Tamil answer returned; TTS dispatch ta-in-x-tac-seanet-embedded; [TTS_COMPLETE]; status bar shows airplane icon (oppo23.png)"
+P12,Device,Offline speech RECOGNITION,Oppo CPH1937,BLOCKED,[was: NOT TESTABLE] Android 11
+H05,Host,TTS engine error ends utterance as failed (regression for stuck SPEAKING),Flutter unit,PASS,4 new tests; suite 180 passed
+S01,Samsung,adb detects SM-G781B RZCRA03QLKA,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S02,Samsung,Android API level >= 31,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S03,Samsung,On-device speech recognition available,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S04,Samsung,Offline Tamil recognition model installed,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S05,Samsung,Offline English recognition model installed,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S06,Samsung,Tamil STT final transcript event,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S07,Samsung,Automatic submission exactly once,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S08,Samsung,Tamil TTS with embedded local voice,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S09,Samsung,Stop and microphone interruption,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S10,Samsung,Multi-turn context (spoken),Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S11,Samsung,Airplane-mode speech recognition + conversation over adb reverse,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S12,Samsung,English speech input and output,Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+S13,Samsung,logcat evidence (UZ_LOCAL_STT),Samsung SM-G781B,BLOCKED,device not connected: adb lists only the Oppo CPH1937 (checked 2026-11-10); not visible on USB
+P13,Device,Oppo screen/app after session break (2026-11-10),Oppo CPH1937,BLOCKED,"app had been removed from the phone; reinstalled OK (adb install Success) but the screen stays black/locked (screencap blank), cannot be driven without the owner unlocking it"
+H06,Host,Definition questions (what is NPK / importance of rotation) plan RAG only; quantity/farm questions keep all tools,Python unit,PASS,tests/api/test_zero_cost_local_ai.py
+H07,Host,Definition prompt forbids calculating field quantities,Python unit,PASS,
+H08,Host,Dose guard accepts a total only if (kg/ha rate in evidence) x (area in evidence); invented/pesticide/wrong-unit doses still blocked,Python unit,PASS,guard NOT weakened
+H09,Host,Inflected Tamil farming questions no longer refused; small talk and scored intents unchanged,Python unit,PASS,
+H10,Host,Truncated trailing sentence trimmed,Python unit,PASS,
+H11,Host,Full backend suite (isolated Chroma copy),pytest,PASS,"343 passed, 0 failed, 0 skipped"
+B01,Backend,English 'What is NPK fertilizer?' x3 on the live backend,live local Qwen+RAG,PASS,"3/3 answered, none fell back; 4-17 s (before: fell back after computing farm quantities)"
+B02,Backend,Quantity question 'How much NPK should I apply to my banana farm?' keeps the full guarded path,live local Qwen+RAG,PASS,tools weather+fertilizer_plan+rag; answer used TNAU base rates from evidence
+B03,Backend,Tamil bench (8 questions): instant refusals,live local Qwen+RAG,PASS,4/8 before -> 0/8 after
+B04,Backend,Tamil bench: answers cut off mid-sentence,live local Qwen+RAG,PASS,4 of 4 answered before -> 0/8 after
+B05,Backend,Tamil bench: answer QUALITY (factual correctness),manual read,FAIL,"still weak/incorrect Tamil content (e.g. NPK expanded wrongly); format improved, quality NOT improved"
+B06,Backend,Tamil bench latency,live local Qwen+RAG,FAIL,answered questions 24-45 s (avg 33 s): slow for a voice demo

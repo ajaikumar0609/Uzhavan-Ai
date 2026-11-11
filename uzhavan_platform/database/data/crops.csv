@@ -1,0 +1,51 @@
+crop_id,english_name,tamil_name,scientific_name,category,sub_category,season_type,duration_days_min,duration_days_max,water_requirement_mm,soil_ph_min,soil_ph_max,expected_yield_kg_ha,source
+1,Rice,நெல்,Oryza sativa L.,Cereal,Kharif/Rabi,Short/Medium/Long,100,160,1200,5.5,6.5,5000,TNAU
+2,Maize,மக்காச்சோளம்,Zea mays L.,Cereal,Kharif,Short,90,120,600,6.0,7.5,6000,TNAU
+3,Sorghum (Jowar),சோளம்,Sorghum bicolor,Cereal,Kharif,Short,90,115,400,6.0,7.5,3000,TNAU
+4,Ragi (Finger Millet),கேழ்வரகு,Eleusine coracana,Cereal,Kharif,Short,90,120,400,5.5,7.0,2000,TNAU
+5,Cumbu (Pearl Millet),கம்பு,Pennisetum glaucum,Cereal,Kharif,Short,75,90,350,6.0,7.5,2500,TNAU
+6,Wheat,கோதுமை,Triticum aestivum,Cereal,Rabi,Medium,100,130,450,6.0,7.5,4000,TNAU
+7,Varagu (Kodo Millet),வரகு,Paspalum scrobiculatum,Minor Millet,Kharif,Short,90,120,300,5.5,7.0,1500,TNAU
+8,Panivaragu (Proso Millet),பனிவரகு,Panicum miliaceum,Minor Millet,Kharif,Short,60,90,300,5.5,7.0,1200,TNAU
+9,Samai (Little Millet),சாமை,Panicum sumatrense,Minor Millet,Kharif,Short,75,90,250,5.5,7.0,1200,TNAU
+10,Tenai (Foxtail Millet),தினை,Setaria italica,Minor Millet,Kharif,Short,60,90,350,5.5,7.0,1500,TNAU
+11,Blackgram (Urad),உளுந்து,Vigna mungo,Pulse,Kharif/Rabi,Short,60,75,300,6.0,7.5,800,TNAU
+12,Greengram (Moong),பாசிப்பயறு,Vigna radiata,Pulse,Kharif/Rabi,Short,60,75,300,6.0,7.5,800,TNAU
+13,Cowpea,தட்டைப்பயறு,Vigna unguiculata,Pulse,Kharif,Short,60,80,350,5.5,7.0,1000,TNAU
+14,Bengalgram (Chickpea),கொண்டைக்கடலை,Cicer arietinum,Pulse,Rabi,Short,90,100,350,6.0,8.0,1500,TNAU
+15,Redgram (Pigeonpea),துவரை,Cajanus cajan,Pulse,Kharif,Medium,150,180,600,6.0,7.5,1500,TNAU
+16,Soybean,சோயாபீன்,Glycine max,Pulse/Oilseed,Kharif,Short,90,120,500,6.0,7.0,2000,TNAU
+17,Horsegram,கொள்ளு,Macrotyloma uniflorum,Pulse,Rabi,Short,75,90,250,5.5,7.0,800,TNAU
+18,Groundnut,நிலக்கடலை,Arachis hypogaea,Oilseed,Kharif/Rabi,Short,90,120,500,6.0,7.0,2500,TNAU
+19,Sunflower,சூரியகாந்தி,Helianthus annuus,Oilseed,Kharif/Rabi,Short,90,100,500,6.0,7.5,2000,TNAU
+20,Sesame (Gingelly),எள்,Sesamum indicum,Oilseed,Kharif,Short,80,90,300,5.5,7.5,800,TNAU
+21,Castor,ஆமணக்கு,Ricinus communis,Oilseed,Kharif,Medium,150,180,600,5.5,7.0,2000,TNAU
+22,Safflower,குங்குமப்பூ,Carthamus tinctorius,Oilseed,Rabi,Short,100,120,350,6.0,8.0,1500,TNAU
+23,Niger,நைஜர்,Guizotia abyssinica,Oilseed,Kharif,Short,80,100,300,5.5,7.0,800,TNAU
+24,Cotton,பருத்தி,Gossypium hirsutum,Fibre,Kharif,Long,150,180,700,6.0,8.0,2000,TNAU
+25,Jute,சணல்,Corchorus olitorius,Fibre,Kharif,Short,100,120,800,6.0,7.0,2500,TNAU
+26,Sugarcane,கரும்பு,Saccharum officinarum,Sugar,Annual,Long,300,360,1500,6.0,7.5,80000,TNAU
+27,Sugarbeet,சர்க்கரை வள்ளிக்கிழங்கு,Beta vulgaris,Sugar,Rabi,Medium,100,130,500,6.5,7.5,40000,TNAU
+28,Banana,வாழை,Musa paradisiaca,Fruit,Annual,Long,270,365,1200,6.0,7.5,40000,TNAU
+29,Coconut,தென்னை,Cocos nucifera,Plantation,Perennial,Long,,,1500,5.5,7.0,15000,TNAU
+30,Mango,மாம்பழம்,Mangifera indica,Fruit,Perennial,Long,,,1000,5.5,7.5,20000,TNAU
+31,Guava,கொய்யா,Psidium guajava,Fruit,Perennial,Long,,,900,5.0,7.0,20000,TNAU
+32,Sapota,சப்போட்டா,Manilkara zapota,Fruit,Perennial,Long,,,750,6.0,8.0,15000,TNAU
+33,Papaya,பப்பாளி,Carica papaya,Fruit,Annual,Medium,270,330,1000,6.0,7.0,50000,TNAU
+34,Tomato,தக்காளி,Solanum lycopersicum,Vegetable,Kharif/Rabi,Short,90,120,600,6.0,7.0,25000,TNAU
+35,Onion,வெங்காயம்,Allium cepa,Vegetable,Rabi,Short,100,130,400,6.0,7.5,20000,TNAU
+36,Brinjal (Eggplant),கத்திரிக்காய்,Solanum melongena,Vegetable,Kharif,Short,90,120,700,5.5,7.0,25000,TNAU
+37,Chilli,மிளகாய்,Capsicum annuum,Vegetable,Kharif/Rabi,Short,120,150,700,6.0,7.0,3000,TNAU
+38,Okra (Bhendi),வெண்டைக்காய்,Abelmoschus esculentus,Vegetable,Kharif,Short,60,80,600,6.0,7.0,8000,TNAU
+39,Drumstick (Moringa),முருங்கை,Moringa oleifera,Vegetable/Tree,Perennial,Long,,,500,6.0,7.5,50000,TNAU
+40,Turmeric,மஞ்சள்,Curcuma longa,Spice,Annual,Long,270,300,1500,5.5,7.0,25000,TNAU
+41,Ginger,இஞ்சி,Zingiber officinale,Spice,Annual,Medium,180,240,1200,5.5,6.5,20000,TNAU
+42,Garlic,பூண்டு,Allium sativum,Spice,Rabi,Short,120,150,600,6.0,7.5,10000,TNAU
+43,Jasmine,மல்லிகை,Jasminum sambac,Flower,Perennial,Long,,,900,6.0,7.5,6000,TNAU
+44,Marigold,துலுக்காமல்லிகை,Tagetes erecta,Flower,Annual,Short,75,90,600,5.5,7.5,15000,TNAU
+45,Anthurium,அந்துரியம்,Anthurium andraeanum,Flower,Perennial,Long,,,1200,5.5,6.5,200000,TNAU
+46,Arecanut,கமுகு,Areca catechu,Plantation,Perennial,Long,,,1500,6.0,8.0,2500,TNAU
+47,Cashew,முந்திரி,Anacardium occidentale,Plantation,Perennial,Long,,,750,5.5,7.0,1000,TNAU
+48,Cumbu Napier,கம்பு நேப்பியர்,Pennisetum purpureum,Fodder,Annual,Medium,,,1000,5.5,7.5,80000,TNAU
+49,Lucerne,அல்பல்பா,Medicago sativa,Fodder,Perennial,Long,,,500,6.5,8.0,30000,TNAU
+50,Tapioca (Cassava),மரவள்ளிக்கிழங்கு,Manihot esculenta,Root/Tuber,Annual,Medium,270,365,800,5.0,7.0,25000,TNAU

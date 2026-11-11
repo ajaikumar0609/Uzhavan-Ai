@@ -1,0 +1,61 @@
+{
+  "audit_date": "2026-11-07",
+  "mode": "read-only forensic audit",
+  "requirements_baseline": "uzhavan_platform/docs/PRD.md v1.0 (no SRS or SDD found)",
+  "overall_implementation_progress_pct": 56.7,
+  "verified_completion_pct": 40.4,
+  "scoring_note": "79 requirements scored with the prescribed status scores; blocked items score 0. Verified credit only where an automated test or command passed during this audit. Historical reports and manual device logs are NOT counted as verified.",
+  "workstreams": [
+    {"name": "Flutter UI and navigation", "weight": 15, "implementation_pct": 80.0, "verified_pct": 60.0},
+    {"name": "Backend and APIs", "weight": 15, "implementation_pct": 66.7, "verified_pct": 55.6},
+    {"name": "Authentication and user management", "weight": 5, "implementation_pct": 50.0, "verified_pct": 50.0},
+    {"name": "AI assistant, LLM and RAG", "weight": 15, "implementation_pct": 53.5, "verified_pct": 30.0},
+    {"name": "Voice/STT/TTS", "weight": 10, "implementation_pct": 75.0, "verified_pct": 37.5},
+    {"name": "Disease vision", "weight": 10, "implementation_pct": 38.9, "verified_pct": 27.8},
+    {"name": "Weather, market, soil and schemes", "weight": 10, "implementation_pct": 56.2, "verified_pct": 50.0},
+    {"name": "Satellite intelligence", "weight": 5, "implementation_pct": 40.0, "verified_pct": 30.0},
+    {"name": "Database and infrastructure", "weight": 5, "implementation_pct": 40.7, "verified_pct": 10.7},
+    {"name": "Testing, security and deployment readiness", "weight": 10, "implementation_pct": 31.2, "verified_pct": 25.0}
+  ],
+  "derived_views_pct": {
+    "core_mobile_app (Flutter+Voice)": {"implementation": 78.0, "verified": 51.0},
+    "backend (Backend+Auth)": {"implementation": 62.5, "verified": 54.2},
+    "ai (Assistant+Disease+Satellite)": {"implementation": 46.4, "verified": 29.3},
+    "integration (weather/market/soil/schemes)": {"implementation": 56.2, "verified": 50.0},
+    "testing": {"implementation": 31.2, "verified": 25.0},
+    "production_readiness (DB/infra + testing/security/deploy)": {"implementation": 34.4, "verified": 20.3},
+    "dataset_preparation": {"catalogued": 46, "held": 36, "blocked": 9, "planned_only": 1, "licence_unverified": 20}
+  },
+  "requirement_status_counts": {
+    "IMPLEMENTED & VERIFIED": 23,
+    "IMPLEMENTED BUT NOT VERIFIED": 16,
+    "PARTIALLY IMPLEMENTED": 16,
+    "PLACEHOLDER / MOCK": 2,
+    "NOT IMPLEMENTED": 16,
+    "BLOCKED": 6
+  },
+  "tests_run_this_audit": {
+    "backend_pytest_default": "COLLECTION ERROR (test_satellite_pipeline.py import)",
+    "backend_pytest_excluding_that_file": {"passed": 247, "failed": 0, "skipped": 7, "skip_reason": "Postgres not reachable"},
+    "satellite_pipeline_tests_from_repo_root": {"passed": 6},
+    "flutter_analyze": "No issues found",
+    "flutter_test": {"passed": 148, "failed": 0}
+  },
+  "services_state_at_audit": {"adb_device_connected": false, "postgres": "down", "redis": "down", "ollama_server": "down", "backend_8000": "down"},
+  "disease_model": {
+    "production_status": "NOT APPROVED - safety gate closed by default (DISEASE_MODEL_APPROVED=false)",
+    "m4_hold": true,
+    "v2_2_seed42_clean_reproduction": "OUTCOME UNKNOWN - only config audit (all EXACT) and environment record exist; no metrics/log/checkpoint",
+    "v2_2_three_seed_mean_macro_f1": "0.8342 +/- 0.1163 (gate >= 0.85: FAIL)",
+    "checkpoints_on_this_machine": "v1.0 only (runs_m4); V2.x checkpoints produced on a separate Windows RTX 4050 host are not present"
+  },
+  "top_risks": [
+    "Application code untracked in git; single commit",
+    "Dev .env has demo/anonymous/M4-demo flags on; M4_DEMO_MODE bypasses disease gate",
+    "No model meets disease gates; MVP flows 6-7 unmet",
+    "Live LLM/DB/device behaviour not re-verifiable today",
+    "No CI, no E2E, no hallucination benchmark results, no DPDPA erasure/consent"
+  ],
+  "audit_status": "PARTIAL",
+  "recommended_next_phase": "Stabilise and prove the existing product: commit/back up the code, lock demo flags, bring up services and run one recorded live smoke on the Samsung device from a fresh build, run the existing evaluation benchmark, add CI. No M4 work until the hold is lifted."
+}

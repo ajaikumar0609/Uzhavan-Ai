@@ -1,0 +1,12 @@
+---
+chunk_id: 5654eafeec5c
+source: https://agritech.tnau.ac.in/important_gos2020.html
+title: TNAU Agritech Portal :: Important  Announcements from Tamil Nadu Government 2014
+category: research_technology
+crop: General
+language: English
+chunk_index: 0
+words: 201
+---
+
+# Source: https://agritech.tnau.ac.in/important_gos2020.html | [Home](../index.html "Home") | [About Us](../about_us/abt_us.html "About Us") | [Success Stories](../success_stories/success_index.html "Success Stories") | [Farmers Association](../farm_association/farm_assoct.html "Farmer's Association") | [Farmers' Innovation](../farm_innovations/farm_innovations.html) | [Publications](../tnau_publish.html "Publications") | [Contact](../contact.html "Contact Us") | | | TNAU Agritech Portal :: Important Announcements from Tamil Nadu Government | | | --- | | **Announcements from Tamil Nadu Government 2024** [[ Press Note No ] Tamil Nadu Government Announcements 2024](https://www.tn.gov.in/announcements) | | | | | | | | | | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | | **TN Government Announcements - Archives** | | | | | | | | | | - | - | - | - | [2023](https://www.tn.gov.in/whatsnew/archives/2023) | [2022](https://www.tn.gov.in/whatsnew/archives/2022) | [2021]( https://www.tn.gov.in/whatsnew/archives/2021) | [2020](https://www.tn.gov.in/whatsnew/archives/2020) | | [2019](important_gos2019.html) | [2018](important_gos2018.html) | [2016](important_gos2016.html) | [2015](important_gos2015.html) | [2014](important_gos2014.html) | [2013](important_gos2013.html) | [2012](important_gos2012.html) | [2010 & 2011](important_gos.html) | --- | | | --- | | [Home](http://www.agritech.tnau.ac.in/index.html "Home") | [About Us](http://www.agritech.tnau.ac.in/about_us/abt_us.html "About Us") | [Success Stories](http://www.agritech.tnau.ac.in/success_stories/success_index.html "Success Stories") | [Farmers Association](http://www.agritech.tnau.ac.in/farm_association/farm_assoct.html "Farmers Association") | [Farmers Innovation](http://www.agritech.tnau.ac.in/farm_innovations/farm_innovations.html "Farmers Innovation") | [Publications](http://www.agritech.tnau.ac.in/tnau_publish.html "TNAU Publications") | [Disclaimer](file:///Macintosh HD/Users/e-extn5tnau/Documents/disclaimer_en.html "Disclaimer") | [Contact Us](http://www.agritech.tnau.ac.in/contact.html "Contact Us") © All Rights Reserved TNAU 2008 - 2024 | | |

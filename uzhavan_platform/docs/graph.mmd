@@ -1,0 +1,33 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	intent_router(intent_router)
+	planner(planner)
+	capability_resolver(capability_resolver)
+	executor(executor)
+	evidence_fusion(evidence_fusion)
+	grounding_validator(grounding_validator)
+	prompt_builder(prompt_builder)
+	llm_node(llm_node)
+	safety_validator(safety_validator)
+	formatter(formatter)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> intent_router;
+	capability_resolver --> executor;
+	evidence_fusion --> grounding_validator;
+	executor --> evidence_fusion;
+	grounding_validator -.-> formatter;
+	grounding_validator -.-> prompt_builder;
+	intent_router --> planner;
+	llm_node --> safety_validator;
+	planner --> capability_resolver;
+	prompt_builder --> llm_node;
+	safety_validator --> formatter;
+	formatter --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

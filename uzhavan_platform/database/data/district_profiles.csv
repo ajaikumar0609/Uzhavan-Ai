@@ -1,0 +1,39 @@
+district_id,name,tamil_name,headquarters,agro_climatic_zone,area_sq_km,avg_rainfall_mm,major_crops,major_soil_type,river_basin,groundwater_status,agriculture_area_pct,notable_feature,source
+1,Ariyalur,அரியலூர்,Ariyalur,Cauvery Delta,1949,960,"Rice,Sugarcane,Banana",Black cotton / Alluvial,Cauvery,Semi-critical,65,New district from Perambalur; rice dominant,TN Agri Dept
+2,Chengalpattu,செங்கல்பட்டு,Chengalpattu,North Eastern,2944,1200,"Rice,Groundnut,Vegetables",Red laterite / Alluvial,Palar,Critical,55,Suburban Chennai; vegetable supply hub,TN Agri Dept
+3,Chennai,சென்னை,Chennai,North Eastern,174,1400,Urban horticulture,Urban,Cooum/Adyar,Over-exploited,2,State capital; very limited agriculture,TN Agri Dept
+4,Coimbatore,கோயம்புத்தூர்,Coimbatore,Western,4723,700,"Maize,Cotton,Coconut,Banana,Turmeric",Red loam / Sandy loam,Noyyal,Critical,60,Textile city; TNAU headquarters; major maize belt,TN Agri Dept
+5,Cuddalore,கடலூர்,Cuddalore,Cauvery Delta,3703,1150,"Rice,Sugarcane,Coconut",Alluvial / Clay,Cauvery/Vellar,Semi-critical,60,Major rice-producing delta district,TN Agri Dept
+6,Dharmapuri,தர்மபுரி,Dharmapuri,North Western,4497,900,"Maize,Groundnut,Mango,Tapioca",Red laterite,Cauvery,Semi-critical,65,Largest mango market in Tamil Nadu,TN Agri Dept
+7,Dindigul,திண்டுக்கல்,Dindigul,Southern,6266,750,"Banana,Groundnut,Maize,Vegetables",Red laterite / Sandy loam,Amaravathi,Safe,60,Lock and coffee trade; banana growing region,TN Agri Dept
+8,Erode,ஈரோடு,Erode,Western,5757,750,"Turmeric,Banana,Coconut,Maize,Sugarcane",Red loam,Bhavani/Cauvery,Semi-critical,65,Asia's largest turmeric market; textile hub,TN Agri Dept
+9,Kallakurichi,கள்ளக்குறிச்சி,Kallakurichi,Cauvery Delta,3521,1000,"Rice,Sugarcane,Banana",Alluvial,Gomukhi,Semi-critical,60,New district 2019; rice and sugarcane belt,TN Agri Dept
+10,Kanchipuram,காஞ்சிபுரம்,Kanchipuram,North Eastern,1687,1100,"Rice,Groundnut,Silk",Alluvial / Red,Palar,Critical,55,Silk weaving; historical temple town,TN Agri Dept
+11,Kanyakumari,கன்னியாகுமரி,Kanyakumari,High Rainfall,1672,1500,"Coconut,Banana,Tapioca,Rice,Rubber",Laterite,Thamirabarani,Safe,70,Southernmost district; highest rainfall in TN,TN Agri Dept
+12,Karur,கரூர்,Karur,Cauvery Delta,2895,850,"Rice,Banana,Sugarcane",Black cotton / Alluvial,Cauvery,Semi-critical,60,Textile industry; banana and rice belt,TN Agri Dept
+13,Krishnagiri,கிருஷ்ணகிரி,Krishnagiri,North Western,5143,900,"Mango,Tomato,Maize,Groundnut",Red laterite,Cauvery tributary,Safe,65,Mango capital of Tamil Nadu; high altitude tomato,TN Agri Dept
+14,Madurai,மதுரை,Madurai,Southern,3741,850,"Rice,Banana,Cotton,Jasmine",Sandy loam / Clay,Vaigai,Critical,60,Temple city; jasmine flower market; banana hub,TN Agri Dept
+15,Mayiladuthurai,மயிலாடுதுறை,Mayiladuthurai,Cauvery Delta,1559,1100,"Rice,Banana",Alluvial,Cauvery/Kollidam,Semi-critical,70,Newest district 2021; intense rice cultivation,TN Agri Dept
+16,Nagapattinam,நாகப்பட்டினம்,Nagapattinam,Cauvery Delta,2716,1150,"Rice,Coconut,Banana",Alluvial coastal,Cauvery,Safe,65,Coastal district; tsunami-affected 2004; rice belt,TN Agri Dept
+17,Namakkal,நாமக்கல்,Namakkal,North Western,3363,850,"Maize,Banana,Coconut,Poultry",Red loam,Cauvery tributary,Semi-critical,60,Largest poultry hub in India; maize for feed,TN Agri Dept
+18,Nilgiris,நீலகிரி,Ooty,High Altitude,2549,1500,"Tea,Coffee,Vegetables,Potato",Laterite / Forest,Moyar/Bhavani,Safe,55,High altitude zone; tea estates; vegetable hub,TN Agri Dept
+19,Perambalur,பெரம்பலூர்,Perambalur,Cauvery Delta,1752,900,"Rice,Sugarcane,Onion",Black cotton / Sandy,Cauvery,Semi-critical,60,Limestone quarries; rice and sugarcane belt,TN Agri Dept
+20,Pudukottai,புதுக்கோட்டை,Pudukottai,Southern,4663,850,"Rice,Cotton,Banana",Sandy loam / Clay,Vellar,Safe,60,Historical Pudukkottai state; semi-arid,TN Agri Dept
+21,Ramanathapuram,ராமநாதபுரம்,Ramanathapuram,Southern,4175,800,"Rice,Cotton,Chilli,Groundnut",Sandy coastal,Pambar,Critical,55,Coastal; Rameshwaram pilgrimage; pearl fishing,TN Agri Dept
+22,Ranipet,ராணிபேட்,Ranipet,North Eastern,2349,1050,"Rice,Sugarcane,Groundnut",Red / Alluvial,Palar,Critical,60,Leather industry hub; tannery pollution concern,TN Agri Dept
+23,Salem,சேலம்,Salem,North Western,5236,900,"Maize,Mango,Banana,Turmeric,Cotton",Sandy loam / Red,Cauvery,Semi-critical,60,Steel city; major mango and maize trade,TN Agri Dept
+24,Sivaganga,சிவகங்கை,Sivaganga,Southern,4189,950,"Rice,Cotton,Banana",Sandy loam / Black,Vaigai,Critical,60,Historical Sivaganga kingdom; temple tanks,TN Agri Dept
+25,Tenkasi,தென்காசி,Tenkasi,Southern,3279,1100,"Rice,Banana,Turmeric,Coconut",Laterite / Sandy,Thamirabarani,Safe,65,High rainfall; waterfalls; spice crops,TN Agri Dept
+26,Thanjavur,தஞ்சாவூர்,Thanjavur,Cauvery Delta,3399,1000,"Rice,Sugarcane,Banana,Coconut",Alluvial (deep black),Cauvery/Kollidam,Semi-critical,75,Rice granary of Tamil Nadu; Brihadeeswarar temple,TN Agri Dept
+27,Theni,தேனி,Theni,Southern,3242,1000,"Banana,Grapes,Sugarcane,Garlic",Sandy loam,Vaigai,Safe,65,Major banana export district; grapes cultivation,TN Agri Dept
+28,Thoothukudi,தூத்துக்குடி,Thoothukudi,Southern,4621,550,"Cotton,Groundnut,Rice,Chilli",Sandy coastal / Red,Thamirabarani,Critical,55,Port city; Pearl fishery; low rainfall district,TN Agri Dept
+29,Tiruchirappalli (Trichy),திருச்சிராப்பள்ளி,Trichy,Cauvery Delta,4404,900,"Rice,Banana,Groundnut,Sugarcane",Alluvial / Red,Cauvery,Semi-critical,60,Rock Fort; major rice and banana market,TN Agri Dept
+30,Tirunelveli,திருநெல்வேலி,Tirunelveli,Southern,6823,900,"Rice,Banana,Cotton,Chilli,Jasmine",Sandy loam / Black,Thamirabarani,Safe,65,Halwa city; banana cultivation along Thamirabarani,TN Agri Dept
+31,Tirupathur,திருப்பத்தூர்,Tirupathur,North Eastern,1795,1050,"Rice,Groundnut,Vegetables",Red laterite,Palar tributary,Safe,60,New district 2019; agriculture and silk weaving,TN Agri Dept
+32,Tiruppur,திருப்பூர்,Tiruppur,Western,5186,700,"Maize,Cotton,Coconut,Banana",Red loam,Noyyal,Critical,60,Knitwear capital of India; agriculture base,TN Agri Dept
+33,Tiruvallur,திருவள்ளூர்,Tiruvallur,North Eastern,3422,1150,"Rice,Groundnut,Vegetables",Alluvial / Red,Palar/Kosasthalaiyar,Critical,55,Suburban Chennai; peri-urban farming,TN Agri Dept
+34,Tiruvannamalai,திருவண்ணாமலை,Tiruvannamalai,North Eastern,6190,1000,"Rice,Sugarcane,Groundnut,Cotton",Red / Sandy,Palar/Cheyyar,Critical,60,Arunachala temple; major rice belt,TN Agri Dept
+35,Tiruvarur,திருவாரூர்,Tiruvarur,Cauvery Delta,2168,1050,"Rice,Banana,Coconut",Deep alluvial,Cauvery delta,Safe,75,Highest rice area density in TN delta,TN Agri Dept
+36,Vellore,வேலூர்,Vellore,North Eastern,3527,1050,"Rice,Sugarcane,Groundnut,Mango",Red / Alluvial,Palar,Critical,60,Leather city; medical tourism hub,TN Agri Dept
+37,Villupuram,விழுப்புரம்,Villupuram,Cauvery Delta,7218,1100,"Rice,Sugarcane,Groundnut,Tapioca",Sandy / Alluvial,Pennaiyar,Semi-critical,60,Largest district in TN by area; diverse agriculture,TN Agri Dept
+38,Virudhunagar,விருதுநகர்,Virudhunagar,Southern,4283,750,"Rice,Cotton,Chilli,Groundnut",Sandy loam / Black,Vaigai,Critical,55,Fireworks industry; cotton and chilli trade,TN Agri Dept

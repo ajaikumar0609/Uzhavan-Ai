@@ -1,0 +1,12 @@
+---
+chunk_id: 712dacef0a8f
+source: https://agritech.tnau.ac.in/agriculture/resourcemgt.html
+title: Agriculture :: Home
+category: crop_production
+crop: General
+language: English
+chunk_index: 0
+words: 62
+---
+
+# Source: https://agritech.tnau.ac.in/agriculture/resourcemgt.html | | | | | | | [Home](agri_index.html "Home") | [Seasons & Varieties](crop_production_varieties.html "Seasons & Varieties") | [Tillage](agri_tillage_index.html "Tillage") | [Nutrient Management](agri_nutrientmgt.html "Nutrient Management") | [Irrigation Management](agri_irrigationmgt.html "Irrigation Management") | [Weed Management](agri_weedmgt.html "Weed Management") | [Crop Protection](../crop_protection/crop_prot.html "Crop Protection") | [Cost of Cultivation](agri_costofcultivation_indexpage.html "Cost of Cultivation") | [Sitemap](agri_sitemap.html "Agriculture Sitemap") � TNAU 2008 - 2024 All Rights Reserved. |

@@ -1,0 +1,20 @@
+Component,Historical V2.2,Reproduction Target,Match
+Manifest,groundnut_v2.csv,groundnut_v2.csv,EXACT
+Manifest SHA256,6768c740a0bc32ec45be...,6768c740a0bc32ec45be...,EXACT
+Architecture,EfficientNetV2-S,EfficientNetV2-S,EXACT
+Resolution / Crop,256x256 -> 224x224,256x256 -> 224x224,EXACT
+Aug: Crop Scale Range,"[0.75, 1.0]","[0.75, 1.0]",EXACT
+Aug: Aspect Ratio Range,"[0.9, 1.1]","[0.9, 1.1]",EXACT
+Aug: Rotation Degrees,15 deg,15 deg,EXACT
+Aug: Color Jitter B/C/S/H,0.25/0.25/0.25/0.04,0.25/0.25/0.25/0.04,EXACT
+Aug: Field Shadow,"p=0.35, dark=[0.35,0.65], area=[0.05,0.35]","p=0.35, dark=[0.35,0.65], area=[0.05,0.35]",EXACT
+Aug: Gaussian Blur,"p=0.20, k=[3,5], sigma=[0.1,1.5]","p=0.20, k=[3,5], sigma=[0.1,1.5]",EXACT
+Loss Formulation,WCE (rust_mult=1.0),WCE (rust_mult=1.0),EXACT
+Normalized Class Weights,"[1.3064, 0.8470, 0.8466]","[1.3064, 0.8470, 0.8466]",EXACT
+Sampler,Natural Random (no oversampling),Natural Random (no oversampling),EXACT
+Optimizer,"AdamW (lr=1e-4, wd=1e-2)","AdamW (lr=1e-4, wd=1e-2)",EXACT
+LR Scheduler,"CosineAnnealingLR (T_max=15, min=1e-6)","CosineAnnealingLR (T_max=15, min=1e-6)",EXACT
+Batch Size,32,32,EXACT
+Total Epochs,15,15,EXACT
+Seed,42,42,EXACT
+Checkpoint Rule,val_macro_f1 > best (strictly >),val_macro_f1 > best (strictly >),EXACT

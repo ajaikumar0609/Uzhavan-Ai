@@ -1,0 +1,44 @@
+{
+  "created": "2026-11-10",
+  "archive": "/Users/ajaikumarn/Desktop/uzhavan_backups_sprint1/uzhavan_source_backup_20261110_131236.tar.gz",
+  "archive_bytes": 51039430,
+  "sha256": "714d340ddedf6bfef69d0d0ef79f297ce4a4448756946dea8895bae3a77a41d8",
+  "files_manifest": "/Users/ajaikumarn/Desktop/uzhavan_backups_sprint1/uzhavan_source_backup_20261110_131236.files.sha256",
+  "files_manifest_sha256": "044bceb91a1e271d5bc2c3171b7893d088df0f6dd0d1b4749ceff1bf8536cbf6",
+  "files_hashed": 1782,
+  "tar_entries": 2335,
+  "checks": {
+    "gzip": "ok",
+    "git_fsck": "clean",
+    "live_vs_archive_drift": 0,
+    "missing_live": 0,
+    "manifest_reverify_failures": 0,
+    "env_or_keystore_in_archive": false,
+    "anthropic_key_pattern_hits": 0
+  },
+  "supersedes_in_content": [
+    "uzhavan_source_backup_20261108_121229.tar.gz",
+    "uzhavan_phase1_addendum_20261108.tar.gz"
+  ],
+  "older_archives_preserved_unmodified": true,
+  "includes": [
+    "backend repairs (RAG, intent, definitional, dose guard, trimming, local-only LLM/voice)",
+    "Flutter on-device STT + TTS fixes + tests",
+    "tamil_bench.py, warm_up_demo.sh",
+    "reports and CSV/JSON artifacts",
+    "chroma.sqlite3 (pre-existing 520-row store, unchanged; HNSW .bin files excluded as before)"
+  ],
+  "excluded": [
+    "datasets, checkpoints, venvs, builds, APKs, .env files, mini project, tnau_crawler/knowledge_base"
+  ],
+  "chroma_original": {
+    "rows": 520,
+    "fingerprint": "16925b95667ba098",
+    "unchanged_since_sprint1": true
+  },
+  "not_done": [
+    "off-machine SSD copy (no SSD mounted)",
+    "data/model backups (C05-C13 in the external backup plan)"
+  ],
+  "secret_housekeeping": "env_backup_20261108_before_key_removal still contains the old ANTHROPIC_API_KEY line. Delete it only after the key is revoked in the provider dashboard (revocation cannot be verified from here)."
+}

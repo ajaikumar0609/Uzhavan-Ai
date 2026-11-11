@@ -1,0 +1,12 @@
+---
+chunk_id: daee0bf8c766
+source: https://agritech.tnau.ac.in/hrd/hrd_main_levels.html
+title: TNAU Agritech Portal :: Human Resource Development
+category: research_technology
+crop: General
+language: English
+chunk_index: 0
+words: 196
+---
+
+# Source: https://agritech.tnau.ac.in/hrd/hrd_main_levels.html | [Home](../index.html "Home") | [About Us](../about_us/abt_us.html "About Us") | [Success Stories](../success_stories/success_index.html "Success Stories") | [Farmers Association](../farm_association/farm_assoct.html "Farmer's Association") | [Farmers' Innovation](../farm_innovations/farm_innovations.html) | [Publications](../tnau_publish.html "TNAU Publications") | [Contact](../contact.html "Contact Us") | | | TNAU Agritech Portal :: HRD :: Funding Agencies [Research Concept Notes- Funding by NASF](http://www.icar.org.in/nfbsfara/announce.htm) | | | --- | | Funding Agencies | | | | | | | | --- | --- | --- | --- | | | | | | | [**Government of Tamil Nadu**](hrd_fund_agency_tn.html) | [**Government of India**](hrd_fund_agency_india.html) | [**International**](hrd_fund_agency_international.html) | [**NGO**](hrd_fund_agency_ngo.html) | | | Recent Updates | | | | | --- | | [Schlumberger Foundation -- Funding for Women in PhD and Post-Doctoral Studies 2016-2017](http://www.ypard.net/opportunity/schlumberger-foundation-funding-women-phd-and-post-doctoral-studies-2016-2017) | | [Bill & Melinda Gates Foundation -- Agriculture-Nutrition Impact](http://www.ypard.net/opportunity/bill-melinda-gates-foundation-agriculture-nutrition-impact) | | [AXA Research Fund -- Post-Doctoral Research Fellowships 2016](http://www.ypard.net/opportunity/axa-research-fund-post-doctoral-research-fellowships-2016) | | [JST and JICA -- Science and Technology Research Partnership for Sustainable Development 2016](http://www.ypard.net/opportunity/japan-science-and-technology-agency-jst-and-japan-international-collaboration-agency-jic) | | | | | [Home](../index.html "Home") | [About Us](../about_us/abt_us.html "About Us") | [Success Stories](../success_stories/success_index.html "Success Stories") | [Farmers Association](../farm_association/farm_assoct.html "Farmers Association") | [Farmers' Innovation](../farm_innovations/farm_innovations.html) | [Publications](../tnau_publish.html "TNAU Publications") | [Disclaimer](# "Disclaimer") | [Contact Us](../contact.html "Contact Us") © 2015 TNAU. All Rights Reserved. | |

@@ -1,0 +1,137 @@
+# Scheme eligibility rules (API contract §6, FP-012).
+#
+# Policy
+# - A rule exists ONLY where the eligibility criteria are explicit in the stored official
+#   source text (government_schemes.eligibility, copied from schemes.jsonl, and its
+#   source_documents). `criteria_text` quotes that text; `criteria_source_url` is the
+#   scheme's official_url.
+# - Conditions use ONLY fields the app collects: district_id (farm, else profile),
+#   crop_id and area_ha (farm). District lists are written with the SOURCE spellings and
+#   mapped to meta ids at load time (an unmapped name is a load error).
+# - Anything the app does not collect (land records, income-tax status, caste, owned-land
+#   size, off-grid status, notified crop/area lists, ...) is listed under `requires` and
+#   yields `more_information_required` with those missing_fields; it is never assumed.
+# - "Preference will be given to ..." clauses are priorities, not eligibility, and are ignored.
+# - A scheme without a rule → cannot_determine.
+#
+# Condition keys: field (district_id | crop_id | area_ha), and one of
+#   in_districts / not_in_districts (source names), in (ids), max / min (numbers).
+
+version: 1
+rules:
+  - scheme_id: tn_agrisnet_A_38
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "Cotton growing Farmers of 29 Major cotton growing districts of Cuddalore, Villupuram, Kallakurichi, Karur, Thirupathur, Thiruvannamalai, Salem, Namakkal, Dharmapuri, Krishnagiri, Coimbatore, Thiruppur, Erode, Tiruchirapalli, Perambalur, Ariyalur, Thanjavur, Thiruvarur, Nagapattinam, Mayiladuthurai, Madurai, Theni, Dindigul, Ramanathapuram, Virudhunagar, Sivagangai, Tirunelveli, Tenkasi and Thoothukudi."
+    conditions:
+      - field: crop_id
+        in: [cotton]
+      - field: district_id
+        in_districts: [Cuddalore, Villupuram, Kallakurichi, Karur, Thirupathur, Thiruvannamalai, Salem, Namakkal, Dharmapuri, Krishnagiri, Coimbatore, Thiruppur, Erode, Tiruchirapalli, Perambalur, Ariyalur, Thanjavur, Thiruvarur, Nagapattinam, Mayiladuthurai, Madurai, Theni, Dindigul, Ramanathapuram, Virudhunagar, Sivagangai, Tirunelveli, Tenkasi, Thoothukudi]
+
+  - scheme_id: tn_agrisnet_A_43
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "Rice growing Farmers of All Districts expect Chennai and Nilgris."
+    conditions:
+      - field: crop_id
+        in: [paddy]
+      - field: district_id
+        not_in_districts: [Chennai, Nilgiris]
+
+  - scheme_id: tn_agrisnet_A_98
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "Pulses growing farmers of all Districts (Except Chennai and Nilgiri)"
+    conditions:
+      - field: crop_id
+        in: [black_gram, green_gram]     # the pulses in the app's crop list
+      - field: district_id
+        not_in_districts: [Chennai, Nilgiri]
+
+  - scheme_id: tn_agrisnet_A_126
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All Pulses growing farmers in Cuddalore, Thanjavur, Trichy, Nagapattinam, Mayiladuthurai and Thiruvarur"
+    conditions:
+      - field: crop_id
+        in: [black_gram, green_gram]
+      - field: district_id
+        in_districts: [Cuddalore, Thanjavur, Trichy, Nagapattinam, Mayiladuthurai, Thiruvarur]
+
+  - scheme_id: tn_agrisnet_A_148
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All farmers of all 25 Millet Special Zone districts (Cuddalore, Villupuram, Kallakurichi, Vellore, Thiruvannamalai, Salem, Namakkal, Dharmapuri, Krishnagiri, Coimbatore, Tiruppur, Erode, Tiruchirapalli, Karur, Perambalur, Ariyalur, Pudukottai, Madurai, Theni, Dindigul, Ramanathapuram, Virudhunagar, Sivagangai, Tenkasi and Thoothukudi)"
+    conditions:
+      - field: district_id
+        in_districts: [Cuddalore, Villupuram, Kallakurichi, Vellore, Thiruvannamalai, Salem, Namakkal, Dharmapuri, Krishnagiri, Coimbatore, Tiruppur, Erode, Tiruchirapalli, Karur, Perambalur, Ariyalur, Pudukottai, Madurai, Theni, Dindigul, Ramanathapuram, Virudhunagar, Sivagangai, Tenkasi, Thoothukudi]
+
+  - scheme_id: tn_agrisnet_H_155
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All farmers in 26 districts viz., Ariyalur, Coimbatore, Cuddalore, Dharmapuri, Dindigul, Erode, Kanniyakumari, Krishnagiri, Madurai, Perambalur, Pudukottai, Ramnad, Salem, Sivagangai, Thanjavur, Theni, The Nilgiris, Tiruppur, Tiruchirappalli, Tirunelveli, Tenkasi, Vellore, Ranipet, Tirupathur, Villupuram and Kallakurichi."
+    conditions:
+      - field: district_id
+        in_districts: [Ariyalur, Coimbatore, Cuddalore, Dharmapuri, Dindigul, Erode, Kanniyakumari, Krishnagiri, Madurai, Perambalur, Pudukottai, Ramnad, Salem, Sivagangai, Thanjavur, Theni, The Nilgiris, Tiruppur, Tiruchirappalli, Tirunelveli, Tenkasi, Vellore, Ranipet, Tirupathur, Villupuram, Kallakurichi]
+
+  - scheme_id: tn_agrisnet_H_156
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All farmers of all districts except Chennai and The Nilgiris"
+    conditions:
+      - field: district_id
+        not_in_districts: [Chennai, The Nilgiris]
+
+  - scheme_id: tn_agrisnet_H_158
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All districts (exceptThe Nilgiris and Chennai)"
+    conditions:
+      - field: district_id
+        not_in_districts: [The Nilgiris, Chennai]
+
+  - scheme_id: tn_agrisnet_H_160
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All Districts except Chennai"
+    conditions:
+      - field: district_id
+        not_in_districts: [Chennai]
+
+  - scheme_id: tn_agrisnet_H_161
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All districts (except Kanyakumari, Tiruppur, Nilgiris and Chennai)"
+    conditions:
+      - field: district_id
+        not_in_districts: [Kanyakumari, Tiruppur, Nilgiris, Chennai]
+
+  - scheme_id: tn_agrisnet_S_61
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "All sugarcane farmers priority should be given to SC, ST, small, marginal farmers and female farmers. An individual farmer can avail the assistance to the maximum of 2 Ha"
+    conditions:
+      - field: crop_id
+        in: [sugarcane]
+
+  - scheme_id: tn_aed_smam
+    criteria_source_url: https://aed.tn.gov.in/en/schemes/agricultural-mechanisation/sub-mission-on-agricultural-mechanisation/
+    criteria_text: "For individual based machinery - all farmers. ... Project area: individual machinery and block-level CHCs in all districts except Chennai"
+    scope_note: "Checked for individual machinery only (Custom Hiring Centres are for groups/entrepreneurs)."
+    conditions:
+      - field: district_id
+        not_in_districts: [Chennai]
+
+  - scheme_id: tn_agrisnet_E_71
+    criteria_source_url: https://www.tnagrisnet.tn.gov.in/home/schemes/
+    criteria_text: "For the replacement of old inefficient electric motor pumpsets, and for the farmers who have created new borewell/tubewell/open well and have obtained EB connection of their own, all the farmers who own upto 5 acres of land are eligible."
+    conditions: []
+    requires: [owned_land_area_acres, own_eb_connection_or_pumpset_replacement]
+
+  - scheme_id: central_pm_kisan
+    criteria_source_url: https://pmkisan.gov.in/
+    criteria_text: "Revised Operational Guidelines (29.03.2020): landholding farmers' families whose names are entered in land records; exclusions (cl. 4.1) include institutional land holders, constitutional post holders, government employees, pensioners with Rs.10,000+ monthly pension, income-tax payers of the last assessment year, registered professionals and NRIs."
+    conditions: []
+    requires: [land_records_ownership, family_exclusion_status_cl_4_1]
+
+  - scheme_id: central_pmfby
+    criteria_source_url: https://pmfby.gov.in/
+    criteria_text: "Operational Guidelines effective Kharif 2023, cl. 3.1: all farmers including sharecroppers and tenant farmers growing the notified crops in the notified areas are eligible; farmers must have insurable interest in the insured crops and land."
+    conditions: []
+    requires: [notified_crop_and_area_for_season, insurable_interest]
+
+  - scheme_id: central_pm_kusum
+    criteria_source_url: https://pmkusum.mnre.gov.in/
+    criteria_text: "Guidelines 22.07.2019, Component-B: individual farmers supported to install standalone solar agriculture pumps ... for replacement of existing diesel agriculture pumps/irrigation systems in off-grid areas."
+    conditions: []
+    requires: [existing_diesel_pump, off_grid_location]

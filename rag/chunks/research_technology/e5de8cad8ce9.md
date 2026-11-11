@@ -1,0 +1,12 @@
+---
+chunk_id: e5de8cad8ce9
+source: https://agritech.tnau.ac.in/farm_innovations/farm_innov_subash chandra bose.html
+title: TNAU Agritech Portal :: Farm Innovation
+category: research_technology
+crop: Groundnut
+language: English
+chunk_index: 0
+words: 292
+---
+
+# Source: https://agritech.tnau.ac.in/farm_innovations/farm_innov_subash chandra bose.html | | [Home](../index.html "Home") | [About Us](../about_us/abt_us.html "About Us") | [Success Stories](../success_stories/success_index.html "Success Stories") | [Farmers' Association](../farm_association/farm_assoct.html "Farmer's Association") | [Farmers' Innovation](farm_innovations.html) | [Publications](../tnau_publish.html "TNAU Publications") |[Contact](../contact.html "Contact Us") | | | **TNAU Agritech Portal :: Farmers' Innovation** | | | --- | | **A Young Innovator : Solar Seeder** | | | | | | --- | --- | | | | | | M. Subash Chandra Bose is studying in eighth standard in St. Sebasthiyar Matriculation School, Pudukkottai, Tamil Nadu. He participated in the National Level Science Competition Ignite – 2015 held at IIM Ahamedabad. He received ‘Dr APJ Abdul kalam Ignite Award- 2015’ from Honorable President Shri Pranab Mukherji for his innovation**“Solar Seeder”.** It can seed the seeds like black gram, groundnut, green gram and chick peas. Prime Minister of Gujrat, Shri Anandiben Patel announced that the Solar Seeder will be supplied to all the local farmers. | | **Please Click below to know more about Solar Seeder** | | | | --- | --- | | | [Power Generation unit](farm_innov_subash chandra bose_power Generation Unit.html) | | | [Power Transmission to Drives](farm_innov_subash chandra bose_Power Transimission to drives.html) | | | [Seeding Unit](farm_innov_subash chandra bose_seeding unit.html) | | | [Benefits of using solar seeder](farm_innov_subash chandra bose_benefits.html) | | | | | | | --- | --- | | | | | | **Contact :** M. Bhuvaneshwari Bhagavathy Kumar, Palanthinapatti, K. Pallivasal (Post), Thirumayyam - Taluk, Pudukottai - District. Mobile : 9047814650 | | | | | [Home](../index.html "Home") | [About Us](../about_us/abt_us.html "About Us") | [Success Stories](../success_stories/success_index.html "Success Stories") | [Farmers' Association](../farm_association/farm_assoct.html "Farmer's Association") | [Farmers' Innovation](farm_innovations.html) | [Publications](../tnau_publish.html "TNAU Publications") | [Disclaimer](http://agritech.tnau.ac.in/disclaimer_en.html) | [Contact](../contact.html "Contact Us") © 2008-2024 TNAU. All Rights Reserved. | | |

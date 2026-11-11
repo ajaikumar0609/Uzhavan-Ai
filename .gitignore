@@ -19,3 +19,35 @@ sickle_toy_dataset/
 uzhavan_ml/packages/m4_v1/images/
 uzhavan_ml/runs_m4*
 backups/
+
+# --- Phase 1 repository safety additions (2026-11-08) ---
+# Secrets: never track real env files; templates stay trackable
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+key.properties
+local.properties
+
+# Generated / local tooling
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+dist/
+*.log
+
+# Model checkpoints (the *.pt and *.bin rules above already cover those)
+*.pth
+*.pth.tar
+*.onnx
+*.ckpt
+
+# Local vector database (real paths: rag/chroma, uzhavan_platform/rag/chroma)
+chroma_db/
+**/rag/chroma/
+
+# Crawled corpora and presentations: large, licence-sensitive, regenerable
+tnau_crawler/knowledge_base/
+mini project/

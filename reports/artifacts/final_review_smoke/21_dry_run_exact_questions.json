@@ -1,0 +1,64 @@
+[
+ {
+  "question": "What is NPK fertilizer?",
+  "http": 200,
+  "seconds": 16.4,
+  "intent": "advisory",
+  "tools_run": [
+   "rag.search_tnau"
+  ],
+  "is_fallback": false,
+  "grounded": true,
+  "grounding_mode": "grounded_verified",
+  "sources_list_appears": true,
+  "sources": [
+   "Horticulture :: Vegetable Crops :: Paprika",
+   "Horticulture :: Flower Crops :: Anthurium"
+  ],
+  "general_guidance_label": false,
+  "answer": "NPK fertilizer stands for nitrogen (N), phosphorus (P), and potassium (K). These are the three primary nutrients that plants need for healthy growth. Nitrogen helps in leaf and stem development, phosphorus aids in root growth and flower formation, and potassium supports overall plant health and disease resistance. Since the crop and stage details are not recorded, it's best to consult with a local agricultural officer or refer to the TNAU guidelines for specific recommendations based on your crop and its growth stage."
+ },
+ {
+  "question": "How can farmers improve soil health?",
+  "http": 200,
+  "seconds": 22.4,
+  "intent": "advisory",
+  "tools_run": [
+   "weather.irrigation_advice",
+   "crop.fertilizer_plan",
+   "rag.search_tnau"
+  ],
+  "is_fallback": false,
+  "grounded": true,
+  "grounding_mode": "grounded_verified",
+  "sources_list_appears": true,
+  "sources": [
+   "Major Areas :: Disaster Management",
+   "Soil and Water Conservation Technologies :: Micro Irrigation & Fertigation",
+   "Horticulture :: Fruits:: Guava",
+   "TNAU Agritech Portal :: Important Links",
+   "TNAU Agritech Portal :: Important Blogs",
+   "Soil and Water Conservation Technologies :: Micro Irrigation & Fertigation"
+  ],
+  "general_guidance_label": false,
+  "answer": "Farmers can improve soil health by adopting mulching techniques and erosion control measures. For instance, using wood chips, industrial solid wastes like coir waste, press mud, flyash, and sewage sludge can help retain moisture and prevent soil erosion. Additionally, TNAU recommends establishing suitable mulching techniques and erosion control measures in fallow lands to enhance soil health.\n\nTo get started, you could spread a layer of organic matter like farmyard manure or compost over your fields. This not only improves soil structure but also increases fertility. Consider consulting with local agricultural officers for specific recommendations tailored to your area."
+ },
+ {
+  "question": "Why are rice leaves turning yellow?",
+  "http": 200,
+  "seconds": 25.6,
+  "intent": "advisory",
+  "tools_run": [
+   "weather.irrigation_advice",
+   "crop.fertilizer_plan",
+   "rag.search_tnau"
+  ],
+  "is_fallback": false,
+  "grounded": false,
+  "grounding_mode": "general_guidance",
+  "sources_list_appears": false,
+  "sources": [],
+  "general_guidance_label": true,
+  "answer": "General guidance (not from TNAU sources): The yellowing of rice leaves could be due to nutrient deficiencies, especially nitrogen (N), phosphorus (P), and potassium (K). According to TNAU's base recommendation for paddy, the typical NPK ratio is 120:50:50 kg/ha. Without knowing the specific crop stage and soil type, it's hard to provide a precise dose.\n\nGiven that the crop stage and soil details are not available, I recommend you to monitor the field closely and consider consulting with a local agricultural officer or TNAU for a detailed soil test and specific fertilizer application advice. This will help ensure your paddy gets the right nutrients at the right time."
+ }
+]

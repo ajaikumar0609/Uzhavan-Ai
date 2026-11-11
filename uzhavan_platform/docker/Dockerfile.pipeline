@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgomp1 && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir \
+    chromadb>=0.5.0 \
+    sentence-transformers>=3.0.0 \
+    pandas>=2.0.0 \
+    pyarrow>=14.0.0 \
+    tqdm>=4.0.0
+
+COPY data_pipeline/ /app/data_pipeline/
+
+CMD ["python", "data_pipeline/embed_chunks.py"]

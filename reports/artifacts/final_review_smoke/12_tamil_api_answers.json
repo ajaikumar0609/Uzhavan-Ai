@@ -1,0 +1,59 @@
+[
+ {
+  "q": "நாளைய வானிலை எப்படி இருக்கும்?",
+  "http": 200,
+  "seconds": 30.5,
+  "intent": "weather",
+  "tools_run": [
+   "weather.current_weather",
+   "weather.forecast",
+   "weather.rain_alert"
+  ],
+  "tools_ok": 2,
+  "fallback": false,
+  "mode": "grounded_verified",
+  "grounded": true,
+  "sources": [],
+  "answer": "நாள் வானிலை முதலில் முக்கியமாக சாத்தியம். தனவெழுத்து 28.8 என்ற உயரமான வெப்பத்தில் இருக்கும்.\n\nஇதற்கு முன்னோடி வெப்பம் செல்லவுள்ளது. நாள் முழுவதும் தனியார் வானிலை உண்ணலாம்.\n\nஉறையின் தேர்வை செய்க."
+ },
+ {
+  "q": "சந்தையில் நெல் விலை என்ன?",
+  "http": 200,
+  "seconds": 27.4,
+  "intent": "market",
+  "tools_run": [
+   "market.current_price",
+   "market.trend"
+  ],
+  "tools_ok": 2,
+  "fallback": false,
+  "mode": "grounded_verified",
+  "grounded": true,
+  "sources": [],
+  "answer": "பத்தாவாற்று தஞ்சாவூரில் நெல் விலை குறைவாக இருக்கின்றது. பட்டம் பெயர்த்த பத்திரிச்சீலில் நெல் விலை மோதல் விலை 2900 கி.கி.பாட்டு அன்று இருந்தது. இது பெயர்த்த பத்திரிச்சீலில் மிக குறைவான விலையாகும்."
+ },
+ {
+  "q": "அரசு விவசாய திட்டங்களைப் பற்றி சொல்லுங்கள்.",
+  "http": 200,
+  "seconds": 31.6,
+  "intent": "advisory",
+  "tools_run": [
+   "weather.irrigation_advice",
+   "crop.fertilizer_plan",
+   "rag.search_tnau"
+  ],
+  "tools_ok": 2,
+  "fallback": false,
+  "mode": "grounded_verified",
+  "grounded": true,
+  "sources": [
+   "TNAU Agritech Portal :: Schemes & Services",
+   "TNAU Agritech Portal :: Schemes & Services",
+   "Soil and Water Conservation Technologies :: Micro Irrigation & Fertigation",
+   "TNAU Agritech Portal :: Farm Enterprises",
+   "Soil and Water Conservation Technologies :: Micro Irrigation & Fertigation",
+   "TNAU Agritech Portal :: Success Stories"
+  ],
+  "answer": "அரசு திட்டங்களில் பங்கேற்று வந்த தொழில்துறை மachinery வழங்கலாம். தனியார் வடிவில் பயிர் உருவங்களில் அதிக வேலை எளியப்படுத்தும் மachinery வழங்குவது உதவும்.\n\nஇதனை செய்ய வேண்டும்: அரசியல் திட்டத்தின் போது தகவல்களைப் பார்க்கவும்."
+ }
+]

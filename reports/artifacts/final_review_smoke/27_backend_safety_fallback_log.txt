@@ -1,0 +1,2 @@
+Formatter fallback triggered: is_fallback=False, grounding_passed=True (failures=[]), safety_passed=False (failures=['unverified_chemical_dosage: answer states a dose not present in the evidence (150 kg of potassium per hectare)']), raw_empty=False, 
+Formatter fallback triggered: is_fallback=False, grounding_passed=True (failures=[]), safety_passed=False (failures=['unverified_chemical_dosage: answer states a dose not present in the evidence (120 kg N, 50 kg P, and 50 kg K per hectare)']), raw_empty=False, 

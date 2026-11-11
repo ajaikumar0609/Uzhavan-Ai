@@ -1,0 +1,12 @@
+workstream,weight,requirements_scored,implementation_score_0_1,verified_score_0_1,implementation_contribution_pct,verified_contribution_pct,blocked_requirements
+Flutter UI and navigation,0.15,10,0.8,0.6,12.0,9.0,0
+Backend and APIs,0.15,9,0.667,0.556,10.0,8.33,0
+Authentication and user management,0.05,5,0.5,0.5,2.5,2.5,1
+"AI assistant, LLM and RAG",0.15,10,0.535,0.3,8.02,4.5,0
+Voice/STT/TTS,0.1,8,0.75,0.375,7.5,3.75,0
+Disease vision,0.1,9,0.389,0.278,3.89,2.78,3
+"Weather, market, soil and schemes",0.1,8,0.562,0.5,5.62,5.0,0
+Satellite intelligence,0.05,5,0.4,0.3,2.0,1.5,2
+Database and infrastructure,0.05,7,0.407,0.107,2.04,0.54,0
+"Testing, security and deployment readiness",0.1,8,0.312,0.25,3.12,2.5,0
+TOTAL,1.0,79,0.567,0.404,56.7,40.4,6

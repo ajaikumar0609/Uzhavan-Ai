@@ -1,0 +1,2 @@
+# Superseded by uzhavan_platform/requirements.txt (FP-007). Kept for reference.
+-r ../../requirements.txt

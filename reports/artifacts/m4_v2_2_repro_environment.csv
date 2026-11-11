@@ -1,0 +1,22 @@
+Property,Value
+Git Commit,ef50615a09463433f1555215ad902129a333d278
+GitHub Repository,https://github.com/ajaikumar0609/Uzhavan-Ai.git
+Python Version,3.12.10 (AMD64)
+PyTorch Version,2.14.0+cu126
+torchvision Version,0.29.0+cu126
+CUDA Version,12.6
+cuDNN Version,91002
+GPU Hardware,NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM)
+GPU Driver Version,560.81
+Manifest SHA256,6768c740a0bc32ec45be08237c564e0be153a610caab9909196c1a0c123a4cfe
+Training Script SHA256,2e234eb4aa149e6ec0b908684cd7dc01b3f1ff4bb05a337a00ca48745a2b587a
+Evaluator Script SHA256,bcbf701157fa312e764e6796c2daeb50e72317550feec5798daf1c0a64352bfd
+Random Seed,42
+Deterministic CUDA Settings,"cudnn.deterministic=True, cudnn.benchmark=False"
+Batch Size,32
+Learning Rate,1e-4 (0.0001)
+Weight Decay,1e-2 (0.01)
+Optimizer,AdamW
+LR Scheduler,"CosineAnnealingLR(T_max=15, eta_min=1e-6)"
+Mixed Precision (AMP),"torch.amp.autocast('cuda', enabled=True)"
+Target Calibration Host,Acer ALPHA (uzhavan_gpu)

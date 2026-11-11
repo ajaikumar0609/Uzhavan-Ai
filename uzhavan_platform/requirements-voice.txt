@@ -1,0 +1,6 @@
+# Optional, LOCAL-ONLY server-side speech-to-text for /voice/stt (WHISPER_PROVIDER=local).
+# Runs on this machine; no audio is sent anywhere. Not installed by default.
+# The Flutter client uses on-device STT/TTS and does not need this.
+# (gTTS was removed: it sends text to Google Translate, which the zero-paid-API / local-first
+#  policy forbids. Server-side TTS is not provided.)
+# faster-whisper

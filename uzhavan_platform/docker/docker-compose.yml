@@ -1,0 +1,123 @@
+version: "3.9"
+
+# ============================================================
+# UZHAVAN AI — Docker Compose Stack
+# ============================================================
+# Services:
+#   db               — PostgreSQL 16 + PostGIS
+#   redis            — Cache + task queue broker
+#   disease-detection — Plant disease FastAPI (port 8001)
+#   advisory-rag     — Advisory RAG FastAPI (port 8002)
+#   data-pipeline    — ETL worker (no exposed port)
+#
+# Usage:
+#   docker compose up -d db redis
+#   docker compose up -d disease-detection
+#   docker compose up                  # everything
+# ============================================================
+
+services:
+
+  # ─── DATABASE ──────────────────────────────────────────────
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: uzhavan_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       uzhavan
+      POSTGRES_USER:     uzhavan
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-uzhavan_dev_pass}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../database/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uzhavan -d uzhavan"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── REDIS ─────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: uzhavan_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── PLANT DISEASE DETECTION ───────────────────────────────
+  disease-detection:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.disease
+    container_name: uzhavan_disease
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      HF_HOME: /app/models
+    volumes:
+      - model_cache:/app/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # ─── ADVISORY RAG ──────────────────────────────────────────
+  advisory-rag:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.advisory
+    container_name: uzhavan_advisory
+    restart: unless-stopped
+    ports:
+      - "8002:8002"
+    environment:
+      DATABASE_URL:   postgresql://uzhavan:${DB_PASSWORD:-uzhavan_dev_pass}@db:5432/uzhavan
+      REDIS_URL:      redis://redis:6379/0
+      RAG_CHUNKS_DIR: /app/rag/chunks
+      OLLAMA_HOST:    ${OLLAMA_HOST:-http://host.docker.internal:11434}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ../rag:/app/rag:ro
+
+  # ─── DATA PIPELINE WORKER ──────────────────────────────────
+  data-pipeline:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.pipeline
+    container_name: uzhavan_pipeline
+    restart: "no"
+    environment:
+      DATABASE_URL:      postgresql://uzhavan:${DB_PASSWORD:-uzhavan_dev_pass}@db:5432/uzhavan
+      KNOWLEDGE_BASE:    /app/knowledge_base
+      OUTPUT_DIR:        /app/database/data
+      RAG_DIR:           /app/rag/chunks
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ../database/data:/app/database/data
+      - ../rag:/app/rag
+      - tnau_kb:/app/knowledge_base:ro
+    command: python data_pipeline/normalize_tnau.py --export-parquet
+
+volumes:
+  pgdata:
+  redisdata:
+  model_cache:
+  tnau_kb:

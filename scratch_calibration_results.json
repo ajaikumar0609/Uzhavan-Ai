@@ -1,0 +1,971 @@
+{
+  "UZ-M4-v1.0-a898475e-s1": {
+    "T_val": 0.44322296136998784,
+    "val_percentiles": {
+      "q01": 0.9007341861724854,
+      "q05": 0.9084183573722839,
+      "q10": 0.911071240901947,
+      "q05_T": 0.9989957809448242
+    },
+    "policies": {
+      "v1_baseline (thr=0.0)": {
+        "threshold": 0.0,
+        "val": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.1597222222222222,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.055,
+        "rec_rust": 0.6833333333333333,
+        "prec_healthy_closed": 1.0,
+        "prec_healthy_open": 0.8048780487804879,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.8631578947368421,
+        "fp_healthy_all": 8,
+        "fp_rust_all": 13,
+        "ext_oot_unsure_rate": 0.0,
+        "ext_oot_coverage": 1.0,
+        "tikka_unsure_rate": 0.0,
+        "tikka_coarse_accepted_acc": 0.9652777777777778
+      },
+      "fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.13472222222222222,
+          "unsure_rate": 0.8652777777777778,
+          "accuracy_on_accepted": 0.4948453608247423,
+          "false_rejection_rate": 0.5826086956521739,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.4,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.6335174953959485,
+        "ext_oot_coverage": 0.3664825046040516,
+        "tikka_unsure_rate": 0.3541666666666667,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "fixed_0.75": {
+        "threshold": 0.75,
+        "val": {
+          "threshold": 0.75,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.75,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.75,
+          "coverage": 0.10277777777777777,
+          "unsure_rate": 0.8972222222222223,
+          "accuracy_on_accepted": 0.5540540540540541,
+          "false_rejection_rate": 0.6434782608695652,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.3416666666666667,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.6887661141804788,
+        "ext_oot_coverage": 0.31123388581952116,
+        "tikka_unsure_rate": 0.41203703703703703,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "fixed_0.80": {
+        "threshold": 0.8,
+        "val": {
+          "threshold": 0.8,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.8,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.8,
+          "coverage": 0.06666666666666667,
+          "unsure_rate": 0.9333333333333333,
+          "accuracy_on_accepted": 0.5625,
+          "false_rejection_rate": 0.7652173913043478,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.225,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.7624309392265194,
+        "ext_oot_coverage": 0.23756906077348067,
+        "tikka_unsure_rate": 0.49537037037037035,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q05 (p05 of correct val)": {
+        "threshold": 0.9084183573722839,
+        "val": {
+          "threshold": 0.9084183573722839,
+          "coverage": 0.9494869771112865,
+          "unsure_rate": 0.050513022888713496,
+          "accuracy_on_accepted": 0.999168744804655,
+          "false_rejection_rate": 0.05055292259083728,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.9084183573722839,
+          "coverage": 0.9310344827586207,
+          "unsure_rate": 0.06896551724137931,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.06896551724137931,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.9084183573722839,
+          "coverage": 0.005555555555555556,
+          "unsure_rate": 0.9944444444444445,
+          "accuracy_on_accepted": 0.25,
+          "false_rejection_rate": 0.991304347826087,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.008333333333333333,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9631675874769797,
+        "ext_oot_coverage": 0.03683241252302026,
+        "tikka_unsure_rate": 0.9097222222222222,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q01 (p01 of correct val)": {
+        "threshold": 0.9007341861724854,
+        "val": {
+          "threshold": 0.9007341861724854,
+          "coverage": 0.98973954222573,
+          "unsure_rate": 0.010260457774269928,
+          "accuracy_on_accepted": 0.9992025518341308,
+          "false_rejection_rate": 0.010268562401263823,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.9007341861724854,
+          "coverage": 0.9804075235109718,
+          "unsure_rate": 0.019592476489028215,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.019592476489028215,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.9007341861724854,
+          "coverage": 0.011111111111111112,
+          "unsure_rate": 0.9888888888888889,
+          "accuracy_on_accepted": 0.375,
+          "false_rejection_rate": 0.9739130434782609,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.025,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9484346224677717,
+        "ext_oot_coverage": 0.05156537753222836,
+        "tikka_unsure_rate": 0.8472222222222222,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "temp_scaled_fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.4486111111111111,
+          "unsure_rate": 0.5513888888888889,
+          "accuracy_on_accepted": 0.21981424148606812,
+          "false_rejection_rate": 0.3826086956521739,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.5916666666666667,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.922077922077922,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 6,
+        "ext_oot_unsure_rate": 0.26887661141804786,
+        "ext_oot_coverage": 0.7311233885819521,
+        "tikka_unsure_rate": 0.12037037037037036,
+        "tikka_coarse_accepted_acc": 0.9815789473684211
+      },
+      "temp_scaled_val_q05": {
+        "threshold": 0.9989957809448242,
+        "val": {
+          "threshold": 0.9989957809448242,
+          "coverage": 0.9502762430939227,
+          "unsure_rate": 0.049723756906077346,
+          "accuracy_on_accepted": 0.9991694352159468,
+          "false_rejection_rate": 0.04976303317535545,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.9989957809448242,
+          "coverage": 0.9357366771159875,
+          "unsure_rate": 0.06426332288401254,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.06426332288401254,
+          "raw_accuracy": 1.0
+        },
+        "ext_scorable": {
+          "threshold": 0.9989957809448242,
+          "coverage": 0.005555555555555556,
+          "unsure_rate": 0.9944444444444445,
+          "accuracy_on_accepted": 0.25,
+          "false_rejection_rate": 0.991304347826087,
+          "raw_accuracy": 0.1597222222222222
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.008333333333333333,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9650092081031307,
+        "ext_oot_coverage": 0.034990791896869246,
+        "tikka_unsure_rate": 0.9166666666666666,
+        "tikka_coarse_accepted_acc": 1.0
+      }
+    }
+  },
+  "UZ-M4-v1.0-a898475e-s2": {
+    "T_val": 0.4549615310079891,
+    "val_percentiles": {
+      "q01": 0.8398597240447998,
+      "q05": 0.8922796845436096,
+      "q10": 0.9048953652381897,
+      "q05_T": 0.9980375170707703
+    },
+    "policies": {
+      "v1_baseline (thr=0.0)": {
+        "threshold": 0.0,
+        "val": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9984214680347278,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992163009404389,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.16666666666666666,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.008333333333333333,
+        "rec_rust": 0.9583333333333334,
+        "prec_healthy_closed": 1.0,
+        "prec_healthy_open": 0.29411764705882354,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.8333333333333334,
+        "fp_healthy_all": 12,
+        "fp_rust_all": 23,
+        "ext_oot_unsure_rate": 0.0,
+        "ext_oot_coverage": 1.0,
+        "tikka_unsure_rate": 0.0,
+        "tikka_coarse_accepted_acc": 0.9976851851851852
+      },
+      "fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 0.9984214680347278,
+          "unsure_rate": 0.0015785319652722968,
+          "accuracy_on_accepted": 0.9984189723320158,
+          "false_rejection_rate": 0.0015810276679841897,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 0.9992163009404389,
+          "unsure_rate": 0.0007836990595611285,
+          "accuracy_on_accepted": 0.9992156862745099,
+          "false_rejection_rate": 0.000784313725490196,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.5722222222222222,
+          "unsure_rate": 0.42777777777777776,
+          "accuracy_on_accepted": 0.24757281553398058,
+          "false_rejection_rate": 0.15,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.85,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.9026548672566371,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 11,
+        "ext_oot_unsure_rate": 0.6832412523020258,
+        "ext_oot_coverage": 0.31675874769797424,
+        "tikka_unsure_rate": 0.19444444444444445,
+        "tikka_coarse_accepted_acc": 0.9971264367816092
+      },
+      "fixed_0.75": {
+        "threshold": 0.75,
+        "val": {
+          "threshold": 0.75,
+          "coverage": 0.9968429360694554,
+          "unsure_rate": 0.0031570639305445935,
+          "accuracy_on_accepted": 0.9984164687252574,
+          "false_rejection_rate": 0.0031620553359683794,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.75,
+          "coverage": 0.9976489028213166,
+          "unsure_rate": 0.0023510971786833857,
+          "accuracy_on_accepted": 0.9992144540455616,
+          "false_rejection_rate": 0.002352941176470588,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.75,
+          "coverage": 0.4388888888888889,
+          "unsure_rate": 0.5611111111111111,
+          "accuracy_on_accepted": 0.310126582278481,
+          "false_rejection_rate": 0.18333333333333332,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.8166666666666667,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.9245283018867925,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 8,
+        "ext_oot_unsure_rate": 0.7734806629834254,
+        "ext_oot_coverage": 0.2265193370165746,
+        "tikka_unsure_rate": 0.24768518518518517,
+        "tikka_coarse_accepted_acc": 0.9969230769230769
+      },
+      "fixed_0.80": {
+        "threshold": 0.8,
+        "val": {
+          "threshold": 0.8,
+          "coverage": 0.9952644041041832,
+          "unsure_rate": 0.004735595895816891,
+          "accuracy_on_accepted": 0.9984139571768438,
+          "false_rejection_rate": 0.0047430830039525695,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.8,
+          "coverage": 0.9945141065830722,
+          "unsure_rate": 0.0054858934169279,
+          "accuracy_on_accepted": 0.9992119779353822,
+          "false_rejection_rate": 0.005490196078431373,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.8,
+          "coverage": 0.30416666666666664,
+          "unsure_rate": 0.6958333333333333,
+          "accuracy_on_accepted": 0.4246575342465753,
+          "false_rejection_rate": 0.225,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.775,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.9393939393939394,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 6,
+        "ext_oot_unsure_rate": 0.8139963167587477,
+        "ext_oot_coverage": 0.1860036832412523,
+        "tikka_unsure_rate": 0.3101851851851852,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q05 (p05 of correct val)": {
+        "threshold": 0.8922796845436096,
+        "val": {
+          "threshold": 0.8922796845436096,
+          "coverage": 0.9479084451460142,
+          "unsure_rate": 0.05209155485398579,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.05059288537549407,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.8922796845436096,
+          "coverage": 0.9545454545454546,
+          "unsure_rate": 0.045454545454545456,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.04470588235294118,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.8922796845436096,
+          "coverage": 0.1,
+          "unsure_rate": 0.9,
+          "accuracy_on_accepted": 0.8611111111111112,
+          "false_rejection_rate": 0.48333333333333334,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.5166666666666667,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9355432780847146,
+        "ext_oot_coverage": 0.06445672191528545,
+        "tikka_unsure_rate": 0.5856481481481481,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q01 (p01 of correct val)": {
+        "threshold": 0.8398597240447998,
+        "val": {
+          "threshold": 0.8398597240447998,
+          "coverage": 0.988950276243094,
+          "unsure_rate": 0.011049723756906077,
+          "accuracy_on_accepted": 0.9992019154030327,
+          "false_rejection_rate": 0.010276679841897233,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.8398597240447998,
+          "coverage": 0.9890282131661442,
+          "unsure_rate": 0.0109717868338558,
+          "accuracy_on_accepted": 0.9992076069730587,
+          "false_rejection_rate": 0.010980392156862745,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.8398597240447998,
+          "coverage": 0.2222222222222222,
+          "unsure_rate": 0.7777777777777778,
+          "accuracy_on_accepted": 0.55625,
+          "false_rejection_rate": 0.25833333333333336,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.7416666666666667,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.967391304347826,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 3,
+        "ext_oot_unsure_rate": 0.8710865561694291,
+        "ext_oot_coverage": 0.1289134438305709,
+        "tikka_unsure_rate": 0.3819444444444444,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "temp_scaled_fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9984214680347278,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992163009404389,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.8930555555555556,
+          "unsure_rate": 0.10694444444444444,
+          "accuracy_on_accepted": 0.17573872472783825,
+          "false_rejection_rate": 0.058333333333333334,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0033333333333333335,
+        "rec_rust": 0.925,
+        "prec_healthy_closed": 1.0,
+        "prec_healthy_open": 1.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.8538461538461538,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 19,
+        "ext_oot_unsure_rate": 0.3388581952117864,
+        "ext_oot_coverage": 0.6611418047882136,
+        "tikka_unsure_rate": 0.05787037037037037,
+        "tikka_coarse_accepted_acc": 0.9975429975429976
+      },
+      "temp_scaled_val_q05": {
+        "threshold": 0.9980375170707703,
+        "val": {
+          "threshold": 0.9980375170707703,
+          "coverage": 0.9479084451460142,
+          "unsure_rate": 0.05209155485398579,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.05059288537549407,
+          "raw_accuracy": 0.9984214680347278
+        },
+        "test": {
+          "threshold": 0.9980375170707703,
+          "coverage": 0.9537617554858934,
+          "unsure_rate": 0.04623824451410658,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.04549019607843137,
+          "raw_accuracy": 0.9992163009404389
+        },
+        "ext_scorable": {
+          "threshold": 0.9980375170707703,
+          "coverage": 0.09305555555555556,
+          "unsure_rate": 0.9069444444444444,
+          "accuracy_on_accepted": 0.9104477611940298,
+          "false_rejection_rate": 0.49166666666666664,
+          "raw_accuracy": 0.16666666666666666
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.5083333333333333,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9392265193370166,
+        "ext_oot_coverage": 0.06077348066298342,
+        "tikka_unsure_rate": 0.6064814814814815,
+        "tikka_coarse_accepted_acc": 1.0
+      }
+    }
+  },
+  "UZ-M4-v1.0-a898475e-s3": {
+    "T_val": 0.41803600820705095,
+    "val_percentiles": {
+      "q01": 0.8580484986305237,
+      "q05": 0.9004864692687988,
+      "q10": 0.9087181091308594,
+      "q05_T": 0.99912428855896
+    },
+    "policies": {
+      "v1_baseline (thr=0.0)": {
+        "threshold": 0.0,
+        "val": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9992107340173638,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.9976489028213166,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "unsure_rate": 0.0,
+          "accuracy_on_accepted": 0.16111111111111112,
+          "false_rejection_rate": 0.0,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0016666666666666668,
+        "rec_rust": 0.9583333333333334,
+        "prec_healthy_closed": 1.0,
+        "prec_healthy_open": 0.034482758620689655,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.8156028368794326,
+        "fp_healthy_all": 28,
+        "fp_rust_all": 26,
+        "ext_oot_unsure_rate": 0.0,
+        "ext_oot_coverage": 1.0,
+        "tikka_unsure_rate": 0.0,
+        "tikka_coarse_accepted_acc": 0.9398148148148148
+      },
+      "fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 0.9992107340173638,
+          "unsure_rate": 0.0007892659826361484,
+          "accuracy_on_accepted": 0.9992101105845181,
+          "false_rejection_rate": 0.0007898894154818325,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 0.9976489028213166,
+          "unsure_rate": 0.0023510971786833857,
+          "accuracy_on_accepted": 0.9992144540455616,
+          "false_rejection_rate": 0.0007855459544383347,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.39861111111111114,
+          "unsure_rate": 0.6013888888888889,
+          "accuracy_on_accepted": 0.34494773519163763,
+          "false_rejection_rate": 0.14655172413793102,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.825,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.9801980198019802,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 2,
+        "ext_oot_unsure_rate": 0.7440147329650092,
+        "ext_oot_coverage": 0.2559852670349908,
+        "tikka_unsure_rate": 0.39351851851851855,
+        "tikka_coarse_accepted_acc": 0.9961832061068703
+      },
+      "fixed_0.75": {
+        "threshold": 0.75,
+        "val": {
+          "threshold": 0.75,
+          "coverage": 0.9984214680347278,
+          "unsure_rate": 0.0015785319652722968,
+          "accuracy_on_accepted": 0.9992094861660079,
+          "false_rejection_rate": 0.001579778830963665,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.75,
+          "coverage": 0.9960815047021944,
+          "unsure_rate": 0.003918495297805642,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.0015710919088766694,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.75,
+          "coverage": 0.30416666666666664,
+          "unsure_rate": 0.6958333333333333,
+          "accuracy_on_accepted": 0.4292237442922374,
+          "false_rejection_rate": 0.1896551724137931,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.7833333333333333,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.9894736842105263,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 1,
+        "ext_oot_unsure_rate": 0.7937384898710865,
+        "ext_oot_coverage": 0.20626151012891344,
+        "tikka_unsure_rate": 0.46064814814814814,
+        "tikka_coarse_accepted_acc": 0.9957081545064378
+      },
+      "fixed_0.80": {
+        "threshold": 0.8,
+        "val": {
+          "threshold": 0.8,
+          "coverage": 0.9976322020520916,
+          "unsure_rate": 0.0023677979479084454,
+          "accuracy_on_accepted": 0.9992088607594937,
+          "false_rejection_rate": 0.002369668246445498,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.8,
+          "coverage": 0.9952978056426333,
+          "unsure_rate": 0.004702194357366771,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.002356637863315004,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.8,
+          "coverage": 0.2222222222222222,
+          "unsure_rate": 0.7777777777777778,
+          "accuracy_on_accepted": 0.50625,
+          "false_rejection_rate": 0.3017241379310345,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.675,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.8434622467771639,
+        "ext_oot_coverage": 0.15653775322283608,
+        "tikka_unsure_rate": 0.5648148148148148,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q05 (p05 of correct val)": {
+        "threshold": 0.9004864692687988,
+        "val": {
+          "threshold": 0.9004864692687988,
+          "coverage": 0.9486977111286503,
+          "unsure_rate": 0.05130228887134965,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.05055292259083728,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.9004864692687988,
+          "coverage": 0.9529780564263323,
+          "unsure_rate": 0.047021943573667714,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.04477611940298507,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.9004864692687988,
+          "coverage": 0.04583333333333333,
+          "unsure_rate": 0.9541666666666667,
+          "accuracy_on_accepted": 0.6060606060606061,
+          "false_rejection_rate": 0.8275862068965517,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.16666666666666666,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9705340699815838,
+        "ext_oot_coverage": 0.029465930018416207,
+        "tikka_unsure_rate": 0.9675925925925926,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "val_q01 (p01 of correct val)": {
+        "threshold": 0.8580484986305237,
+        "val": {
+          "threshold": 0.8580484986305237,
+          "coverage": 0.988950276243094,
+          "unsure_rate": 0.011049723756906077,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.010268562401263823,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.8580484986305237,
+          "coverage": 0.987460815047022,
+          "unsure_rate": 0.012539184952978056,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.01021209740769835,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.8580484986305237,
+          "coverage": 0.1375,
+          "unsure_rate": 0.8625,
+          "accuracy_on_accepted": 0.6161616161616161,
+          "false_rejection_rate": 0.47413793103448276,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.5083333333333333,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9097605893186004,
+        "ext_oot_coverage": 0.09023941068139964,
+        "tikka_unsure_rate": 0.7337962962962963,
+        "tikka_coarse_accepted_acc": 1.0
+      },
+      "temp_scaled_fixed_0.70": {
+        "threshold": 0.7,
+        "val": {
+          "threshold": 0.7,
+          "coverage": 0.9992107340173638,
+          "unsure_rate": 0.0007892659826361484,
+          "accuracy_on_accepted": 0.9992101105845181,
+          "false_rejection_rate": 0.0007898894154818325,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.7,
+          "coverage": 0.9992163009404389,
+          "unsure_rate": 0.0007836990595611285,
+          "accuracy_on_accepted": 0.9976470588235294,
+          "false_rejection_rate": 0.0007855459544383347,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.7,
+          "coverage": 0.8875,
+          "unsure_rate": 0.1125,
+          "accuracy_on_accepted": 0.1752738654147105,
+          "false_rejection_rate": 0.034482758620689655,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0016666666666666668,
+        "rec_rust": 0.925,
+        "prec_healthy_closed": 1.0,
+        "prec_healthy_open": 0.1111111111111111,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 0.8604651162790697,
+        "fp_healthy_all": 8,
+        "fp_rust_all": 18,
+        "ext_oot_unsure_rate": 0.31123388581952116,
+        "ext_oot_coverage": 0.6887661141804788,
+        "tikka_unsure_rate": 0.12268518518518519,
+        "tikka_coarse_accepted_acc": 0.9630606860158312
+      },
+      "temp_scaled_val_q05": {
+        "threshold": 0.99912428855896,
+        "val": {
+          "threshold": 0.99912428855896,
+          "coverage": 0.9486977111286503,
+          "unsure_rate": 0.05130228887134965,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.05055292259083728,
+          "raw_accuracy": 0.9992107340173638
+        },
+        "test": {
+          "threshold": 0.99912428855896,
+          "coverage": 0.9537617554858934,
+          "unsure_rate": 0.04623824451410658,
+          "accuracy_on_accepted": 1.0,
+          "false_rejection_rate": 0.04399057344854674,
+          "raw_accuracy": 0.9976489028213166
+        },
+        "ext_scorable": {
+          "threshold": 0.99912428855896,
+          "coverage": 0.04722222222222222,
+          "unsure_rate": 0.9527777777777777,
+          "accuracy_on_accepted": 0.7058823529411765,
+          "false_rejection_rate": 0.7931034482758621,
+          "raw_accuracy": 0.16111111111111112
+        },
+        "rec_healthy": 0.0,
+        "rec_rust": 0.2,
+        "prec_healthy_closed": 0.0,
+        "prec_healthy_open": 0.0,
+        "prec_rust_closed": 1.0,
+        "prec_rust_open": 1.0,
+        "fp_healthy_all": 0,
+        "fp_rust_all": 0,
+        "ext_oot_unsure_rate": 0.9742173112338858,
+        "ext_oot_coverage": 0.02578268876611418,
+        "tikka_unsure_rate": 0.9560185185185185,
+        "tikka_coarse_accepted_acc": 1.0
+      }
+    }
+  }
+}

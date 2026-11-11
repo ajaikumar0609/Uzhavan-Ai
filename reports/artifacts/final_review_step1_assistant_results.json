@@ -1,0 +1,882 @@
+[
+ {
+  "q": "What is photosynthesis?",
+  "status": 200,
+  "seconds": 42.95,
+  "ollama_calls": 1,
+  "events": [
+   [
+    0.03,
+    "session_started",
+    {
+     "event": "session_started",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:23.911559+00:00",
+     "data": {
+      "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+      "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+      "turn": 0
+     }
+    }
+   ],
+   [
+    0.03,
+    "intent_detected",
+    {
+     "event": "intent_detected",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:23.921615+00:00",
+     "data": {
+      "intent": "advisory",
+      "confidence": 0.95,
+      "entities": {
+       "district": "Thanjavur"
+      }
+     }
+    }
+   ],
+   [
+    0.03,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:23.921897+00:00",
+     "data": {
+      "capabilities_requested": [
+       "weather.irrigation_advice",
+       "crop.fertilizer_plan",
+       "rag.advisory"
+      ]
+     }
+    }
+   ],
+   [
+    0.03,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:23.925952+00:00",
+     "data": {}
+    }
+   ],
+   [
+    16.24,
+    "tool_complete",
+    {
+     "event": "tool_complete",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:40.130534+00:00",
+     "data": {
+      "tools_run": [
+       "weather.irrigation_advice",
+       "crop.fertilizer_plan",
+       "rag.advisory"
+      ],
+      "succeeded": 1,
+      "failed": 2
+     }
+    }
+   ],
+   [
+    16.24,
+    "evidence_ready",
+    {
+     "event": "evidence_ready",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:40.132197+00:00",
+     "data": {
+      "tools_used": [
+       "weather.irrigation_advice"
+      ],
+      "confidence": 0.85,
+      "citations": 1
+     }
+    }
+   ],
+   [
+    16.24,
+    "grounding",
+    {
+     "event": "grounding",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:40.134395+00:00",
+     "data": {
+      "passed": true,
+      "failures": []
+     }
+    }
+   ],
+   [
+    16.24,
+    "reasoning",
+    {
+     "event": "reasoning",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:13:40.137720+00:00",
+     "data": {}
+    }
+   ],
+   [
+    42.95,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:14:06.837301+00:00",
+     "data": {
+      "provider": "ollama",
+      "latency_ms": 26690,
+      "is_fallback": false
+     }
+    }
+   ],
+   [
+    42.95,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:14:06.842090+00:00",
+     "data": {}
+    }
+   ],
+   [
+    42.95,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:14:06.847160+00:00",
+     "data": {
+      "is_fallback": false,
+      "confidence": 0.85,
+      "tools_used": [
+       "weather.irrigation_advice"
+      ],
+      "source_count": 0
+     }
+    }
+   ],
+   [
+    42.95,
+    "completed",
+    {
+     "event": "completed",
+     "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+     "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+     "timestamp": "2026-11-08T07:14:06.848154+00:00",
+     "data": {
+      "answer": "\u0baa\u0bbf\u0bb0\u0bcb\u0b83\u0b9f\u0bbe\u0bb8\u0bcd\u0ba8\u0bc8\u0ba4\u0bbf \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbf\u0ba9\u0bcd \u0b89\u0bb0\u0bae\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b9a\u0b95\u0bcd\u0ba4\u0bbf\u0baf\u0bc8 \u0b95\u0bb5\u0bb2\u0bc8\u0baf\u0bbf\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4 \u0b85\u0bb3\u0bb5\u0b9f\u0bc8\u0baa\u0bcd\u0baa\u0bc1, \u0b87\u0bb2\u0bc8\u0ba4\u0bcd\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0bb0\u0bc1\u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b9a\u0bc6\u0baf\u0bb1\u0bcd\u0bb1\u0bae\u0ba9\u0bcd\u0ba9\u0b99\u0bcd\u0b95\u0bc1 \u0bae\u0bc2\u0bb2\u0bae\u0bcd \u0ba8\u0b9f\u0bc8\u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. \u0b87\u0ba4\u0bc1 \u0b92\u0bb0\u0bc1 \u0baa\u0ba3\u0bbf\u0baf\u0bbe\u0bb3\u0bbf \u0bb5\u0bb4\u0bb5\u0b9a\u0bcd \u0b9a\u0bc6\u0baf\u0bb2\u0bbe\u0b95, \u0ba4\u0bc1\u0bb1\u0bc8 \u0b89\u0bb0\u0bc1\u0bb5\u0b99\u0bcd\u0b95\u0bb3\u0bbf\u0ba9\u0bcd \u0bae\u0bc2\u0bb2\u0baa\u0bcd \u0baa\u0b9e\u0bcd\u0b9a\u0bae\u0bcd \u0ba8\u0b9f\u0ba4\u0bcd\u0ba4\u0bc1\u0bae\u0bcd. \u0b87\u0ba9\u0bbf\u0baf \u0bb5\u0bbf\u0ba4\u0bc8 \u0b85\u0ba3\u0bbf (chlorophyll) \u0b8e\u0ba9\u0bcd\u0bb1 \u0b92",
+      "spoken_text": "\u0baa\u0bbf\u0bb0\u0bcb\u0b83\u0b9f\u0bbe\u0bb8\u0bcd\u0ba8\u0bc8\u0ba4\u0bbf \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbf\u0ba9\u0bcd \u0b89\u0bb0\u0bae\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b9a\u0b95\u0bcd\u0ba4\u0bbf\u0baf\u0bc8 \u0b95\u0bb5\u0bb2\u0bc8\u0baf\u0bbf\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4 \u0b85\u0bb3\u0bb5\u0b9f\u0bc8\u0baa\u0bcd\u0baa\u0bc1, \u0b87\u0bb2\u0bc8\u0ba4\u0bcd\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0bb0\u0bc1\u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b9a\u0bc6\u0baf\u0bb1\u0bcd\u0bb1\u0bae\u0ba9\u0bcd\u0ba9\u0b99\u0bcd\u0b95\u0bc1 \u0bae\u0bc2\u0bb2\u0bae\u0bcd \u0ba8\u0b9f\u0bc8\u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. \u0b87\u0ba4\u0bc1 \u0b92\u0bb0\u0bc1 \u0baa\u0ba3\u0bbf\u0baf\u0bbe\u0bb3\u0bbf \u0bb5\u0bb4\u0bb5\u0b9a\u0bcd \u0b9a\u0bc6\u0baf\u0bb2\u0bbe\u0b95, \u0ba4\u0bc1\u0bb1\u0bc8 \u0b89\u0bb0\u0bc1\u0bb5\u0b99\u0bcd\u0b95\u0bb3\u0bbf\u0ba9\u0bcd \u0bae\u0bc2\u0bb2\u0baa\u0bcd \u0baa\u0b9e\u0bcd\u0b9a\u0bae\u0bcd \u0ba8\u0b9f\u0ba4\u0bcd\u0ba4\u0bc1\u0bae\u0bcd. \u0b87\u0ba9\u0bbf\u0baf \u0bb5\u0bbf\u0ba4\u0bc8 \u0b85\u0ba3\u0bbf (chlorophyll) \u0b8e\u0ba9\u0bcd\u0bb1 \u0b92",
+      "is_fallback": false,
+      "grounded": true,
+      "confidence": 0.85,
+      "total_latency_ms": 42936,
+      "session_id": "9c531c8a-6ab1-44e3-b395-3564e3072516",
+      "conversation_id": "c725d486-a724-4661-bfe4-43c66a8f748a",
+      "turn_id": "5548e95a-8191-4a0c-af08-4a5da675ae01"
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "q": "What is NPK fertilizer?",
+  "status": 200,
+  "seconds": 15.06,
+  "ollama_calls": 1,
+  "events": [
+   [
+    0.01,
+    "session_started",
+    {
+     "event": "session_started",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:06.857456+00:00",
+     "data": {
+      "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+      "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+      "turn": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "intent_detected",
+    {
+     "event": "intent_detected",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:06.859775+00:00",
+     "data": {
+      "intent": "advisory",
+      "confidence": 0.95,
+      "entities": {
+       "district": "Thanjavur"
+      }
+     }
+    }
+   ],
+   [
+    0.01,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:06.860205+00:00",
+     "data": {
+      "capabilities_requested": [
+       "weather.irrigation_advice",
+       "crop.fertilizer_plan",
+       "rag.advisory"
+      ]
+     }
+    }
+   ],
+   [
+    0.01,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:06.860699+00:00",
+     "data": {}
+    }
+   ],
+   [
+    2.0,
+    "tool_complete",
+    {
+     "event": "tool_complete",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:08.854108+00:00",
+     "data": {
+      "tools_run": [
+       "weather.irrigation_advice",
+       "crop.fertilizer_plan",
+       "rag.advisory"
+      ],
+      "succeeded": 1,
+      "failed": 2
+     }
+    }
+   ],
+   [
+    2.0,
+    "evidence_ready",
+    {
+     "event": "evidence_ready",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:08.855069+00:00",
+     "data": {
+      "tools_used": [
+       "weather.irrigation_advice"
+      ],
+      "confidence": 0.85,
+      "citations": 1
+     }
+    }
+   ],
+   [
+    2.01,
+    "grounding",
+    {
+     "event": "grounding",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:08.856846+00:00",
+     "data": {
+      "passed": true,
+      "failures": []
+     }
+    }
+   ],
+   [
+    2.01,
+    "reasoning",
+    {
+     "event": "reasoning",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:08.858305+00:00",
+     "data": {}
+    }
+   ],
+   [
+    15.05,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:21.904759+00:00",
+     "data": {
+      "provider": "ollama",
+      "latency_ms": 13044,
+      "is_fallback": false
+     }
+    }
+   ],
+   [
+    15.05,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:21.905873+00:00",
+     "data": {}
+    }
+   ],
+   [
+    15.06,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:21.906983+00:00",
+     "data": {
+      "is_fallback": false,
+      "confidence": 0.85,
+      "tools_used": [
+       "weather.irrigation_advice"
+      ],
+      "source_count": 0
+     }
+    }
+   ],
+   [
+    15.06,
+    "completed",
+    {
+     "event": "completed",
+     "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+     "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+     "timestamp": "2026-11-08T07:14:21.907420+00:00",
+     "data": {
+      "answer": "NPK \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbe\u0ba9\u0ba4\u0bc1 Nitrogen (N), Phosphorus (P), Potassium (K) \u0b87\u0bb2\u0bcd\u0bb2\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0bb5\u0bb1\u0bcd\u0bb1\u0bc8\u0b95\u0bcd \u0b95\u0ba3\u0b95\u0bcd\u0b95\u0bbf\u0b9f\u0bbf \u0b89\u0bb0\u0bae\u0bcd / \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbe\u0ba9\u0ba4\u0bc1. Nitrogen \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0b9a\u0bbf\u0bb2 \u0ba8\u0b9f\u0bb5\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc6iy\u0bb2\u0bcd, \u0baa\u0b95\u0bb4\u0bcd \u0b87\u0bb1\u0baa\u0bcd\u0baa\u0bc1 \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0ba3\u0bcd\u0b9f\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. Phosphorus \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0bb0\u0bb5\u0bbf \u0ba8\u0b9f\u0bb5\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc6iy\u0bb2\u0bcd, \u0b87\u0bb1\u0baa\u0bcd\u0baa\u0bc1 \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0ba3\u0bcd\u0b9f\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. Potassium (K) \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0ba8\u0bbf\u0bb2\u0bb5\u0bc1 \u0b9a\u0bc2\u0b9f\u0bcd\u0b9f",
+      "spoken_text": "NPK \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbe\u0ba9\u0ba4\u0bc1 Nitrogen (N), Phosphorus (P), Potassium (K) \u0b87\u0bb2\u0bcd\u0bb2\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0bb5\u0bb1\u0bcd\u0bb1\u0bc8\u0b95\u0bcd \u0b95\u0ba3\u0b95\u0bcd\u0b95\u0bbf\u0b9f\u0bbf \u0b89\u0bb0\u0bae\u0bcd / \u0bb5\u0bbf\u0ba4\u0bc8\u0baf\u0bbe\u0ba9\u0ba4\u0bc1. Nitrogen \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0b9a\u0bbf\u0bb2 \u0ba8\u0b9f\u0bb5\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc6iy\u0bb2\u0bcd, \u0baa\u0b95\u0bb4\u0bcd \u0b87\u0bb1\u0baa\u0bcd\u0baa\u0bc1 \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0ba3\u0bcd\u0b9f\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. Phosphorus \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0bb0\u0bb5\u0bbf \u0ba8\u0b9f\u0bb5\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc6iy\u0bb2\u0bcd, \u0b87\u0bb1\u0baa\u0bcd\u0baa\u0bc1 \u0bb5\u0b9a\u0ba4\u0bbf \u0b89\u0ba3\u0bcd\u0b9f\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. Potassium (K) \u0b8e\u0ba9\u0bcd\u0ba9? \u0b85\u0ba4\u0bc1 \u0bae\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0bcd \u0ba8\u0bbf\u0bb2\u0bb5\u0bc1 \u0b9a\u0bc2\u0b9f\u0bcd\u0b9f",
+      "is_fallback": false,
+      "grounded": true,
+      "confidence": 0.85,
+      "total_latency_ms": 15050,
+      "session_id": "4813b67a-400e-498f-8870-75d4bdd31a46",
+      "conversation_id": "6e2f79c5-3538-493e-a511-88e7a6c2cb62",
+      "turn_id": "91dd286a-7e9f-436a-869a-650ac8ca0325"
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "q": "Why are rice leaves turning yellow?",
+  "status": 200,
+  "seconds": 0.01,
+  "ollama_calls": 0,
+  "events": [
+   [
+    0.0,
+    "session_started",
+    {
+     "event": "session_started",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.910723+00:00",
+     "data": {
+      "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+      "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+      "turn": 0
+     }
+    }
+   ],
+   [
+    0.0,
+    "intent_detected",
+    {
+     "event": "intent_detected",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.912425+00:00",
+     "data": {
+      "intent": "off_topic",
+      "confidence": 0.3,
+      "entities": {
+       "crop": "paddy",
+       "symptom": "yellowing",
+       "district": "Thanjavur"
+      }
+     }
+    }
+   ],
+   [
+    0.0,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.913022+00:00",
+     "data": {
+      "capabilities_requested": []
+     }
+    }
+   ],
+   [
+    0.01,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.913642+00:00",
+     "data": {}
+    }
+   ],
+   [
+    0.01,
+    "tool_complete",
+    {
+     "event": "tool_complete",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.914239+00:00",
+     "data": {
+      "tools_run": [],
+      "succeeded": 0,
+      "failed": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "evidence_ready",
+    {
+     "event": "evidence_ready",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.914856+00:00",
+     "data": {
+      "tools_used": [],
+      "confidence": 0.0,
+      "citations": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "grounding",
+    {
+     "event": "grounding",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.915865+00:00",
+     "data": {
+      "passed": false,
+      "failures": [
+       "off_topic: Question is unrelated to agriculture or assistant scope"
+      ]
+     }
+    }
+   ],
+   [
+    0.01,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.917364+00:00",
+     "data": {
+      "is_fallback": true,
+      "confidence": 0.0,
+      "tools_used": [],
+      "source_count": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "completed",
+    {
+     "event": "completed",
+     "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+     "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+     "timestamp": "2026-11-08T07:14:21.917620+00:00",
+     "data": {
+      "answer": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622",
+      "spoken_text": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622",
+      "is_fallback": true,
+      "grounded": false,
+      "confidence": 0.0,
+      "total_latency_ms": 6,
+      "session_id": "bc8ad6d4-0aaf-4444-8e44-e73708b61c21",
+      "conversation_id": "3dedfd6d-6380-44f2-96ab-2b2cfe949d33",
+      "turn_id": "8f485a25-dbc5-48dd-ba13-067f1a3e8d2d"
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "q": "How can I improve soil health?",
+  "status": 200,
+  "seconds": 0.01,
+  "ollama_calls": 0,
+  "events": [
+   [
+    0.0,
+    "session_started",
+    {
+     "event": "session_started",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.919736+00:00",
+     "data": {
+      "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+      "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+      "turn": 0
+     }
+    }
+   ],
+   [
+    0.0,
+    "intent_detected",
+    {
+     "event": "intent_detected",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.921385+00:00",
+     "data": {
+      "intent": "off_topic",
+      "confidence": 0.3,
+      "entities": {
+       "district": "Thanjavur"
+      }
+     }
+    }
+   ],
+   [
+    0.0,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.922087+00:00",
+     "data": {
+      "capabilities_requested": []
+     }
+    }
+   ],
+   [
+    0.0,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.922660+00:00",
+     "data": {}
+    }
+   ],
+   [
+    0.01,
+    "tool_complete",
+    {
+     "event": "tool_complete",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.923195+00:00",
+     "data": {
+      "tools_run": [],
+      "succeeded": 0,
+      "failed": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "evidence_ready",
+    {
+     "event": "evidence_ready",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.923743+00:00",
+     "data": {
+      "tools_used": [],
+      "confidence": 0.0,
+      "citations": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "grounding",
+    {
+     "event": "grounding",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.924796+00:00",
+     "data": {
+      "passed": false,
+      "failures": [
+       "off_topic: Question is unrelated to agriculture or assistant scope"
+      ]
+     }
+    }
+   ],
+   [
+    0.01,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.925559+00:00",
+     "data": {
+      "is_fallback": true,
+      "confidence": 0.0,
+      "tools_used": [],
+      "source_count": 0
+     }
+    }
+   ],
+   [
+    0.01,
+    "completed",
+    {
+     "event": "completed",
+     "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+     "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+     "timestamp": "2026-11-08T07:14:21.925858+00:00",
+     "data": {
+      "answer": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622",
+      "spoken_text": "Sorry, the information needed to answer this is not available right now. Please contact the TNAU help centre: 0431-2371622",
+      "is_fallback": true,
+      "grounded": false,
+      "confidence": 0.0,
+      "total_latency_ms": 6,
+      "session_id": "9591e110-5b3a-42e7-83bb-79690beb52c1",
+      "conversation_id": "61e23dea-bbf1-4a29-b011-052fb5e7f6e2",
+      "turn_id": "2a11a281-f1c3-480f-b2ae-0014d718cea2"
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "q": "Explain the importance of crop rotation.",
+  "status": 200,
+  "seconds": 20.92,
+  "ollama_calls": 1,
+  "events": [
+   [
+    0.0,
+    "session_started",
+    {
+     "event": "session_started",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:21.928291+00:00",
+     "data": {
+      "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+      "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+      "turn": 0
+     }
+    }
+   ],
+   [
+    0.0,
+    "intent_detected",
+    {
+     "event": "intent_detected",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:21.929324+00:00",
+     "data": {
+      "intent": "crop",
+      "confidence": 0.95,
+      "entities": {
+       "district": "Thanjavur"
+      }
+     }
+    }
+   ],
+   [
+    0.0,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:21.929730+00:00",
+     "data": {
+      "capabilities_requested": [
+       "crop.recommend",
+       "crop.fertilizer_plan",
+       "crop.crop_calendar",
+       "rag.advisory"
+      ]
+     }
+    }
+   ],
+   [
+    0.0,
+    "planning",
+    {
+     "event": "planning",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:21.930257+00:00",
+     "data": {}
+    }
+   ],
+   [
+    0.11,
+    "tool_complete",
+    {
+     "event": "tool_complete",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:22.033760+00:00",
+     "data": {
+      "tools_run": [
+       "crop.recommend",
+       "crop.fertilizer_plan",
+       "crop.crop_calendar",
+       "rag.advisory"
+      ],
+      "succeeded": 1,
+      "failed": 3
+     }
+    }
+   ],
+   [
+    0.11,
+    "evidence_ready",
+    {
+     "event": "evidence_ready",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:22.034153+00:00",
+     "data": {
+      "tools_used": [
+       "crop.recommend"
+      ],
+      "confidence": 0.87,
+      "citations": 1
+     }
+    }
+   ],
+   [
+    0.11,
+    "grounding",
+    {
+     "event": "grounding",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:22.034660+00:00",
+     "data": {
+      "passed": true,
+      "failures": []
+     }
+    }
+   ],
+   [
+    0.11,
+    "reasoning",
+    {
+     "event": "reasoning",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:22.035240+00:00",
+     "data": {}
+    }
+   ],
+   [
+    20.92,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:42.848029+00:00",
+     "data": {
+      "provider": "ollama",
+      "latency_ms": 20810,
+      "is_fallback": false
+     }
+    }
+   ],
+   [
+    20.92,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:42.849052+00:00",
+     "data": {}
+    }
+   ],
+   [
+    20.92,
+    "response_complete",
+    {
+     "event": "response_complete",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:42.850107+00:00",
+     "data": {
+      "is_fallback": false,
+      "confidence": 0.87,
+      "tools_used": [
+       "crop.recommend"
+      ],
+      "source_count": 0
+     }
+    }
+   ],
+   [
+    20.92,
+    "completed",
+    {
+     "event": "completed",
+     "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+     "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+     "timestamp": "2026-11-08T07:14:42.850539+00:00",
+     "data": {
+      "answer": "\u0bb5\u0bbf\u0bb5\u0b9a\u0bbe\u0baf\u0bbf \u0bae\u0ba9\u0bc8\u0bb5\u0bb0\u0bcd, \u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0b95\u0ba4\u0bcd \u0ba4\u0bae\u0bbf\u0bb4\u0bbf\u0bb2\u0bcd \u0b89\u0bb3\u0bcd\u0bb3 \u0b95\u0b9f\u0bb2\u0bcd\u0bb5\u0bb4\u0bbf\u0baf\u0bbf\u0ba9\u0bcd (Cauvery Delta Zone) \u0b85\u0ba3\u0bc1\u0b95\u0bc1\u0bae\u0bc1\u0bb1\u0bc8\u0baa\u0bcd \u0baa\u0bbe\u0b9f\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd, \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0b92\u0ba9\u0bcd\u0bb1\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b87\u0bb5\u0ba9\u0bcd\u0b95\u0bb3\u0bcb\u0bb2\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0baf \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0b95\u0bbf\u0ba9\u0bcd\u0bb1 \"\u0b95\u0bb1\u0bcd\u0bb1\u0bc1\u0ba4\u0bb2\u0bcd\" (Crop Rotation) \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0bae\u0bbf\u0ba4\u0bbf\u0ba4\u0bcd\u0ba4\u0bc1\u0bb0\u0bc8\u0bb5\u0bc1\u0bae\u0bcd. \n\n\u0b87\u0ba8\u0bcd\u0ba4 \u0b9a\u0bc6\u0baf\u0bb2\u0bcd \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0bae\u0bcd \u0b87\u0bb1\u0bc1\u0ba4\u0bbf \u0b85\u0ba3\u0bc1\u0b95\u0bc1\u0bae\u0bc1\u0bb1\u0bc8\u0b95\u0bb3\u0bcd (Kharif: \u0baa\u0b9f\u0bbf, Rabi: \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1) \u0b89\u0ba9\u0bb5\u0bbf\u0baf\u0bb2\u0bcd \u0bb5",
+      "spoken_text": "\u0bb5\u0bbf\u0bb5\u0b9a\u0bbe\u0baf\u0bbf \u0bae\u0ba9\u0bc8\u0bb5\u0bb0\u0bcd, \u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0b95\u0ba4\u0bcd \u0ba4\u0bae\u0bbf\u0bb4\u0bbf\u0bb2\u0bcd \u0b89\u0bb3\u0bcd\u0bb3 \u0b95\u0b9f\u0bb2\u0bcd\u0bb5\u0bb4\u0bbf\u0baf\u0bbf\u0ba9\u0bcd (Cauvery Delta Zone) \u0b85\u0ba3\u0bc1\u0b95\u0bc1\u0bae\u0bc1\u0bb1\u0bc8\u0baa\u0bcd \u0baa\u0bbe\u0b9f\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd, \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0b92\u0ba9\u0bcd\u0bb1\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b87\u0bb5\u0ba9\u0bcd\u0b95\u0bb3\u0bcb\u0bb2\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0baf \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0b95\u0bbf\u0ba9\u0bcd\u0bb1 \"\u0b95\u0bb1\u0bcd\u0bb1\u0bc1\u0ba4\u0bb2\u0bcd\" (Crop Rotation) \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0bae\u0bbf\u0ba4\u0bbf\u0ba4\u0bcd\u0ba4\u0bc1\u0bb0\u0bc8\u0bb5\u0bc1\u0bae\u0bcd. \u0b87\u0ba8\u0bcd\u0ba4 \u0b9a\u0bc6\u0baf\u0bb2\u0bcd \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0bae\u0bcd \u0b87\u0bb1\u0bc1\u0ba4\u0bbf \u0b85\u0ba3\u0bc1\u0b95\u0bc1\u0bae\u0bc1\u0bb1\u0bc8\u0b95\u0bb3\u0bcd (Kharif: \u0baa\u0b9f\u0bbf, Rabi: \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1) \u0b89\u0ba9\u0bb5\u0bbf\u0baf\u0bb2\u0bcd \u0bb5",
+      "is_fallback": false,
+      "grounded": true,
+      "confidence": 0.87,
+      "total_latency_ms": 20922,
+      "session_id": "dcf929d9-41ff-4fa8-9d9a-3fd001ebe73b",
+      "conversation_id": "b77a9912-ff9d-43c4-aea9-df9b1bb52f0d",
+      "turn_id": "1edd745d-afaa-4bb0-8252-2ef31b3a3b7a"
+     }
+    }
+   ]
+  ]
+ }
+]

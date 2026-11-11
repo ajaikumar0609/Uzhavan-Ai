@@ -1,0 +1,19 @@
+# UZHAVAN AI backend runtime dependencies (FP-007 AC-7). Pinned to the versions that pass the tests.
+# Python 3.14 (/opt/homebrew/bin/python3.14). Install:  python3.14 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+# Optional server-side TTS (gTTS) is in requirements-voice.txt (installed with --no-deps; see there).
+fastapi==0.141.1
+starlette==1.7.0
+uvicorn[standard]==0.54.0
+pydantic==2.13.4
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+python-multipart==0.0.32
+asyncpg==0.31.0
+redis==8.1.0
+PyJWT==2.15.0
+httpx==0.28.1
+langgraph==1.2.12
+PyYAML==6.0.3
+# RAG (imported lazily by backend/knowledge/rag/engine.py; pulls in torch)
+chromadb==1.5.9
+sentence-transformers==6.1.0

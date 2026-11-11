@@ -1,0 +1,9 @@
+component,endpoint,state_before,action,state_after,version_or_detail,health_check,result
+PostgreSQL,127.0.0.1:5432 db=uzhavan_dev,stopped,brew services start postgresql@14,RUNNING (started by me),14.19 Homebrew; data dir /opt/homebrew/var/postgresql@14 unchanged,pg_isready + select version + table count,OK; 20 public tables; no schema/data change by me
+Redis,127.0.0.1:6379 db0,stopped,brew services start redis,RUNNING (started by me),8.6.1; dir /opt/homebrew/var/db/redis/,redis-cli ping,PONG; dbsize 0 before API use; 2 rate-limit keys after assistant test
+Ollama,127.0.0.1:11434,stopped,brew services start ollama,RUNNING (started by me),server 0.12.3; model qwen2.5:7b-instruct 4.68 GB already present (no download),GET /api/version + /api/tags,OK; 6 local models; 3 /api/chat calls observed in server log
+ChromaDB,file uzhavan_platform/rag/chroma (embedded),n/a,none (read-only sqlite check; retrieval tested on a scratch COPY),AVAILABLE,collection tnau_knowledge; 520 embeddings; chromadb 1.5.9,sqlite ro count + GET /health/config chroma_present,OK
+FastAPI backend,0.0.0.0:8000,stopped,.venv/bin/uvicorn backend.conversation.main:app --host 0.0.0.0 --port 8000 (no --reload),RUNNING pid 29990 (started by me),ENV=development; ai 0.1.0; model qwen2.5:7b-instruct,GET /health -> 200; GET /health/config -> db/redis/chroma true,OK
+Disease service M4,127.0.0.1:8001,stopped,not started (M4 HOLD),NOT RUNNING,n/a,n/a,intentionally not started
+Android device,adb,no device,none,NO DEVICE ATTACHED,adb at /opt/homebrew/bin/adb,adb devices -l,BLOCKED: phone connectivity untested
+RAG tool (rag.advisory),inside /conversation,n/a,n/a,FAILING,error: 'tuple' object has no attribute 'confidence' (reproduced on scratch copy),agent.execute on copy,FAIL in every assistant run

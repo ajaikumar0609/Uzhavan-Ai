@@ -1,0 +1,105 @@
+{
+  "created_local": "2026-11-08",
+  "archive": "/Users/ajaikumarn/Desktop/uzhavan_backups_sprint1/uzhavan_source_backup_20261108_121229.tar.gz",
+  "archive_bytes": 49780963,
+  "sha256": "19a13ac9fd39868c233a69d5d748560be2a5c2c49621cea2e2b71395bf0bd127",
+  "sha256_sidecar": "/Users/ajaikumarn/Desktop/uzhavan_backups_sprint1/uzhavan_source_backup_20261108_121229.tar.gz.sha256",
+  "entries": 4200,
+  "gzip_integrity": "ok",
+  "listable": true,
+  "restore_test": {
+    "extracted": [
+      "./.git",
+      "./uzhavan_platform/backend"
+    ],
+    "git_fsck": "clean",
+    "git_log_head": "ef50615"
+  },
+  "git_repos": [
+    {
+      "path": ".",
+      "branch": "main",
+      "commit": "ef50615a09463433f1555215ad902129a333d278",
+      "status_entries_before": 28,
+      "remote": "github.com/ajaikumar0609/Uzhavan-Ai"
+    },
+    {
+      "path": "frontend",
+      "branch": "main",
+      "commit": "c09fa8249369e864bc31ec2d1c5473e6640f9f2a",
+      "status_entries_before": 32,
+      "remote": "github.com/ajaikumar0609/uzhavan-chelvi-seyal"
+    },
+    {
+      "path": "external/SICKLE",
+      "branch": "main",
+      "commit": "c496cee8aadc5b6b61312f5ddb9b060f09555539",
+      "status_entries_before": 0,
+      "remote": "github.com/Depanshu-Sani/SICKLE (third-party)"
+    }
+  ],
+  "git_metadata_included": true,
+  "secrets_in_archive": false,
+  "excluded_secret_files": [
+    "uzhavan_platform/.env",
+    "frontend/.env.local"
+  ],
+  "env_var_names_recorded": {
+    "uzhavan_platform/.env.example": "see report section 2",
+    "uzhavan_platform/.env": [
+      "ENV",
+      "OTP_DEV_LOG",
+      "JWT_SECRET",
+      "DATABASE_URL",
+      "REDIS_URL",
+      "CORS_ORIGINS",
+      "ALLOW_ANONYMOUS",
+      "SMS_PROVIDER",
+      "LLM_PROVIDER",
+      "OLLAMA_URL",
+      "OLLAMA_BASE_URL",
+      "OLLAMA_MODEL",
+      "ANTHROPIC_API_KEY",
+      "DISEASE_SERVICE_URL",
+      "M4_DEMO_MODE",
+      "AUTH_DEMO_MODE",
+      "DEMO_PHONE_NUMBER",
+      "DEMO_OTP"
+    ],
+    "frontend/.env.local": [
+      "VITE_API_URL"
+    ]
+  },
+  "excluded_not_backed_up": {
+    "regenerable": [
+      ".venv*",
+      "node_modules",
+      "uzhavan_flutter/build",
+      "uzhavan_flutter/.dart_tool",
+      "frontend/.output",
+      "__pycache__"
+    ],
+    "large_data_NOT_IN_THIS_ARCHIVE": [
+      "uzhavan_data (6.3G)",
+      "runs (3.3G, SICKLE checkpoints)",
+      "uzhavan_ml/runs_m4 (1.1G, M4 checkpoints)",
+      "uzhavan_ml/packages (1.1G)",
+      "tnau_crawler/knowledge_base (1.1G)",
+      "datasets",
+      "sickle_dataset",
+      "sickle_toy_dataset",
+      "all_files.txt",
+      "dataset_structure.txt",
+      "mini project (presentations, 128M)",
+      "backups (older SQL dumps + tgz)"
+    ],
+    "pattern_exclusions_that_matter": [
+      "*.bin (also excludes Chroma HNSW index files; chroma.sqlite3 IS included, index is rebuildable)",
+      "*.pt/*.pth/*.pth.tar/*.ckpt (all checkpoints)"
+    ]
+  },
+  "limitations": [
+    "Backup is on the same physical disk as the project; it is NOT an off-machine backup.",
+    "Model checkpoints and datasets need a separate backup."
+  ]
+}

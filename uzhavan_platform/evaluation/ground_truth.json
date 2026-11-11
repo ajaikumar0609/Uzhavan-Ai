@@ -1,0 +1,224 @@
+{
+  "version": "1.0",
+  "description": "Ground truth for UZHAVAN AI evaluation — TNAU-based expected answers for advisory questions",
+  "ground_truth": [
+    {
+      "question_id": "ADV-001",
+      "topic": "BPH management in rice",
+      "key_facts": [
+        "Brown Plant Hopper (BPH) — Nilaparvata lugens",
+        "ETL threshold: 5-10 hoppers per plant at tillering",
+        "Drain field water before spraying",
+        "TNAU recommends imidacloprid 17.8 SL or thiamethoxam 25 WG",
+        "Avoid broad-spectrum insecticides that kill natural enemies",
+        "Light trap monitoring recommended"
+      ],
+      "must_not_contain": [
+        "chlorpyrifos for BPH",
+        "monocrotophos",
+        "endosulfan"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["தெளிக்க", "போடவும்", "வடிகட்ட", "கண்காணிக்க"]
+    },
+    {
+      "question_id": "ADV-002",
+      "topic": "Nitrogen application timing for rice",
+      "key_facts": [
+        "Split application of nitrogen recommended",
+        "Basal dose at transplanting",
+        "First top-dressing at active tillering (15-20 DAT)",
+        "Second top-dressing at panicle initiation",
+        "TNAU recommends 120-150 kg N/ha for high-yielding varieties",
+        "Leaf Colour Chart (LCC) used to time application"
+      ],
+      "must_not_contain": [
+        "apply all nitrogen at once",
+        "single dose nitrogen"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["போடவும்", "தெளிக்கவும்", "நேரம்"]
+    },
+    {
+      "question_id": "ADV-003",
+      "topic": "Banana planting spacing",
+      "key_facts": [
+        "Cavendish/Robusta: 1.8m x 1.8m spacing",
+        "Rasthali/Poovan: 2m x 2m spacing",
+        "Grand Naine: 1.5m x 1.5m or 1.8m x 1.8m",
+        "High density planting possible for tissue culture plants",
+        "TNAU recommends pit size 60cm x 60cm x 60cm"
+      ],
+      "must_not_contain": [
+        "same spacing for all varieties",
+        "arbitrary spacing"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "English",
+      "actionable_keywords_en": ["plant", "spacing", "dig", "prepare"]
+    },
+    {
+      "question_id": "ADV-004",
+      "topic": "Early blight management in tomato",
+      "key_facts": [
+        "Alternaria solani — fungal disease",
+        "Concentric ring pattern on older leaves (target board symptom)",
+        "Mancozeb 75 WP at 2.5 g/L or Chlorothalonil 75 WP at 2 g/L",
+        "Spray at 7-10 day intervals",
+        "Remove and destroy infected leaves",
+        "Crop rotation for 2-3 years"
+      ],
+      "must_not_contain": [
+        "bacterial treatment for early blight",
+        "non-approved fungicides"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["தெளிக்கவும்", "அழிக்கவும்", "பூச்சி", "மருந்து"]
+    },
+    {
+      "question_id": "ADV-007",
+      "topic": "Coconut fertilization in sandy coastal soil",
+      "key_facts": [
+        "Coconut requires NPK 500:320:1200 g/palm/year in sandy coastal soil",
+        "Apply in 2 split doses — June-July and December-January",
+        "Green manuring recommended with Gliricidia",
+        "Magnesium and micronutrients important in sandy soils",
+        "Basin method of application; incorporate into soil"
+      ],
+      "must_not_contain": [
+        "same NPK as clay soil",
+        "one dose application"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "English",
+      "actionable_keywords_en": ["apply", "incorporate", "split", "basin"]
+    },
+    {
+      "question_id": "ADV-008",
+      "topic": "Rust disease management in chilli",
+      "key_facts": [
+        "Colletotrichum capsici — anthracnose (often confused with rust in chilli)",
+        "Carbendazim 50 WP at 1g/L for anthracnose",
+        "Propiconazole 25 EC for rust",
+        "Remove infected fruits immediately",
+        "Seed treatment with thiram before sowing",
+        "Maintain field hygiene"
+      ],
+      "must_not_contain": [
+        "unapproved fungicides",
+        "overuse of copper compounds"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["தெளிக்கவும்", "நீக்கவும்", "சுத்தம்"]
+    },
+    {
+      "question_id": "ADV-009",
+      "topic": "Groundnut irrigation during pod development",
+      "key_facts": [
+        "Critical irrigation stages: flowering (35-40 DAS), pegging (45-50 DAS), pod development (60-70 DAS)",
+        "3-4 irrigations total for medium soils",
+        "Avoid water stress during pod filling",
+        "50mm irrigation at each stage",
+        "Avoid waterlogging — groundnut sensitive to excess moisture"
+      ],
+      "must_not_contain": [
+        "daily irrigation",
+        "flood irrigation for groundnut"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "English",
+      "actionable_keywords_en": ["irrigate", "apply", "avoid", "schedule"]
+    },
+    {
+      "question_id": "ADV-010",
+      "topic": "Stem borer management in maize",
+      "key_facts": [
+        "Chilo partellus — spotted stem borer",
+        "ETL: 5% dead hearts at vegetative stage",
+        "Carbofuran 3G in whorl at 12-15 kg/ha",
+        "Trichogramma chilonis egg parasitoid — 50,000/ha at 7-day intervals",
+        "Light traps for adult monitoring",
+        "Early sowing avoids peak pest incidence"
+      ],
+      "must_not_contain": [
+        "non-registered pesticides",
+        "blanket spraying without monitoring"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["போடவும்", "வெளியிடவும்", "கண்காணிக்க"]
+    },
+    {
+      "question_id": "SCH-001",
+      "topic": "Pradhan Mantri Fasal Bima Yojana",
+      "key_facts": [
+        "PMFBY — Pradhan Mantri Fasal Bima Yojana",
+        "Premium: 2% for Kharif, 1.5% for Rabi, 5% for commercial crops",
+        "Enroll before sowing through Common Service Centres or bank",
+        "Aadhaar and bank account mandatory",
+        "Tamil Nadu state implementation via Tamil Nadu Crop Insurance portal"
+      ],
+      "must_not_contain": [
+        "incorrect premium rates",
+        "wrong eligibility criteria"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "pmfby.gov.in",
+        "tnau.ac.in"
+      ],
+      "response_language": "Tamil",
+      "actionable_keywords_ta": ["பதிவு", "விண்ணப்பிக்க", "ஆவணங்கள்"]
+    },
+    {
+      "question_id": "SCH-002",
+      "topic": "Drip irrigation subsidy Tamil Nadu",
+      "key_facts": [
+        "National Mission for Sustainable Agriculture (NMSA)",
+        "Tamil Nadu Horticulture Development Agency (TANHODA)",
+        "Subsidy up to 90% for small and marginal farmers",
+        "Apply through district horticulture office",
+        "Aadhaar, patta, bank passbook required"
+      ],
+      "must_not_contain": [
+        "100% subsidy claim",
+        "incorrect agency names"
+      ],
+      "acceptable_citations": [
+        "agritech.tnau.ac.in",
+        "tnau.ac.in",
+        "tanhoda.tn.gov.in"
+      ],
+      "response_language": "English",
+      "actionable_keywords_en": ["apply", "contact", "submit", "register"]
+    }
+  ]
+}

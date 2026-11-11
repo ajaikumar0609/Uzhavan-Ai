@@ -1,0 +1,39 @@
+method,endpoint,purpose,caller,status,test_evidence
+POST,/conversation,SSE assistant (LangGraph),Flutter Assistant,Active,"test_conversation_farm.py, test_phase_d/e/f.py (LLM faked)"
+POST,/voice/stt,Speech to text,Flutter (server fallback),Active - engine not run,test_voice_assistant.py
+POST,/voice/tts,Text to speech,Flutter (server fallback),Active - engine not run,test_voice_assistant.py
+GET,/health,Health,ops,Active,test_settings.py
+GET,/metrics,Metrics snapshot,ops,Active (in-memory),test_settings.py
+GET,/health/config,Config summary,ops,Active,test_settings.py
+POST,/api/auth/send-otp,Request OTP,Flutter login,Active; SMS not live,test_auth_flow.py
+POST,/api/auth/verify-otp,"Verify OTP, issue JWT",Flutter login,Active,test_auth_flow.py
+POST,/api/auth/refresh,Rotate tokens,Flutter ApiClient,Active,test_auth_flow.py; token_refresh_test.dart
+POST,/api/auth/logout,Revoke refresh token,Flutter Settings,Active,test_auth_flow.py
+GET,/api/farmer/profile,Read profile,Flutter,Active,test_profile_farms.py
+PUT,/api/farmer/profile,Update profile,Flutter,Active,test_profile_farms.py
+GET,/api/farms,List farms,Flutter,Active,test_profile_farms.py
+POST,/api/farms,Create farm,Flutter,Active,test_profile_farms.py
+PUT,/api/farms/{farm_id},Update farm,Flutter,Active,test_profile_farms.py
+DELETE,/api/farms/{farm_id},Delete farm,Flutter,Active,test_profile_farms.py
+GET,/api/diary,List diary,Flutter,Active,test_diary_disease_satellite.py
+POST,/api/diary,Add diary entry,Flutter,Active,test_diary_disease_satellite.py
+GET,/api/meta/districts,Districts,Flutter,Active,tests/api
+GET,/api/meta/crops,Crops,Flutter,Active,tests/api
+GET,/api/meta/enums,Enums,Flutter,Active,tests/api
+GET,/api/weather/current,Current weather (Open-Meteo),Flutter Home/Weather,Active,test_weather.py
+GET,/api/weather/forecast,Forecast,Flutter Weather,Active,test_weather.py
+GET,/api/weather/advisories,Rule advisories,Flutter Weather,Active,test_weather.py
+GET,/api/market/commodities,Commodities,Flutter Market,Active,test_market.py
+GET,/api/market/markets,Markets,Flutter Market,Active,test_market.py
+GET,/api/market/latest,Latest prices,Flutter Home/Market,Active,test_market.py (PG tests skipped)
+GET,/api/market/trend,Price trend,Flutter Market,Active,test_market.py (PG tests skipped)
+GET,/api/schemes,List schemes,Flutter Schemes,Active,test_schemes.py
+GET,/api/schemes/{scheme_id},Scheme detail,Flutter Schemes,Active,test_schemes.py
+GET,/api/schemes/{scheme_id}/eligibility,Eligibility,Flutter Schemes,Active,test_schemes.py
+GET,/api/soil,Regional soil,Flutter Soil,Active,test_soil.py
+POST,/api/soil/tests,Save farmer soil test,Flutter Soil,Active,test_soil.py
+GET,/api/soil/tests,List soil tests,Flutter Soil,Active,test_soil.py
+POST,/api/disease/scan,Leaf scan,Flutter Scan,Gated 503 by default; DEMO path returns research output when M4_DEMO_MODE=true (dev .env),test_diary_disease_satellite.py (gate)
+GET,/api/satellite/status,Validation gate status,Flutter Satellite,Active (status only),test_diary_disease_satellite.py
+DELETE,(missing) /api/farmer account,Erasure (DPDPA),-,NOT IMPLEMENTED,none
+POST,(missing) feedback,Answer thumbs,-,NOT IMPLEMENTED,none
